@@ -23,4 +23,4 @@ We interfaced many different sensors using Arduino.
 
 #### EE 2350 -- DSP
 
-We will try basic methods of Sampling of a Signal.
+We will try basic methods of Sampling,Quantisation and Filtering of a Signal.
