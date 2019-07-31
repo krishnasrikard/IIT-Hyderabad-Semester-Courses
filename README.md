@@ -20,3 +20,7 @@ We had implemented various projects using Arduino,Seven Segment Display and Flip
 #### ID 1350 -- Internet of Things
 
 We interfaced many different sensors using Arduino.
+
+#### EE 2350 -- DSP
+
+We will try basic methods of Sampling of a Signal.
