@@ -12,3 +12,11 @@ We will use Verilog to code different kinds of implementations.
 #### EE 1390 -- Introduction to AI and ML by GVV Sharma Sir
 
 We will try to create a Voice Controlled Bot using Machine Learning. We will train the algorithm using 80 different samples of commands like "Forward", "Back", "Left", "Right" and "Stop".
+
+#### EE 1110 -- Applied Digital Logic Design
+
+We had implemented various projects using Arduino,Seven Segment Display and Flip-Flops. 
+
+#### ID 1350 -- Internet of Things
+
+We interfaced many different sensors using Arduino.
