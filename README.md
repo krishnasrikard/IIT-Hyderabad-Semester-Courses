@@ -21,6 +21,6 @@ We had implemented various projects using Arduino,Seven Segment Display and Flip
 
 We interfaced many different sensors using Arduino.
 
-#### EE 2350 -- DSP
+#### EE 2350 -- DSP(Digital Signal Processing)
 
 We will try basic methods of Sampling,Quantisation and Filtering of a Signal.
