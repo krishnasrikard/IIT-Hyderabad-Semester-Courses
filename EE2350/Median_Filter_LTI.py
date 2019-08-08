@@ -1,16 +1,16 @@
-# In this We will try to check wheter Median_Filter is LTI system or not
+# In this We will try to check wheter Median Filter is LTI system or not
 
 import numpy as np
 import matplotlib.pyplot as plt
 
-def Add_Noise(signal,mu = 0,sigma = 1):
+def Add_Noise(signal,mu = 0,sigma = 1):									# Function to add noise
 	gaussian_noise = np.random.normal(0, 1, signal.shape[0])
 	signal_noise = signal + gaussian_noise
 	
 	return signal_noise
 	
 
-def Median_Filter(signal,M):
+def Median_Filter(signal,M):											# Function to apply Median Filter
 	p,q,s = M,signal.shape[0]- M,signal.shape[0]
 	signal_change = np.zeros(s+2*M)
 	signal_change[M:s+M] = signal
@@ -24,7 +24,7 @@ def Median_Filter(signal,M):
 	return signal_new,time
 
 	
-def Sin_Discrete(a,b,F,A = 1,f = 1):
+def Sin_Discrete(a,b,F,A = 1,f = 1):									# Generating Discrete Sinusoid
 	"""
 	A = Amplitude
 	F = Sampling Frequency
@@ -36,7 +36,7 @@ def Sin_Discrete(a,b,F,A = 1,f = 1):
 	
 	return amplitude,time
 
-def Cos_Discrete(a,b,F,A = 1,f = 1):
+def Cos_Discrete(a,b,F,A = 1,f = 1):									# Generating Discrete Cosine
 	"""
 	A = Amplitude
 	F = Sampling Frequency
