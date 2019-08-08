@@ -13,14 +13,14 @@ We will use Verilog to code different kinds of implementations.
 
 We will try to create a Voice Controlled Bot using Machine Learning. We will train the algorithm using 80 different samples of commands like "Forward", "Back", "Left", "Right" and "Stop".
 
-#### EE 1110 -- Applied Digital Logic Design
+#### EE 1110 -- Applied Digital Logic Design by GVV Sharma Sir
 
 We had implemented various projects using Arduino,Seven Segment Display and Flip-Flops. 
 
-#### ID 1350 -- Internet of Things
+#### ID 1350 -- Internet of Things by RajyaLakshmi Madam
 
 We interfaced many different sensors using Arduino.
 
-#### EE 2350 -- DSP(Digital Signal Processing)
+#### EE 2350 -- DSP(Digital Signal Processing) by K.Sri Rama Murthy Sir
 
 We will try basic methods of Sampling,Quantisation and Filtering of a Signal.
