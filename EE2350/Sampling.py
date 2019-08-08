@@ -3,7 +3,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-def Sin_Continous(a,b,A = 1,f = 1):
+def Sin_Continous(a,b,A = 1,f = 1):										# Generating a Continous Sin
 	"""
 	A = Amplitude
 	f = Frequency
@@ -18,7 +18,7 @@ def Sin_Continous(a,b,A = 1,f = 1):
 	plt.plot(time,amplitude)
 	plt.show()
 	
-def Sin_Sampling(a,b,F,A = 1,f = 1):									# Discrete Sin
+def Sin_Sampling(a,b,F,A = 1,f = 1):									# Sampling Sin
 	"""
 	A = Amplitude
 	F = Sampling Frequency
