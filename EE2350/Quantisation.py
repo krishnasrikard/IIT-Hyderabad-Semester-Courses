@@ -3,7 +3,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-def Sin_Continous(a,b,A = 1,f = 1):
+def Sin_Continous(a,b,A = 1,f = 1):										# Generating Continous Sin
 	"""
 	A = Amplitude
 	f = Frequency
@@ -18,7 +18,7 @@ def Sin_Continous(a,b,A = 1,f = 1):
 	plt.plot(time,amplitude)
 	plt.show()
 
-def Sin_Quantisation(a,b,N,A = 1,f = 1):
+def Sin_Quantisation(a,b,N,A = 1,f = 1):								# Quantisation
 	"""
 	A = Amplitude
 	N = no.of bits
