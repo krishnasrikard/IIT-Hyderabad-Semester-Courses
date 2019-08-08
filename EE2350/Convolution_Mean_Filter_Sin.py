@@ -58,6 +58,25 @@ def Convolution(A,B):
 	s = output.shape[0]
 	time = np.arange(0,s)
 	return output,time
+	
+def Convolution_Manual(A,B):
+	a,b = A.shape[0],B.shape[0]
+	s = a+b-1
+	output = np.zeros(s)
+	time = np.arange(0,s)
+	
+	for n in range(s):
+		for k in range(a):
+			j = n - k
+			if (j < 0 or j > b-1):
+				l = 0
+			else:
+				l = B[j]
+				
+			output[n] += A[k] * l	
+			
+	return output,time
+	
 
 S,time = Sin_Discrete(0,50,32)
 S_noise = Add_Noise(S)
@@ -66,15 +85,15 @@ S_filtered_Mean,time = Mean_Filter(S_noise,10)
 h = System_Function_Mean_Filter()
 S_convolution,time_conv = Convolution(S_noise,h)
 
-plt.figure(figsize=(13, 8))
+S_convolution_manual,time_conv_manual = Convolution_Manual(S_noise,h)
 
-ax = plt.subplot(1, 2, 1)
+plt.figure(figsize=(15, 15))
+
+ax = plt.subplot(1, 3, 1)
 plt.stem(time,S_filtered_Mean,'r')
-ax = plt.subplot(1,2,2)
+ax = plt.subplot(1,3,2)
 plt.stem(time_conv,S_convolution,'y')
+ax = plt.subplot(1,3,3)
+plt.stem(time_conv_manual,S_convolution_manual,'y')
+
 plt.show()
-
-
-
-	
-
