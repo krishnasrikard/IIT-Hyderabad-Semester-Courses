@@ -46,6 +46,19 @@ def Median_Filter(audio,M):												# Function to apply Median Filter to audi
 	
 	return audio_new,time
 
+def Mean_Filter(signal,M):												# Function to apply Mean Filter
+	p,q,s = M,signal.shape[0]- M,signal.shape[0]
+	signal_change = np.zeros(s+2*M)
+	signal_change[M:s+M] = signal
+	signal_new = np.zeros(s)
+		
+	for i in range(M,s+M):
+		signal_new[i-M] = np.mean(signal_change[i-M:i+M])
+	
+	time = np.arange(s)	
+	
+	return signal_new,time
+	
 Plot_Audio(audio)
 audio = Add_Noise(audio)
 Plot_Audio(audio)
@@ -54,3 +67,7 @@ write("Audio_with_Noise.wav",rate,audio)								# Creating a Audio signal with n
 audio_new_median,time_new = Median_Filter(audio,2)
 Plot_Audio(audio_new_median)
 write("Audio_with_Noise_Filtered_Median.wav",rate,audio_new_median)		# Creating filtered audio signal using Median Filter
+
+audio_new_mean,time_new = Mean_Filter(audio,2)
+Plot_Audio(audio_new_mean)
+write("Audio_with_Noise_Filtered_Mean.wav",rate,audio_new_mean)			# Creating filtered audio signal using Mean Filter
