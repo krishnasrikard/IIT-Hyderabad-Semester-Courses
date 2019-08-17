@@ -26,7 +26,7 @@ def Signal_Ideal_Delay(signal,d):										# Function to generate ideal delay in
 
 def Moving_Average_System(signal,M = 10):								# Function of Moving Average System using Ideal Delay System							
 	"""
-	Moving Average System using Ideal Dealy System.
+	Moving Average System using Ideal Delay System.
 	"""
 	p,q,s = M,signal.shape[0]- M,signal.shape[0]
 	signal_new = np.zeros(s)
