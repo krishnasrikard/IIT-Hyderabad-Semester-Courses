@@ -39,7 +39,7 @@ def Sin_Sampling(a,b,F,A = 1,f = 1):									# Function to plot sampled Sin wave
 	return amplitude,time
 
 
-frequencies = [1,2,3.5,4,5,6,7]
+frequencies = [1,2,3,3.5,4,5,6,7]
 
 for i in frequencies:
 	x,t = Sin_Sampling(0,100,F = 8000,f = i*1000)
