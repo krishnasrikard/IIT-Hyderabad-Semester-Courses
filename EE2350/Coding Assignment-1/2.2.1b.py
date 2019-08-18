@@ -1,6 +1,24 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
+def Convolution_Manual(A,B):											# Function to Convolve 2 signals without using numpy
+	a,b = A.shape[0],B.shape[0]
+	s = a+b-1
+	output = np.zeros(s)
+	time = np.arange(0,s)
+	
+	for n in range(s):
+		for k in range(a):
+			j = n - k
+			if (j < 0 or j > b-1):
+				l = 0
+			else:
+				l = B[j]
+				
+			output[n] += A[k] * l	
+			
+	return output,time
+	
 def Sin_Discrete(a,b,F,A = 1,f = 1):									# Function to generate Discrete Sinusoid
 	"""
 	A = Amplitude
@@ -67,6 +85,8 @@ def Moving_Average_System(signal,M = 10):								# Function of Moving Average Sy
 def Backward_Differencing_System(S):									# Function of Backward Differencing System
 	"""
 	y[n] = x[n] - x[n-1]
+	h[n] = {1, -1}  ------- Can be used if we want to use convolution
+	Convolution_Manual can be used to convolve.
 	"""
 	s = S.shape[0]
 	Y = np.zeros(s+1)
@@ -93,6 +113,8 @@ def Backward_Differencing_System(S):									# Function of Backward Differencing
 def Filter_1(S):														# Function generator
 	"""
 	y[n] = x[n] - 2x[n-1] + x[n-2]
+	h[n] = {1, -2, 1}  ------- Can be used if we want to use convolution
+	Convolution_Manual can be used to convolve.
 	"""
 	s = S.shape[0]
 	Y = np.zeros(s+2)
@@ -123,7 +145,7 @@ def Filter_1(S):														# Function generator
 
 def Squarer_System(x):													# Function to apply filter on a array 
 	"""
-	Applying Backward Differencing System/Filter on an array
+	Applying Squarer System/Filter on an array
 	"""
 	n = x.shape[0]
 	output = np.zeros(n)
