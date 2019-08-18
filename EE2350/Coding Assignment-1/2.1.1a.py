@@ -18,7 +18,7 @@ def Reverse_Signal(signal):												# Function to reverse a signal
 
 x_reverse = Reverse_Signal(x)
 s = x_reverse.shape[0]
-time_reverse = np.arange(s)
+time_reverse = np.arange(-s+1,1)
 
 plt.figure(figsize=(13, 8))
 
