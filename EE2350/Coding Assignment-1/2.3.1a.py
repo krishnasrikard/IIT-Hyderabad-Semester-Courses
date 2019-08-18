@@ -7,7 +7,7 @@ from scipy.io.wavfile import read
 from scipy.io.wavfile import write
 
 
-rate,audio_original = read('Audio.wav')
+rate,audio_original = read('speech.wav')
 audio = audio_original[:,0]
 print (audio.shape[0])
 print (audio.shape[0]/rate)												# Time of track
@@ -49,7 +49,7 @@ def Convolution_Manual(A,B):											# Function to Convolve 2 signals without 
 			
 	return output,time
 	
-def Reverberation(audio,M=100):											# Function to generate a Reverberated Audio signal
+def Reverberation_1(audio,M=100):										# Function to generate a Reverberated Audio signal
 	"""
 	M = No.of Refelections
 	audio = signal to be Reverberated
@@ -58,11 +58,19 @@ def Reverberation(audio,M=100):											# Function to generate a Reverberated 
 	print (h)
 	
 	output,time = Convolution_Manual(audio,h)
+	"""
+	If this takes time use
 	
+	output = np.convolve(audio,h)
+	s = output.shape[0]
+	time = np.arange(s)
+	
+	"""
+
 	return output,time
 
 Plot_Audio(audio)
 	
-audio_reverb,time = Reverberation(audio)
+audio_reverb,time = Reverberation_1(audio)
 Plot_Audio(audio_reverb)
-write("Audio_Reverberated.wav",rate,audio_reverb)						# Creating file for reverberated audio signal
+write("speech_Reverberated_1.wav",rate,audio_reverb)					# Creating file for reverberated audio signal
