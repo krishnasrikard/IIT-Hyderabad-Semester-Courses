@@ -1,20 +1,15 @@
-# Code for Moving Average System using Ideal Delay System
+# Code for Moving Average System
 
 import numpy as np
 import matplotlib.pyplot as plt
 
-def Sin_Discrete(a,b,F,A = 1,f = 1):									# Function to generate Discrete Sinusoid
-	"""
-	A = Amplitude
-	F = Sampling Frequency
-	f = Frequency
-	"a" and "b" are range for plotting the graph
-	"""	
-	time = np.arange(a,b,1)
-	amplitude = A*np.sin(2*np.pi*time*f/F)
-	
-	return amplitude,time
+n = int(input("No.of Elements in signal: "))
+x = np.ones(n)
+time = np.arange(n)
 
+for i in range(n):														# Generating the input
+	x[i] = 0.95 ** i
+	
 def Signal_Ideal_Delay(signal,d = 2):									# Function to generate ideal delay in signal
 	"""
 	Now we get ideal delay in signal
@@ -39,16 +34,15 @@ def Moving_Average_System(signal,M = 10):								# Function of Moving Average Sy
 	
 	return signal_new,time
 	
-
-S,time = Sin_Discrete(0,50,32)
-S_filtered,time_filtered = Moving_Average_System(S)
+	
+x_filtered,time_filtered = Moving_Average_System(x)
 
 plt.figure(figsize=(13, 8))
 
 ax = plt.subplot(1, 2, 1)
-plt.stem(time,S,'r')
+plt.stem(time,x,'r')
 
 ax = plt.subplot(1,2,2)
-plt.stem(time_filtered,S_filtered,'y')
+plt.stem(time_filtered,x_filtered,'y')
 
 plt.show()
