@@ -3,6 +3,24 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
+def Convolution_Manual(A,B):											# Function to Convolve 2 signals without using numpy
+	a,b = A.shape[0],B.shape[0]
+	s = a+b-1
+	output = np.zeros(s)
+	time = np.arange(0,s)
+	
+	for n in range(s):
+		for k in range(a):
+			j = n - k
+			if (j < 0 or j > b-1):
+				l = 0
+			else:
+				l = B[j]
+				
+			output[n] += A[k] * l	
+			
+	return output,time
+	
 def Sin_Discrete(a,b,F,A = 1,f = 1):									# Function to generate Discrete Sinusoid
 	"""
 	A = Amplitude
@@ -18,6 +36,8 @@ def Sin_Discrete(a,b,F,A = 1,f = 1):									# Function to generate Discrete Sin
 def Filter(S):															# Function generator
 	"""
 	y[n] = x[n] - 2x[n-1] + x[n-2]
+	h[n] = {1, -2, 1}  ------- Can be used if we want to use convolution
+	Convolution_Manual can be used to convolve.
 	"""
 	s = S.shape[0]
 	Y = np.zeros(s+2)
