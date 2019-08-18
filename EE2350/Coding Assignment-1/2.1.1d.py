@@ -40,7 +40,7 @@ def Odd_Signal_Component(signal):										# Function to get odd component of si
 	
 x_reverse = Reverse_Signal(x)
 s = x_reverse.shape[0]
-time_reverse = np.arange(s)
+time_reverse = np.arange(-s+1,1)
 
 x_even_component = Even_Signal_Component(x)
 s = x_even_component.shape[0]
