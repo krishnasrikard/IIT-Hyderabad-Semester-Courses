@@ -40,31 +40,27 @@ def Odd_Signal_Component(signal):										# Function to get odd component of si
 	
 	return odd_signal
 	
-def Signal_Ideal_Delay(signal,d = 2):										# Function to generate ideal delay in signal
+def Signal_Ideal_Delay(signal,d = 2):									# Function to generate ideal delay in signal
 	"""
 	Now we get ideal delay in signal
 	"""
-	s = signal.shape[0] - d
-	signal_delay = signal[d:]
+	s = signal.shape[0]
+	time = np.arange(+d,s+d)
 	
-	return signal_delay
-
+	return signal,time
 
 def Moving_Average_System(signal,M = 10):								# Function of Moving Average System using Ideal Delay System							
 	"""
-	Moving Average System using Ideal Dealy System.
+	Moving Average System using Ideal Delay System.
 	"""
 	p,q,s = M,signal.shape[0]- M,signal.shape[0]
-	signal_new = np.zeros(s)
-	add = np.zeros(s)
-		
-	for k in range(M+1):
-		add[0:s-k] = Signal_Ideal_Delay(signal,k)
-		signal_new += add
-		
-	signal_new = (signal_new)/(M + 1)
+	signal_new = np.zeros(s+M)
 	
-	time = np.arange(s)	
+	for i in range(M+1):
+		signal_new[M-i:M-i+s] += Signal_Ideal_Delay(signal,d=i)[0]
+		
+	signal_new = signal_new/(M + 1)		
+	time = np.arange(0,s+M)
 	
 	return signal_new,time
 
@@ -229,10 +225,12 @@ plt.show()
 """
 print ("-------------------------------------------------------------------------------")
 
-y1,y2,Output_Sum = Signal_Ideal_Delay(x1),Signal_Ideal_Delay(x2),Signal_Ideal_Delay(Input_Sum)
+y1,t1 = Signal_Ideal_Delay(x1)
+y2,t2 = Signal_Ideal_Delay(x2)
+Output_Sum,to = Signal_Ideal_Delay(Input_Sum)
 Y = a1*y1 + a2*y2
 y = Y.shape[0]
-time = np.arange(y)
+time = t1
 if (np.sum(Y - Output_Sum) == 0):
 	print ("Signal_Ideal_Delay is Linear System")
 else:
@@ -240,9 +238,9 @@ else:
 """
 plt.figure(figsize=(13, 8))
 ax = plt.subplot(1, 2, 1)
-plt.stem(time,Y,'r')
+plt.stem(t1,Y,'r')
 ax = plt.subplot(1,2,2)
-plt.stem(time,Output_Sum,'y')
+plt.stem(t1,Output_Sum,'y')
 plt.show()
 """
 print ("-------------------------------------------------------------------------------")
