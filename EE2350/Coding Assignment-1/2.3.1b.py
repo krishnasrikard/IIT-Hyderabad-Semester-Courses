@@ -25,7 +25,7 @@ def Attenuation_Coeff2(M = 1000):										# Function to calculate Attenuation C
 	M = No.of Reflections
 	"""
 	
-	h = np.random.normal(0, 0.25, M)
+	h = 0.25*np.random.normal(0, 1, M)
 		
 	return h
 	
