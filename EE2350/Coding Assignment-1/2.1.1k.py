@@ -17,7 +17,7 @@ def Sin_Discrete(a,b,F,A = 1,f = 1):									# Function to generate Discrete Sin
 	
 def Squarer_System(x):													# Function to apply filter on a array 
 	"""
-	Applying Backward Differencing System/Filter on an array
+	Applying Squarer System/Filter on an array
 	"""
 	n = x.shape[0]
 	output = np.zeros(n)
