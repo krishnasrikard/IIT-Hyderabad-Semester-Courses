@@ -39,32 +39,28 @@ def Odd_Signal_Component(signal):										# Function to get odd component of si
 	odd_signal = signal[1::2]
 	
 	return odd_signal
-	
-def Signal_Ideal_Delay(signal,d = 2):										# Function to generate ideal delay in signal
+
+def Signal_Ideal_Delay(signal,d = 2):									# Function to generate ideal delay in signal
 	"""
 	Now we get ideal delay in signal
 	"""
-	s = signal.shape[0] - d
-	signal_delay = signal[d:]
-	
-	return signal_delay
-
+	s = signal.shape[0]
+	time = np.arange(+d,s+d)
+	# time is not necessary here
+	return signal
 
 def Moving_Average_System(signal,M = 10):								# Function of Moving Average System using Ideal Delay System							
 	"""
-	Moving Average System using Ideal Dealy System.
+	Moving Average System using Ideal Delay System.
 	"""
 	p,q,s = M,signal.shape[0]- M,signal.shape[0]
-	signal_new = np.zeros(s)
-	add = np.zeros(s)
-		
-	for k in range(M+1):
-		add[0:s-k] = Signal_Ideal_Delay(signal,k)
-		signal_new += add
-		
-	signal_new = (signal_new)/(M + 1)
+	signal_new = np.zeros(s+M)
 	
-	time = np.arange(s)	
+	for i in range(M+1):
+		signal_new[M-i:M-i+s] += Signal_Ideal_Delay(signal,d=i)[0]
+		
+	signal_new = signal_new/(M + 1)		
+	time = np.arange(0,s+M)
 	
 	return signal_new,time
 
@@ -172,6 +168,7 @@ for i in range(101):
 x1[100:] = t
 x2,time = Sin_Discrete(-100,101,f=200,F=8000)
 Input_Sum = a1*x1 + a2*x2
+d = 2																	# Giving Delay as "2" for all cases to check Time Invarience Property
 
 
 print ("-------------------------------------------------------------------------------")
@@ -179,14 +176,14 @@ print ("------------------------------------------------------------------------
 y1,y2 = Signal_Ideal_Delay(Reverse_Signal(x1)),Signal_Ideal_Delay(Reverse_Signal(x2))
 Y1,Y2 = Reverse_Signal(Signal_Ideal_Delay(x1)),Reverse_Signal(Signal_Ideal_Delay(x2))
 t = Y1.shape[0]
-time = np.arange(t)
+time = np.arange(+d,t+d)
 if (np.sum(Y1 - y1) == 0 and np.sum(Y2 - y2) == 0):
 	print ("Reverse-Signal is Time Invarient")
 else:
 	print ("Reverse-Signal is Time Varient")
-
-fig, ax = plt.subplots(2, 2)
 """
+fig, ax = plt.subplots(2, 2)
+
 ax[0, 0].stem(time,Y1, 'r')
 ax[1, 0].stem(time,y1, 'b')
 ax[0, 1].stem(time,Y2, 'r')
@@ -198,14 +195,14 @@ print ("------------------------------------------------------------------------
 y1,y2 = Signal_Ideal_Delay(Signal_Ideal_Delay(x1)),Signal_Ideal_Delay(Signal_Ideal_Delay(x2))
 Y1,Y2 = Signal_Ideal_Delay(Signal_Ideal_Delay(x1)),Signal_Ideal_Delay(Signal_Ideal_Delay(x2))
 t = Y1.shape[0]
-time = np.arange(t)
+time = np.arange(2*d,t+2*d)
 if (np.sum(Y1 - y1) == 0 and np.sum(Y2 - y2) == 0):
 	print ("Signal_Ideal_Delay is Time Invarient")
 else:
 	print ("Signal_Ideal_Delay is Time Varient")
-
-fig, ax = plt.subplots(2, 2)
 """
+fig, ax = plt.subplots(2, 2)
+
 ax[0, 0].stem(time,Y1, 'r')
 ax[1, 0].stem(time,y1, 'b')
 ax[0, 1].stem(time,Y2, 'r')
@@ -216,10 +213,10 @@ print ("------------------------------------------------------------------------
 
 t1,t2 = Signal_Ideal_Delay(Even_Signal_Component(x1)),Signal_Ideal_Delay(Even_Signal_Component(x2))
 Y1,Y2 = Even_Signal_Component(Signal_Ideal_Delay(x1)),Even_Signal_Component(Signal_Ideal_Delay(x2))
-y1 = np.append(t1,0)
-y2 = np.append(t2,0)
+y1 = t1
+y2 = t2
 t = Y1.shape[0]
-time = np.arange(t)
+time = np.arange(+d,t+d)
 if (np.sum(Y1 - y1) == 0 and np.sum(Y2 - y2) == 0):
 	print ("Even_Signal_Component is Time Invarient")
 else:
@@ -237,10 +234,10 @@ print ("------------------------------------------------------------------------
 
 t1,t2 = Signal_Ideal_Delay(Odd_Signal_Component(x1)),Signal_Ideal_Delay(Odd_Signal_Component(x2))
 Y1,Y2 = Odd_Signal_Component(Signal_Ideal_Delay(x1)),Odd_Signal_Component(Signal_Ideal_Delay(x2))
-y1 = np.append(t1,0)
-y2 = np.append(t2,0)
+y1 = t1
+y2 = t2
 t = Y1.shape[0]
-time = np.arange(t)
+time = np.arange(+d,t+d)
 if (np.sum(Y1 - y1) == 0 and np.sum(Y2 - y2) == 0):
 	print ("Odd_Signal_Component is Time Invarient")
 else:
@@ -258,7 +255,7 @@ print ("------------------------------------------------------------------------
 
 y1,y2 = Signal_Ideal_Delay(Squarer_System(x1)),Signal_Ideal_Delay(Squarer_System(x2))
 Y1,Y2 = Squarer_System(Signal_Ideal_Delay(x1)),Squarer_System(Signal_Ideal_Delay(x2))
-time = np.arange(t)
+time = np.arange(+d,t+d)
 if (np.sum(Y1 - y1) == 0 and np.sum(Y2 - y2) == 0):
 	print ("Squarer_System is Time Invarient")
 else:
@@ -279,7 +276,7 @@ y2 = Signal_Ideal_Delay(Moving_Average_System(x2)[0])
 Y1,T1 = Moving_Average_System(Signal_Ideal_Delay(x1))
 Y2,T2 = Moving_Average_System(Signal_Ideal_Delay(x2))
 t = Y1.shape[0]
-time = np.arange(t)
+time = np.arange(+d,t+d)
 if (np.sum(Y1 - y1) == 0 and np.sum(Y2 - y2) == 0):
 	print ("Moving_Average_System is Time Invarient")
 else:
@@ -300,7 +297,7 @@ y2 = Signal_Ideal_Delay(Backward_Differencing_System(x2)[0])
 Y1,T1 = Backward_Differencing_System(Signal_Ideal_Delay(x1))
 Y2,T2 = Backward_Differencing_System(Signal_Ideal_Delay(x2))
 t = Y1.shape[0]
-time = np.arange(t)
+time = np.arange(+d,t+d)
 if (round(np.sum(Y1 - y1)) == 0 and round(np.sum(Y2 - y2)) == 0):
 	print ("Backward_Differencing_System is Time Invarient")
 else:
@@ -321,11 +318,11 @@ y2 = Signal_Ideal_Delay(Filter_1(x2)[0])
 Y1,T1 = Filter_1(Signal_Ideal_Delay(x1))
 Y2,T2 = Filter_1(Signal_Ideal_Delay(x2))
 t = Y1.shape[0]
-time = np.arange(t)
+time = np.arange(+d,t+d)
 if (round(np.sum(Y1 - y1)) == 0 and round(np.sum(Y2 - y2)) == 0):
-	print ("Filter_1 is Time Invarient")
+	print ("y[n] = x[n] - 2x[n-1] + x[n-2] is Time Invarient")
 else:
-	print ("Filter_1 is Time Varient")
+	print ("y[n] = x[n] - 2x[n-1] + x[n-2] is Time Varient")
 
 fig, ax = plt.subplots(2, 2)
 """
@@ -342,12 +339,11 @@ y2 = Signal_Ideal_Delay(Filter_2(x2)[0])
 Y1,T1 = Filter_2(Signal_Ideal_Delay(x1))
 Y2,T2 = Filter_2(Signal_Ideal_Delay(x2))
 t = Y1.shape[0]
-time = np.arange(t)
-print (np.sum(Y2-y2))
+time = np.arange(+d,t+d)
 if (round(np.sum(Y1 - y1)) == 0 and round(np.sum(Y2 - y2)) == 0):
-	print ("Filter_2 is Time Invarient")
+	print ("y[n] = x[2-n] + x[n-2] is Time Invarient")
 else:
-	print ("Filter_2 is Time Varient")
+	print ("y[n] = x[2-n] + x[n-2] is Time Varient")
 
 fig, ax = plt.subplots(2, 2)
 """
