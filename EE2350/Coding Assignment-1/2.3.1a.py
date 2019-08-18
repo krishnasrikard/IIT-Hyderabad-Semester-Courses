@@ -5,7 +5,7 @@ import scipy
 import matplotlib.pyplot as plt
 from scipy.io.wavfile import read
 from scipy.io.wavfile import write
-
+import random
 
 rate,audio_original = read('speech.wav')
 audio = audio_original[:,0]
@@ -13,21 +13,19 @@ print (audio.shape[0])
 print (audio.shape[0]/rate)												# Time of track
 # print (audio.shape[1])												# No.of Channels
 
+
 def Plot_Audio(audio):													# Function to plot Audio Signal
 	s = audio.shape[0]
 	time = np.arange(s)
 	plt.plot(time,audio)
 	plt.show()
 	
-def Attenuation_Coeff1(M = 100):										# Function to calculate Attenuation Coefficient
+def Attenuation_Coeff2(M = 1000):										# Function to calculate Attenuation Coefficient
 	"""
 	M = No.of Reflections
 	"""
 	
-	h = np.ones(100)
-	
-	for i in range(100):
-		h[i:] = h[i:] * 0.999
+	h = 0.25 * np.random.rand(M)
 		
 	return h
 	
@@ -49,12 +47,12 @@ def Convolution_Manual(A,B):											# Function to Convolve 2 signals without 
 			
 	return output,time
 	
-def Reverberation_1(audio,M=100):										# Function to generate a Reverberated Audio signal
+def Reverberation_2(audio,M=1000):										# Function to generate a Reverberated Audio signal
 	"""
 	M = No.of Refelections
 	audio = signal to be Reverberated
 	"""
-	h = Attenuation_Coeff1(M)
+	h = Attenuation_Coeff2(M)
 	print (h)
 	
 	output,time = Convolution_Manual(audio,h)
@@ -66,11 +64,11 @@ def Reverberation_1(audio,M=100):										# Function to generate a Reverberated
 	time = np.arange(s)
 	
 	"""
-
+	
 	return output,time
 
 Plot_Audio(audio)
 	
-audio_reverb,time = Reverberation_1(audio)
+audio_reverb,time = Reverberation_2(audio)
 Plot_Audio(audio_reverb)
-write("speech_Reverberated_1.wav",rate,audio_reverb)					# Creating file for reverberated audio signal
+write("speech_Reverberated_2.wav",rate,audio_reverb)					# Creating file for reverberated audio signal
