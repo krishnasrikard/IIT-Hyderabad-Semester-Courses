@@ -14,6 +14,24 @@ print (audio.shape[0])
 print (audio.shape[0]/rate)												# Time of track
 # print (audio.shape[1])												# No.of Channels
 
+def Convolution_Manual(A,B):											# Function to Convolve 2 signals without using numpy
+	a,b = A.shape[0],B.shape[0]
+	s = a+b-1
+	output = np.zeros(s)
+	time = np.arange(0,s)
+	
+	for n in range(s):
+		for k in range(a):
+			j = n - k
+			if (j < 0 or j > b-1):
+				l = 0
+			else:
+				l = B[j]
+				
+			output[n] += A[k] * l	
+			
+	return output,time
+	
 def Plot_Audio(audio):													# Function to plot Audio Signal
 	s = audio.shape[0]
 	time = np.arange(s)
@@ -29,11 +47,12 @@ def Add_Noise(audio,mu = 0,sigma = 1):									# Function to add Noise
 	
 	return audio
 	
-
 def Mean_Filter(audio,M):												# Function to apply Mean Filter to audio signal
 	"""
 	audio = signal on which filter needs to be applied
 	M = Bandwidth of filter
+	h[n] = np.ones(2*M) --- Can be used if we want to do Convolution
+	Convolution can be done by using Convolution_Manual Function.
 	"""
 	p,q,s = M,audio.shape[0]- M,audio.shape[0]
 	audio_change = np.zeros(s+2*M)
