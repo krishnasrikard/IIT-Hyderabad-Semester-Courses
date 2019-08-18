@@ -12,14 +12,12 @@ def Signal_Ideal_Delay(signal,d = 2):										# Function to generate ideal dela
 	"""
 	Now we get ideal delay in signal
 	"""
-	s = signal.shape[0] - d
-	signal_delay = signal[d:]
+	s = signal.shape[0]
+	time = np.arange(+d,s+d)
 	
-	return signal_delay
+	return signal,time
 
-x_ideal_delay = Signal_Ideal_Delay(x,d)
-s = x_ideal_delay.shape[0]
-time_delay = np.arange(s)
+x_ideal_delay,time_delay = Signal_Ideal_Delay(x,d)
 
 plt.figure(figsize=(13, 8))
 
