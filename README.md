@@ -24,3 +24,7 @@ We interfaced many different sensors using Arduino.
 #### EE 2350 -- DSP(Digital Signal Processing) by K.Sri Rama Murthy Sir
 
 We will try basic methods of Sampling,Quantisation and Filtering of a Signal.
+
+#### EE 2010 -- Engineering Electromagnetics by Naresh Sir and Seshadri Sravan Kumar Sir
+
+Implementation of "Averaging Property" of Potentials.
