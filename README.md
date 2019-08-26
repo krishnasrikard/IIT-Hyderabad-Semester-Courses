@@ -28,3 +28,7 @@ We will try basic methods of Sampling,Quantisation and Filtering of a Signal.
 #### EE 2010 -- Engineering Electromagnetics by Naresh Sir and Seshadri Sravan Kumar Sir
 
 Implementation of "Averaging Property" of Potentials.
+
+#### EE 2015 -- Independent Project by Aditya Sir,Naresh Sir and Seshadri Sravan Kumar Sir
+
+Projects and Assignments on Signal Processing.
