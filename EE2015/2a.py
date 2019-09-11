@@ -37,6 +37,8 @@ def Square_Wave(a,b,L=1500):											# Generating Square Wave
 	for n in N:
 		output += (Sin_Continous(a,b,A=1/(n),f=n))[0]
 		
+	output = (output - min(output))/(max(output) - min(output))
+	
 	plt.xlabel("Time")
 	plt.ylabel("Output")
 	plt.plot(time,output)
@@ -57,6 +59,8 @@ def Triangle_Wave(a,b,L=1500):											# Generating Triangle Wave
 	
 	for n in N:
 		output += (Cos_Continous(a,b,A=1/(n**2),f=n))[0]
+	
+	output = (output - min(output))/(max(output) - min(output))
 		
 	plt.xlabel("Time")
 	plt.ylabel("Output")

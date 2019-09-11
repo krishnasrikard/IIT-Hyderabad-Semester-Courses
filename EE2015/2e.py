@@ -24,64 +24,40 @@ def Cos_Continous(a,b,A = 1,f = 1):										# Function to generate and plot a C
 	
 	return amplitude,time
 
-def Square_Wave(a,b,L=1500):											# Generating Square Wave
+def Square_Wave(a,b,L=1500):											# Generating Square Wave Fourier Spectrum
 	"""
 	L = Limit
 	"""
 	
 	N = np.arange(1,L,2)
-	u = N.shape[0]												
-	time = np.arange(a,b,0.01)
-	s = time.shape[0]
-	output = np.zeros(s)
+	u = N.shape[0]
 	spectrum = np.zeros(u)
 		
-	
 	for n in N:
-		output += (Sin_Continous(a,b,A=1/(n),f=n))[0]
 		spectrum[int(n/2)] = 1/n
-	
-	output = (output - min(output))/(max(output) - min(output))
-	
-	plt.figure(figsize=(13, 8))
-	ax = plt.subplot(1,2,1)
-	plt.plot(time,output)
-	
-	ax = plt.subplot(1,2,2)
+		
 	plt.plot(N,spectrum)
-	
 	plt.show()
 
-	return output,time
+	return N,spectrum
 
-def Triangle_Wave(a,b,L=1500):											# Generating Triangle Wave
+def Triangle_Wave(a,b,L=1500):											# Generating Triangle Wave Fourier Spectrum
 	"""
 	L = Limit
 	"""
 	
 	N = np.arange(1,L,2)
-	u = N.shape[0]													
-	time = np.arange(a,b,0.01)
-	s = time.shape[0]
-	output = np.zeros(s)
+	u = N.shape[0]
 	spectrum = np.zeros(u)
 	
 	for n in N:
-		output += (Cos_Continous(a,b,A=1/(n**2),f=n))[0]
 		spectrum[int(n/2)] = 1/n**2
 	
-	output = (output - min(output))/(max(output) - min(output))
-			
-	plt.figure(figsize=(13, 8))
-	ax = plt.subplot(1,2,1)
-	plt.plot(time,output)
-	
-	ax = plt.subplot(1,2,2)
 	plt.plot(N,spectrum)
 	
 	plt.show()
 		
-	return output,time
+	return N,spectrum
 
 Square_Wave(-2,2,L=15)
 Triangle_Wave(-2,2,L=15)

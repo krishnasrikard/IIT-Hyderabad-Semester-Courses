@@ -17,17 +17,24 @@ def function1(L,a,b):													# Generating Harmonics of Sine Wave,adding the
 	L = Limit
 	"""
 	
-	N = np.arange(1,L,1)												
+	N = np.arange(1,L,1)
+	u = N.shape[0]													
 	time = np.arange(a,b,0.01)
 	s = time.shape[0]
 	output = np.zeros(s)
+	spectrum = np.zeros(u)
 	
 	for n in N:
 		output += (Sin_Continous(a,b,A=1/n,f=n))[0]
+		spectrum[int(n/2)] = 1/n
 		
-	plt.xlabel("Time")
-	plt.ylabel("Output")
+	plt.figure(figsize=(13, 8))
+	ax = plt.subplot(1,2,1)
 	plt.plot(time,output)
+	
+	ax = plt.subplot(1,2,2)
+	plt.plot(N,spectrum)
+	
 	plt.show()
 		
 	return output,time
@@ -37,20 +44,29 @@ def function2(L,a,b):													# Generating Odd Harmonics of Sine Wave,adding
 	L = Limit
 	"""
 	
-	N = np.arange(1,L,2)												
+	N = np.arange(1,L,2)
+	u = N.shape[0]												
 	time = np.arange(a,b,0.01)
 	s = time.shape[0]
 	output = np.zeros(s)
+	spectrum = np.zeros(u)
 	
 	for n in N:
 		output += (Sin_Continous(a,b,A=1/(n),f=n))[0]
+		spectrum[int(n/2)] = 1/n
 		
-	plt.xlabel("Time")
-	plt.ylabel("Output")
+	plt.figure(figsize=(13, 8))
+	ax = plt.subplot(1,2,1)
 	plt.plot(time,output)
+	
+	ax = plt.subplot(1,2,2)
+	plt.plot(N,spectrum)
+	
 	plt.show()
 		
 	return output,time
 	
 function1(100,0,4*np.pi)
-function2(100,0,4*np.pi)	
+function2(100,0,4*np.pi)
+
+	
