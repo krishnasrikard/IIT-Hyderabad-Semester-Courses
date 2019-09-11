@@ -66,7 +66,7 @@ def function2(L,a,b):													# Generating Odd Harmonics of Sine Wave,adding
 		
 	return output,time
 	
-function1(100,0,4*np.pi)
-function2(100,0,4*np.pi)
+function1(1000,0,4*np.pi)
+function2(1000,0,4*np.pi)
 
 	
