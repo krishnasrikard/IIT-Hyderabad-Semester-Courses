@@ -33,6 +33,6 @@ Implementation of "Averaging Property" of Potentials.
 
 Projects and Assignments on Signal Processing.
 
-#### EE 1360 -- Communication Systems bt Sai Dheeraj Sir
+#### EE 1360 -- Communication Systems by Sai Dheeraj Sir
 
 Convolution of Audio Signal with Impulse in Matlab
