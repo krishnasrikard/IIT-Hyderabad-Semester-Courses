@@ -32,3 +32,7 @@ Implementation of "Averaging Property" of Potentials.
 #### EE 2015 -- Independent Project by Aditya Sir,Naresh Sir and Seshadri Sravan Kumar Sir
 
 Projects and Assignments on Signal Processing.
+
+#### EE 1360 -- Communication Systems bt Sai Dheeraj Sir
+
+Convolution of Audio Signal with Impulse in Matlab
