@@ -36,3 +36,7 @@ Projects and Assignments on Signal Processing.
 #### EE 1360 -- Communication Systems by Sai Dheeraj Sir
 
 Convolution of Audio Signal with Impulse in Matlab
+
+#### CS 3510 -- Operating Systems-1 by Bheemarjuna Reddy Sir
+
+Understanding Linux Operating System
