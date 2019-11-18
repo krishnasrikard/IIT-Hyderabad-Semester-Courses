@@ -4,21 +4,13 @@
 #include <sys/types.h>
 #include <stdio.h>
 
-int main()
+void main()
 {
 	while(1)
 	{
-		type_prompt();
-		read_command(command,parameters);
+		char* command = "ls";
+		printf("Calling Status.c");
 
-		if(fork() != 0)
-		{
-			waitpid(-1,&status,0);
-		}
-
-		else
-		{
-			execve(command,parameters,0);
-		}
+		execve("st",NULL,NULL);
 	}
 }
