@@ -3,14 +3,11 @@
 #include <sys/syscall.h> // loc: /usr/src/include/i386-linux-gnu/bits/syscall.h, defines syscall numbers/Macros
 #include <sys/types.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 void main()
 {
-	while(1)
-	{
-		char* command = "ls";
-		printf("Calling Status.c");
+	printf("Calling Status.c");
+	execve("a.out",NULL,1);
 
-		execve("st",NULL,NULL);
-	}
 }

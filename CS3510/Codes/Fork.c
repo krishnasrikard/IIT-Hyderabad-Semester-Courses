@@ -11,7 +11,7 @@ int main()
 
 	if (pid < 0)
 	{
-		fprintf(stdeer, "Fork Failed")
+		fprintf(stderr, "Fork Failed");
 	}
 
 	else if (pid == 0)
