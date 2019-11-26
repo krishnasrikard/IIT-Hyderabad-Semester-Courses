@@ -40,3 +40,7 @@ Convolution of Audio Signal with Impulse in Matlab
 #### CS 3510 -- Operating Systems-1 by Bheemarjuna Reddy Sir
 
 Understanding Linux Operating System
+
+#### EE 2133 -- Analog Electronics by Gajendranath Sir
+
+Analog Circuits Simulation in LTSpice
