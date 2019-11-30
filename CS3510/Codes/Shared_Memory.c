@@ -27,8 +27,9 @@ if (cpid == 0)
 
 else
 {
-	wait(NULL);
+	
 	shared_memory = (char*) shmat(segment_id, NULL, 0);//attach
+	wait(NULL);
 	printf("Process %d read: %s\n", getpid(), shared_memory);
 	shmdt(shared_memory);//detach
 	shmctl(segment_id, IPC_RMID, NULL);//remove segment
