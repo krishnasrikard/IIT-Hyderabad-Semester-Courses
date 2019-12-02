@@ -40,8 +40,8 @@ int main()
 
 		else
 		{
-			fprintf(stdout,"Waiting for Process-1 and Process-2 to terminate.");
-			wait(NULL);
+			fprintf(stdout,"Waiting for Process-1 and Process-2 to terminate.\n");
+			waitpid(pid2,&status,0);
 			exit(0);
 		}
 	}
