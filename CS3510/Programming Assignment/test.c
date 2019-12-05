@@ -1,72 +1,42 @@
-// C program to implement sighup(), sigint() 
-// and sigquit() signal functions 
 #include <signal.h> 
 #include <stdio.h> 
 #include <stdlib.h> 
 #include <sys/types.h> 
-#include <unistd.h> 
+#include <unistd.h>
+#include <time.h>
 
-// function declaration 
-void sighup(); 
-void sigint(); 
-void sigquit(); 
-
-// driver code 
-void main() 
-{ 
-  int pid; 
-
-  /* get child process */
-  if ((pid = fork()) < 0)
-  { 
-    perror("fork"); 
-    exit(1); 
-  } 
-
-  if (pid == 0)
-  { /* child */
-    signal(SIGHUP, sighup); 
-    signal(SIGINT, sigint); 
-    signal(SIGQUIT, sigquit); 
-    for (;;) 
-      ; /* loop for ever */
-  } 
-
-  else /* parent */
-  { /* pid hold id of child */
-    printf("\nPARENT: sending SIGHUP\n\n"); 
-    kill(pid, SIGHUP); 
-
-    sleep(3); /* pause for 3 secs */
-    printf("\nPARENT: sending SIGINT\n\n"); 
-    kill(pid, SIGINT); 
-
-    sleep(3); /* pause for 3 secs */
-    printf("\nPARENT: sending SIGQUIT\n\n"); 
-    kill(pid, SIGQUIT); 
-    sleep(3); 
-  } 
-} 
-
-// sighup() function definition 
 void sighup() 
-
-{ 
+{
   signal(SIGHUP, sighup); /* reset signal */
   printf("CHILD: I have received a SIGHUP\n"); 
 } 
 
-// sigint() function definition qq
-void sigint() 
+int main()
+{
+  for(int i=0;i<8;i++)
+  {
+      int pid;
+      time_t t1,t2,t3,t4,tc,tp;
 
-{ 
-  signal(SIGINT, sigint); /* reset signal */
-  printf("CHILD: I have received a SIGINT\n"); 
-} 
+      pid = fork();
 
-// sigquit() function definition 
-void sigquit() 
-{ 
-  printf("My DADDY has Killed me!!!\n"); 
-  exit(0); 
-} 
+      if (pid == 0)  {
+          t2 = clock();
+          signal(SIGHUP, sighup);
+          //t1 = clock() - t1;
+      }
+
+      else  {
+          printf("\nPARENT: sending SIGHUP\n");
+          t1 = clock();
+          kill(pid,SIGHUP);
+          //t2 = clock() - t2;
+          exit(0);
+      }
+
+      tc = t2 - t1;
+
+      long double diff = (long double)(tc)/CLOCKS_PER_SEC; 
+      printf("Time for Context Switch is %Lf\n",diff);
+  }
+}

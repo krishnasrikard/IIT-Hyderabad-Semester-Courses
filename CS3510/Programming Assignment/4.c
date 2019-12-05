@@ -1,3 +1,13 @@
+/*******************************************************************
+ *
+ * 	4.c - For the given Operating Systems Coding Assignment
+ *
+ *	
+ *	Utility - This code created 2 Processes measures
+ *	          Context Switch Time
+ *
+ */
+
 #include <signal.h> 
 #include <stdio.h> 
 #include <stdlib.h> 
@@ -5,56 +15,36 @@
 #include <unistd.h>
 #include <time.h>
 
-void sighup() 
-{
-	signal(SIGHUP, sighup); /* reset signal */
-	printf("CHILD: I have received a SIGHUP\n"); 
+void SighUp()  {
+	  // signal(SIGHUP, SighUp); /* reset signal */
+	  printf("CHILD: I have received a SIGHUP\n");
 } 
 
-// sigint() function definition qq
-void sigint() 
-{ 
-	signal(SIGINT, sigint); /* reset signal */
-	printf("CHILD: I have received a SIGINT\n"); 
-} 
+int main()  {
+		
+	for(int i=0;i<8;i++)  {/*Loop executes 8-times and Prints Time for Context Switch */
+    		pid_t pid;											// To store ID of Parent
+    		time_t t1,t2,tc;									// Variables are used to measure time.
 
-// sigquit() function definition 
-void sigquit() 
-{ 
-	printf("My DADDY has Killed me!!!\n"); 
-	exit(0); 
-}
+   			pid = fork();										// Creating a Child Process
 
-int main()
-{
-	int pid;
-	time_t t1,t2,t3,t4,tc,tp;
+  			if (pid == 0)  {/* Child Process created*/
+      				t2 = clock();								// Storing Time-Stamp
+      				signal(SIGHUP, SighUp);						// Sending Signal can calling Function
+      				//t1 = clock() - t1;
+   			}
 
-	pid = fork();
+   			else  {/* Parent Process created*/	
+      				printf("\nPARENT: sending SIGHUP\n");
+      				t1 = clock();								// Storing Time-Stamp
+      				kill(pid,SIGHUP);							// Sending Signal to kill Child Process
+      				//t2 = clock() - t2;
+   					exit(0);
+  			}
 
-	if (pid == 0)
-	{
-		t2 = clock();
-		signal(SIGHUP, sighup);
-		//t1 = clock() - t1;
+  			tc = t2 - t1;
+
+  			long double diff = (long double)(tc)/CLOCKS_PER_SEC; 
+  			printf("Time for Context Switch is %Lf\n",diff);
 	}
-
-	else
-	{
-		printf("\nPARENT: sending SIGHUP\n");
-		t1 = clock();
-		kill(pid,SIGHUP);
-		//t2 = clock() - t2;
-		exit(0);
-	}
-
-	tc = t2 - t1;
-	tp = t4 - t3;
-
-	long double diff = (long double)(t2 - t1)/CLOCKS_PER_SEC;
-
-	printf("%Lf\n",diff);
-
 }
-
-
