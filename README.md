@@ -44,3 +44,7 @@ Understanding Linux Operating System
 #### EE 2133 -- Analog Electronics by Gajendranath Sir
 
 Analog Circuits Simulation in LTSpice
+
+#### EE 2340 -- Information Sciences by Shashank Sir
+
+Codes for Information Sciences Assignment
