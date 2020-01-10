@@ -18,6 +18,6 @@ def Heads_Atmost(n=10,m=5,p=0.3):
 		tp += x
 	return tp
 
-tp = Heads_Atmost()
+tp = Heads_Atmost(1000,350,0.3)
 print (tp)
 
