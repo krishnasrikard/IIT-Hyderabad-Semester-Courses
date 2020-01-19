@@ -7,14 +7,14 @@ def PMF_ASCII(s):
 	
 	# Declaring all ascii as a Dictionary and having values=0
 	ascii_char = {}
-	x = ''.join([chr(i) for i in range(128)])
+	x = ''.join([chr(i) for i in range(256)])
 
 	for c in x:
 		ascii_char[c] = 0
-	
+			
 	# Interating over the entire text and incrementing the corresponding ascii_char only
 	for v in s:
-		ascii_char[v.lower()] += 1
+		ascii_char[v] += 1
 	
 	# Total no.of ascii_char detected		
 	total_ascii_char = sum(ascii_char.values())
@@ -33,7 +33,6 @@ with open('file2.txt', 'r') as file:
 # Printing the Dictionary containing data of ascii_char in text file in seperate lines.
 alpha = PMF_ASCII(data)
 pprint (alpha)
-
 
 # Ploting Histogram for all ascii_char
 plt_ = sns.barplot(list(alpha.keys()), list(alpha.values()))
