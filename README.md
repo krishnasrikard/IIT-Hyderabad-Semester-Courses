@@ -48,3 +48,7 @@ Analog Circuits Simulation in LTSpice
 #### EE 2340 -- Information Sciences by Shashank Sir
 
 Codes for Information Sciences Assignment
+
+#### EE 2025 -- Independent Project by Shashank Sir and Lakshmi Prasad Natrajan Sir
+
+Assignments of Course Independent Project

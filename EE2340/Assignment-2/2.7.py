@@ -42,7 +42,7 @@ def Entropy(p):
 	
 	
 # Reading the Input text file
-file1 =  open('file2.txt', 'r+', encoding='utf-8')
+file1 =  open('file1.txt', 'r+', encoding='utf-8')
 data = file1.read()
 file1.close()
 print ("Length of Data",len(data))	
