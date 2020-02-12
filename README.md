@@ -52,3 +52,7 @@ Codes for Information Sciences Assignment
 #### EE 2025 -- Independent Project by Shashank Sir and Lakshmi Prasad Natrajan Sir
 
 Assignments of Course Independent Project
+
+#### EE 2227 -- Control Systems by GVV Sharma Sir
+
+Presentations of the course Control Systems
