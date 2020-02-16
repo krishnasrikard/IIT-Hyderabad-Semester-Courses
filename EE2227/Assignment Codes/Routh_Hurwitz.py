@@ -5,7 +5,7 @@ import cmath
 from matplotlib import cm
 
 Coeff = np.array([1,1,7,14,31,73,25,200])
-#Coeff = np.array([1,2,1,2])
+Roots = np.roots(Coeff)
 l = Coeff.shape[0]
 
 RH = np.zeros((l,int(np.ceil(l/2))))
@@ -17,7 +17,6 @@ if RH.shape[1] >= Coeff[1::2].shape[0]:
 
 	
 for i in range(2,l):
-	
 	a = RH[i-2]
 	b = RH[i-1]
 	a1,a2 = a[0],b[0]
@@ -43,10 +42,23 @@ for i in range(2,l):
 		
 	if (np.sum(t) == it and RH[i][0] == 0):
 		for k in range(b.shape[0]):
-			print (l-i-2*k)
 			RH[i][k] = (l-i- 2*k) * b[k]
 			
 	elif (RH[i][0] == 0 and np.sum(t) != it):
 		RH[i][0] = pow(10,-5)
+
+output = 0		
+for i in range(l-1):
+	a = RH[i][0]
+	b = RH[i+1][0]
+	
+	if a*b < 0:
+		output += 1
 		
-print (RH)
+print ("No.of Roots on Right of Y-axis are",output)
+
+plt.axhline(y=0, color='black',linewidth=0.5)
+plt.axvline(x=0, color='black',linewidth=0.5)
+plt.scatter(Roots.real,Roots.imag,color='red')
+plt.show()
+
