@@ -15,6 +15,11 @@ if RH.shape[1] >= Coeff[1::2].shape[0]:
 	x = Coeff[1::2].shape[0]
 	RH[1,:x] = Coeff[1::2]
 
+if (RH[0][0] == 0):
+	RH[0][0] = pow(10,-5)
+if (RH[1][0] == 0):
+	RH[1][0] = pow(10,-5)
+
 	
 for i in range(2,l):
 	a = RH[i-2]
