@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title> Colors </title>
+    </head>
+
+    <body>
+    <script type="text/javascript">
+        var min = 210;
+        var max = 255;
+        var a = Math.floor(Math.random() * (max - min + 1) ) + min;
+        var b = Math.floor(Math.random() * (max - min + 1) ) + min;
+        var c = Math.floor(Math.random() * (max - min + 1) ) + min;
+        bgColor = "rgb(" + a + "," + b + "," + c + ")";
+    
+        document.body.style.background = bgColor;
+        
+    </script>
+    <h3>
+        The value of R:
+    <script type="text/javascript">
+        document.write(a)
+    </script>
+    </h3>
+    <h3>
+        The value of G:
+    <script type="text/javascript">
+        document.write(b)
+    </script>
+
+    </h3>
+    <h3>
+        The value of B:
+    <script type="text/javascript">
+        document.write(c)
+    </script>
+    </h3>
+
+    </body>
+</html>
