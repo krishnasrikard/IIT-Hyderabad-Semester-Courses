@@ -1,0 +1,8 @@
+\contentsline {section}{\numberline {1}Mason's Gain Formula}{1}{section.1}
+\contentsline {section}{\numberline {2}Bode Plot}{1}{section.2}
+\contentsline {subsection}{\numberline {2.1}Introduction}{1}{subsection.2.1}
+\contentsline {section}{\numberline {3}Second order System}{3}{section.3}
+\contentsline {section}{\numberline {4}Routh Hurwitz Criterion}{3}{section.4}
+\contentsline {section}{\numberline {5}State-Space Model}{3}{section.5}
+\contentsline {section}{\numberline {6}Nyquist Plot}{3}{section.6}
+\contentsline {section}{\numberline {7}Compensators}{3}{section.7}
