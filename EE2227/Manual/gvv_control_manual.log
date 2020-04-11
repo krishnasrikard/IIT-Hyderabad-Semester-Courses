@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.4.6)  11 APR 2020 11:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.4.6)  11 APR 2020 11:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -820,11 +820,36 @@ Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
 \verbatim@line=\toks42
 \verbatim@in@stream=\read2
 )
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count146
+\lst@gtempboxa=\box66
+\lst@token=\toks43
+\lst@length=\count147
+\lst@currlwidth=\dimen270
+\lst@column=\count148
+\lst@pos=\count149
+\lst@lostspace=\dimen271
+\lst@width=\dimen272
+\lst@newlines=\count150
+\lst@lineno=\count151
+\lst@maxwidth=\dimen273
+
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+\c@lstnumber=\count152
+\lst@skipnumbers=\count153
+\lst@framebox=\box67
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2015/06/04 1.6 listings configuration
+))
+Package: listings 2015/06/04 1.6 (Carsten Heinz)
+
 (/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
 Package: array 2016/10/06 v2.4d Tabular extension package (FMi)
-\col@sep=\dimen270
-\extrarowheight=\dimen271
-\NC@list=\toks43
+\col@sep=\dimen274
+\extrarowheight=\dimen275
+\NC@list=\toks44
 \extratabsurround=\skip66
 \backup@length=\skip67
 )
@@ -839,34 +864,32 @@ Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/multicol.sty
 Package: multicol 2017/04/11 v1.8q multicolumn formatting (FMi)
-\c@tracingmulticols=\count146
+\c@tracingmulticols=\count154
 
 
 Package multicol Warning: May not work with the twocolumn option on input line 
 134.
 
-\mult@box=\box66
-\multicol@leftmargin=\dimen272
-\c@unbalance=\count147
-\c@collectmore=\count148
-\doublecol@number=\count149
-\multicoltolerance=\count150
-\multicolpretolerance=\count151
-\full@width=\dimen273
-\page@free=\dimen274
-\premulticols=\dimen275
-\postmulticols=\dimen276
+\mult@box=\box68
+\multicol@leftmargin=\dimen276
+\c@unbalance=\count155
+\c@collectmore=\count156
+\doublecol@number=\count157
+\multicoltolerance=\count158
+\multicolpretolerance=\count159
+\full@width=\dimen277
+\page@free=\dimen278
+\premulticols=\dimen279
+\postmulticols=\dimen280
 \multicolsep=\skip68
 \multicolbaselineskip=\skip69
-\partial@page=\box67
-\last@line=\box68
-\maxbalancingoverflow=\dimen277
-\mult@rightbox=\box69
-\mult@grightbox=\box70
-\mult@gfirstbox=\box71
-\mult@firstbox=\box72
-\@tempa=\box73
-\@tempa=\box74
+\partial@page=\box69
+\last@line=\box70
+\maxbalancingoverflow=\dimen281
+\mult@rightbox=\box71
+\mult@grightbox=\box72
+\mult@gfirstbox=\box73
+\mult@firstbox=\box74
 \@tempa=\box75
 \@tempa=\box76
 \@tempa=\box77
@@ -882,14 +905,16 @@ Package multicol Warning: May not work with the twocolumn option on input line
 \@tempa=\box87
 \@tempa=\box88
 \@tempa=\box89
-\c@columnbadness=\count152
-\c@finalcolumnbadness=\count153
-\last@try=\dimen278
-\multicolovershoot=\dimen279
-\multicolundershoot=\dimen280
-\mult@nat@firstbox=\box90
-\colbreak@box=\box91
-\mc@col@check@num=\count154
+\@tempa=\box90
+\@tempa=\box91
+\c@columnbadness=\count160
+\c@finalcolumnbadness=\count161
+\last@try=\dimen282
+\multicolovershoot=\dimen283
+\multicolundershoot=\dimen284
+\mult@nat@firstbox=\box92
+\colbreak@box=\box93
+\mc@col@check@num=\count162
 ) (/usr/share/texlive/texmf-dist/tex/latex/chngcntr/chngcntr.sty
 Package: chngcntr 2009/09/02 v1.0a change counter resetting
 )
@@ -950,6 +975,7 @@ Package gensymb Warning: Not defining \micro.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
+Package caption Info: listings package is loaded.
 Package caption Info: longtable package is loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/caption/ltcaption.sty
 Package: ltcaption 2013/06/09 v1.4-94 longtable captions (AR)
@@ -959,17 +985,17 @@ Package caption Info: End \AtBeginDocument code.
 ABD: EveryShipout initializing macros
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count155
-\scratchdimen=\dimen281
-\scratchbox=\box92
-\nofMPsegments=\count156
-\nofMParguments=\count157
-\everyMPshowfont=\toks44
-\MPscratchCnt=\count158
-\MPscratchDim=\dimen282
-\MPnumerator=\count159
-\makeMPintoPDFobject=\count160
-\everyMPtoPDFconversion=\toks45
+\scratchcounter=\count163
+\scratchdimen=\dimen285
+\scratchbox=\box94
+\nofMPsegments=\count164
+\nofMParguments=\count165
+\everyMPshowfont=\toks45
+\MPscratchCnt=\count166
+\MPscratchDim=\dimen286
+\MPnumerator=\count167
+\makeMPintoPDFobject=\count168
+\everyMPtoPDFconversion=\toks46
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -1026,12 +1052,13 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\c@theorem=\count161
-\c@problem=\count162
-\c@proposition=\count163
-\c@lemma=\count164
-\c@example=\count165
-\c@rem=\count166
+\c@lstlisting=\count169
+\c@theorem=\count170
+\c@problem=\count171
+\c@proposition=\count172
+\c@lemma=\count173
+\c@example=\count174
+\c@rem=\count175
 
 (./gvv_control_manual.toc)
 \tf@toc=\write4
@@ -1134,7 +1161,7 @@ Package epstopdf Info: Source file: <figs/Roots.eps>
 (epstopdf)                    size: 7527 bytes
 (epstopdf)             Command: <repstopdf --outfile=figs/Roots-eps-converted-t
 o.pdf figs/Roots.eps>
-(epstopdf)             \includegraphics on input line 73.
+(epstopdf)             \includegraphics on input line 78.
 Package epstopdf Info: Output file is already uptodate.
 
 
@@ -1143,29 +1170,29 @@ n: found PDF version <1.7>, but at most version <1.5> allowed
 <figs/Roots-eps-converted-to.pdf, id=18, 1535.7375pt x 773.89125pt>
 File: figs/Roots-eps-converted-to.pdf Graphic file (type pdf)
 <use figs/Roots-eps-converted-to.pdf>
-Package pdftex.def Info: figs/Roots-eps-converted-to.pdf  used on input line 73
+Package pdftex.def Info: figs/Roots-eps-converted-to.pdf  used on input line 78
 .
 (pdftex.def)             Requested size: 230.35068pt x 116.07867pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 72--74
+Underfull \hbox (badness 10000) in paragraph at lines 77--79
 
  []
 
 <figs/f(z).png, id=19, 1606.0pt x 873.2625pt>
 File: figs/f(z).png Graphic file (type png)
 <use figs/f(z).png>
-Package pdftex.def Info: figs/f(z).png  used on input line 76.
+Package pdftex.def Info: figs/f(z).png  used on input line 81.
 (pdftex.def)             Requested size: 240.8896pt x 130.98372pt.
 ) [2 <./figs/Roots-eps-converted-to.pdf> <./figs/f(z).png>]
 (./gvv_control_manual.aux) ) 
 Here is how much of TeX's memory you used:
- 25123 strings out of 492982
- 575412 string characters out of 6134897
- 739909 words of memory out of 5000000
- 28229 multiletter control sequences out of 15000+600000
+ 26301 strings out of 492982
+ 592806 string characters out of 6134897
+ 759238 words of memory out of 5000000
+ 29395 multiletter control sequences out of 15000+600000
  64510 words of font info for 138 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 55i,13n,67p,510b,193s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,13n,67p,510b,837s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base
 /8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></u
 sr/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb></usr/share/tex
@@ -1175,7 +1202,7 @@ ype1/public/txfonts/txsy.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/tim
 es/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb>
 </usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/tex
 live/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on gvv_control_manual.pdf (2 pages, 180239 bytes).
+Output written on gvv_control_manual.pdf (2 pages, 180591 bytes).
 PDF statistics:
  57 PDF objects out of 1000 (max. 8388607)
  40 compressed objects within 1 object stream
