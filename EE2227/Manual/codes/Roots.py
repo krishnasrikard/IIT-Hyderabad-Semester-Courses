@@ -4,16 +4,21 @@ from mpl_toolkits.mplot3d import Axes3D
 import cmath
 from matplotlib import cm
 
+# Coefficients of given Polynomial
 Coeff = [1,1,7,14,31,73,25,200]
+
+# Roots of the given Polynomial uisng "np.roots"
 Roots = np.roots(Coeff)
 print ("Roots of Polynomial Function",Roots)
 
+# Setting the plot parameters and drawing X,Y Axes
 plt.axhline(y=0, color='black',linewidth=0.5)
 plt.axvline(x=0, color='black',linewidth=0.5)
 plt.scatter(Roots.real,Roots.imag,color='red')
 plt.show()
 
 def Complex(Data,Coeff):
+	
 	Output = np.zeros(Data.shape) + 1j * np.zeros(Data.shape)
 	for i in range(Data.shape[0]):
 		for j in range(Data.shape[1]):
