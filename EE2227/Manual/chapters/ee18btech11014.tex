@@ -26,46 +26,19 @@ Rules for generating Routh-Hurwitz Table.
     \item The right hand column is the elements of the column above and to the right.
     \item The table is complete when all of the rows are completed down to $s^0$.
 \end{enumerate}
-The Routh-Hurwitz Table for given equation $s^{7}+s^{6}+7 s^{5}+14 s^{4}+31s^{3}+73 s^{2}+25 s+$ $200,$ is calculated as follows
-
-\begin{center}
-
-\begin{tabular}{ |p{1.25cm}|p{1.25cm}|p{1.25cm}|p{1.25cm}|p{1.25cm}|  }
-\hline
-$s^7$ & 1 & 7 & 31 & 25\\
-\hline
-$s^6$ & 1 & 14 & 73 & 200\\
-\hline
-$s^5$ & -7 & -42 & -175 & 0\\
-\hline
-\end{tabular}\\
-
-\begin{tabular}{ |p{1.25cm}|p{1.25cm}|p{1.25cm}|p{1.25cm}|p{1.25cm}|  }
-\hline
-$s^7$ & 1 & 7 & 31 & 25\\
-\hline
-$s^6$ & 1 & 14 & 73 & 200\\
-\hline
-$s^5$ & -7 & -42 & -175 & 0\\
-\hline
-$s^4$ & 8 & 48 & 200 & 0\\
-\hline
-\end{tabular}\\
-
-\begin{tabular}{ |p{1.25cm}|p{1.25cm}|p{1.25cm}|p{1.25cm}|p{1.25cm}|  }
-\hline
-$s^7$ & 1 & 7 & 31 & 25\\
-\hline
-$s^6$ & 1 & 14 & 73 & 200\\
-\hline
-$s^5$ & -7 & -42 & -175 & 0\\
-\hline
-$s^4$ & 8 & 48 & 200 & 0\\
-\hline
-$s^3$ & 0 & 0 & 0 &  \\
-\hline
-\end{tabular}\\
-\end{center}
+The Routh-Hurwitz Table for given equation $s^{7}+s^{6}+7 s^{5}+14 s^{4}+31s^{3}+73 s^{2}+25 s+$ $200,$ is calculated as follows\\
+\begin{align}
+\mydet{s^7\\s^6\\s^5}
+\mydet{1 & 7 & 31 & 25 \\ 1 & 14 & 73 & 200 \\ -7 & -42 & -175 & 0}
+\end{align}\\
+\begin{align}
+\mydet{s^7\\s^6\\s^5\\s^4}
+\mydet{1 & 7 & 31 & 25 \\ 1 & 14 & 73 & 200 \\ -7 & -42 & -175 & 0 \\ 8 & 48 & 200 & 0}
+\end{align}\\
+\begin{align}
+\mydet{s^7\\s^6\\s^5\\s^4\\s^3}
+\mydet{1 & 7 & 31 & 25 \\ 1 & 14 & 73 & 200 \\ -7 & -42 & -175 & 0 \\ 8 & 48 & 200 & 0 \\ 0 & 0 & 0 &  }
+\end{align}\\
 
 When such a case is encountered, we take the derivative of the expression formed the the coefficients above it i.e derivative of $8s^4 + 48s^2 +200$.
 \begin{center}
@@ -74,87 +47,31 @@ When such a case is encountered, we take the derivative of the expression formed
 
 The coefficients of obtained expression are placed in the table.
 
-\begin{center}
-
-\begin{tabular}{ |p{1.25cm}|p{1.25cm}|p{1.25cm}|p{1.25cm}|p{1.25cm}|  }
-\hline
-$s^7$ & 1 & 7 & 31 & 25\\
-\hline
-$s^6$ & 1 & 14 & 73 & 200\\
-\hline
-$s^5$ & -7 & -42 & -175 & 0\\
-\hline
-$s^4$ & 8 & 48 & 200 & 0\\
-\hline
-$s^3$ & 32 & 96 & 0 &  \\
-\hline
-\end{tabular}
-
-\begin{tabular}{ |p{1.25cm}|p{1.25cm}|p{1.25cm}|p{1.25cm}|p{1.25cm}|  }
-\hline
-$s^7$ & 1 & 7 & 31 & 25\\
-\hline
-$s^6$ & 1 & 14 & 73 & 200\\
-\hline
-$s^5$ & -7 & -42 & -175 & 0\\
-\hline
-$s^4$ & 8 & 48 & 200 & 0\\
-\hline
-$s^3$ & 32 & 96 & 0 &  \\
-\hline
-$s^2$ & 24 & 200 & 0 &  \\
-\hline
-\end{tabular}
-
-\begin{tabular}{ |p{1.25cm}|p{1.25cm}|p{1.25cm}|p{1.25cm}|p{1.25cm}|  }
-\hline
-$s^7$ & 1 & 7 & 31 & 25\\
-\hline
-$s^6$ & 1 & 14 & 73 & 200\\
-\hline
-$s^5$ & -7 & -42 & -175 & 0\\
-\hline
-$s^4$ & 8 & 48 & 200 & 0\\
-\hline
-$s^3$ & 32 & 96 & 0 & \\
-\hline
-$s^2$ & 24 & 200 & 0 & \\
-\hline
-$s^1$ & -170.67 & 0 &  & \\
-\hline
-\end{tabular}
-
-\begin{tabular}{ |p{1.25cm}|p{1.25cm}|p{1.25cm}|p{1.25cm}|p{1.25cm}|  }
-\hline
-$s^7$ & 1 & 7 & 31 & 25\\
-\hline
-$s^6$ & 1 & 14 & 73 & 200\\
-\hline
-$s^5$ & -7 & -42 & -175 & 0\\
-\hline
-$s^4$ & 8 & 48 & 200 & 0\\
-\hline
-$s^3$ & 32 & 96 & 0 & \\
-\hline
-$s^2$ & 24 & 200 & 0 & \\
-\hline
-$s^1$ & -170.67 & 0 &  & \\
-\hline
-$s^0$ & 200 &   &   & \\
-\hline
-\end{tabular}
-
-\end{center}
+\begin{align}
+\mydet{s^7\\s^6\\s^5\\s^4\\s^3}
+\mydet{1 & 7 & 31 & 25 \\ 1 & 14 & 73 & 200 \\ -7 & -42 & -175 & 0 \\ 8 & 48 & 200 & 0 \\ 32 & 96 & 0 &  }
+\end{align}\\
+\begin{align}
+\mydet{s^7\\s^6\\s^5\\s^4\\s^3\\s^2}
+\mydet{1 & 7 & 31 & 25 \\ 1 & 14 & 73 & 200 \\ -7 & -42 & -175 & 0 \\ 8 & 48 & 200 & 0 \\ 32 & 96 & 0 &  \\ 24 & 200 & 0 &  }
+\end{align}\\
+\begin{align}
+\mydet{s^7\\s^6\\s^5\\s^4\\s^3\\s^2\\s^1}
+\mydet{1 & 7 & 31 & 25 \\ 1 & 14 & 73 & 200 \\ -7 & -42 & -175 & 0 \\ 8 & 48 & 200 & 0 \\ 32 & 96 & 0 &  \\ 24 & 200 & 0 &  \\ -170.67 & 0 &  & }
+\end{align}\\
+\begin{align}
+\mydet{s^7\\s^6\\s^5\\s^4\\s^3\\s^2\\s^1\\s^0}
+\mydet{1 & 7 & 31 & 25 \\ 1 & 14 & 73 & 200 \\ -7 & -42 & -175 & 0 \\ 8 & 48 & 200 & 0 \\ 32 & 96 & 0 &  \\ 24 & 200 & 0 &  \\ -170.67 & 0 &  & \\200 &   &   & }
+\end{align}\\
 
 So, the above one is the Routh-Hurwitz Table.\\
-The no.of sign changes in first column of Routh–Hurwitz Table is the no.of roots on right side of imaginary axis.
+The no.of sign changes in first column of Routh–Hurwitz Table is the no.of roots on right side of imaginary axis.\\
 So, for the given equation 4 roots lie on right-side of Imaginary Axis.
-Given equation has a total of 7 roots in which 4 lie on right side of Imaginary Axis. \textbf{So there will be 3 roots on left of Imaginary Axis.}
+Given equation has a total of 7 roots in which 4 lie on right side of Imaginary Axis. \textbf{So there will be 3 roots on left of Imaginary Axis.}\\
 
-\begin{figure}
-    \caption{Roots of given polynomial}
-    \includegraphics[scale=0.15]{figs/Roots.eps}
-    
-    \caption{Contour Plot Describing the values of given polynomial}
-    \includegraphics[scale=0.15]{figs/f(z).png}
-\end{figure}
+The below image is the location of Roots of given polynomial.\\
+\includegraphics[scale=0.15]{figs/Roots.eps}\\
+
+The below image is finding out the roots of given polynomial by substituting $z=x+iy$ and obtaining the Real and Imaginary Parts of f(z). The values of $z$ where Real and Imaginary parts f(z) becomes zero simultaneously are roots of f(z).\\
+\includegraphics[scale=0.15]{figs/f(z).png}
+
