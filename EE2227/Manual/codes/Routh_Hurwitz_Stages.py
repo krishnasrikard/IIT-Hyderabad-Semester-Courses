@@ -52,11 +52,16 @@ for i in range(2,l):
 			
 	elif (RH[i][0] == 0 and np.sum(t) != it):
 		RH[i][0] = pow(10,-5)
+		
+	print (RH[0:i+1])
+	print ()
 
 output = 0	
 
 print ("Routh Hurwitz Matrix:")
 print (RH)	
+print ()
+
 for i in range(l-1):
 	a = RH[i][0]
 	b = RH[i+1][0]
@@ -64,10 +69,4 @@ for i in range(l-1):
 	if a*b < 0:
 		output += 1
 		
-print ("No.of Roots on Right of Y-axis are",output)
-
-plt.axhline(y=0, color='black',linewidth=0.5)
-plt.axvline(x=0, color='black',linewidth=0.5)
-plt.scatter(Roots.real,Roots.imag,color='red')
-plt.show()
-
+print ("No.of Sign Changes = ",output)
