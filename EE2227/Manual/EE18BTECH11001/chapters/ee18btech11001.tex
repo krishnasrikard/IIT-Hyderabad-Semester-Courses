@@ -14,55 +14,17 @@ is as illustrated in the Fig. \ref{fig:ee18btech11001_bode}. Express $G(f)$ in t
 \end{figure}\\
 
 \solution
-Let us consider a generalized transfer gain\\
 \begin{align}
-	H(s) = k \dfrac{(s-z_{1})(s-z_{2})...(s-z_{m-1})(s-z_{m})}{(s-p_{1})(s-p_{2})....(s-p_{n-1})(s-p_{n})}
-\end{align}\\
-\begin{multline}
-	Gain = 20\log\abs{H(s)} = 20\log \abs{k} + 20\log \abs{s-z_{1}} 
-	    \\
-	    + 20\log \abs{s-z_{2}} + \dots + 20\log \abs{s-z_{m}} - 20\log \abs{s-p_{1}} 
-	    \\
-	    - 20\log \abs{s-p_{2}} - \dots - 20\log \abs{s-z_{n}} 
-\end{multline}\\
-
-Let us consider the term $ 20\log \abs{s-z_{1}} $ and let $s = j\omega$\\
-\begin{align}
-	20\log \abs{s-z_{1}} = 20\log \abs{\sqrt{\omega^{2} + z_{1}^{2}}}
-\end{align}\\
-
-Based on log scale plot approximations,to the left of $z_{1} \hspace{5pt} \omega << z_{1}$ and towards right  $\omega >> z_{1}$\\
-For $\omega < z_{1}$\\
-\begin{align}
-	20\log \abs{s-z_{1}} = 20\log \abs{\sqrt{\omega^{2} + z_{1}^{2}}}
-	&= 20 \log \abs{z_{1}}\\
-	&= constant
-\end{align}  
-i.e. Slope = 0\\
-
-For $\omega > z_{1}$
-
-\begin{align}
-	20\log \abs{s-z_{1}} = 20\log \abs{\sqrt{\omega^{2} + z_{1}^{2}}} = 20 \log \abs{\omega} 
-\end{align}
-
-i.e Slope = 20\\
-
-\textbf{When a zero is encountered the slope always increases by 20 dB/decade}\\
-By performing similar analysis for $-20\log \abs{s-p_{1}}$, we conclude that\\
-\textbf{When a pole is encountered the slope always decreases by 20 dB/decade}
-\\
-So, Poles are encountered at $f = 10,10^2,10^5,10^6$\\
-Similarly Zeros are encountered at $f = 0,10^3,10^4$
-
-Final Transfer function is\\
-\begin{align}
-	H(f) = \dfrac{K(f+10^{3})(f+10^{4})^{2}}{(f+10^{1})(f+10^{2})^{2}(f+10^{5})^{2}(f+10^{6})}
-\end{align}\\
-\begin{align}
-\begin{small}
-	G(f) = 20\log\dfrac{K(f+10^{3})(f+10^{4})^{2}}{(f+10^{1})(f+10^{2})^{2}(f+10^{5})^{2}(f+10^{6})}
-\end{small}
+ G(f) = 
+ \begin{cases} 
+        100 & 0 < f < 10^{1} \\
+      120-20log(f) & 10 < f < 10^{2} \\
+      200-60log(f) & 10^2 < f < 10^{3} \\
+      140-40log(f) & 10^{3} < f < 10^{4} \\
+       -20 & 10^{4} < f < 10^{5} \\
+      180-40log(f) & 10^{5} < f < 10^{6} \\
+      300-60log(f) & 10^{6} < f < 10^{7}   
+ \end{cases}
 \end{align}
 
 %-----------------------------------------------------------------------%
@@ -71,7 +33,7 @@ Final Transfer function is\\
 \\
 \solution\\
 \begin{align}
-Slope = \nabla G(f) &= \dfrac{d(G(f))}{df}
+Slope = \nabla G(f) &= \dfrac{d(G(f))}{d(log(f))}
 \end{align}
 
 \begin{align}
@@ -136,6 +98,57 @@ Similarly Zeros are encountered at\\ $f = 0,10^3,10^4$
 \item Obtain the transfer function of $H(s)$.
 \\
 \solution\
+Let us consider a generalized transfer gain\\
+\begin{align}
+	H(s) = k \dfrac{(s-z_{1})(s-z_{2})...(s-z_{m-1})(s-z_{m})}{(s-p_{1})(s-p_{2})....(s-p_{n-1})(s-p_{n})}
+\end{align}\\
+\begin{multline}
+	Gain = 20\log\abs{H(s)} = 20\log \abs{k} + 20\log \abs{s-z_{1}} 
+	    \\
+	    + 20\log \abs{s-z_{2}} + \dots + 20\log \abs{s-z_{m}} - 20\log \abs{s-p_{1}} 
+	    \\
+	    - 20\log \abs{s-p_{2}} - \dots - 20\log \abs{s-z_{n}} 
+\end{multline}\\
+
+Let us consider the term $ 20\log \abs{s-z_{1}} $ and let $s = j\omega$\\
+\begin{align}
+	20\log \abs{s-z_{1}} = 20\log \abs{\sqrt{\omega^{2} + z_{1}^{2}}}
+\end{align}\\
+
+Based on log scale plot approximations,to the left of $z_{1} \hspace{5pt} \omega << z_{1}$ and towards right  $\omega >> z_{1}$\\
+For $\omega < z_{1}$\\
+\begin{align}
+	20\log \abs{s-z_{1}} = 20\log \abs{\sqrt{\omega^{2} + z_{1}^{2}}}
+	&= 20 \log \abs{z_{1}}\\
+	&= constant
+\end{align}  
+i.e. Slope = 0\\
+
+For $\omega > z_{1}$
+
+\begin{align}
+	20\log \abs{s-z_{1}} = 20\log \abs{\sqrt{\omega^{2} + z_{1}^{2}}} = 20 \log \abs{\omega} 
+\end{align}
+
+i.e Slope = 20\\
+
+\textbf{When a zero is encountered the slope always increases by 20 dB/decade}\\
+By performing similar analysis for $-20\log \abs{s-p_{1}}$, we conclude that\\
+\textbf{When a pole is encountered the slope always decreases by 20 dB/decade}
+\\
+So, Poles are encountered at $f = 10,10^2,10^5,10^6$\\
+Similarly Zeros are encountered at $f = 0,10^3,10^4$
+
+Final Transfer function is\\
+\begin{align}
+	H(f) = \dfrac{K(f+10^{3})(f+10^{4})^{2}}{(f+10^{1})(f+10^{2})^{2}(f+10^{5})^{2}(f+10^{6})}
+\end{align}\\
+\begin{align}
+\begin{small}
+	G(f) = 20\log\dfrac{K(f+10^{3})(f+10^{4})^{2}}{(f+10^{1})(f+10^{2})^{2}(f+10^{5})^{2}(f+10^{6})}
+\end{small}
+\end{align}
+
 $ s = j\omega = j2\pi f$
 \begin{align}
 \begin{small}
