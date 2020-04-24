@@ -12,9 +12,10 @@ import cmath
 from matplotlib import cm
 
 # Coefficients of Given Polynomial
-Coeff = np.array([1,1,7,14,31,73,25,200])
+Coeff = np.array([4,1,0,1])
 # Roots of given Polynomial
 Roots = np.roots(Coeff)
+print (Roots)
 	
 def Creating_RH_Matrix(Coeff,epsilon=1e-5):
 	"""
