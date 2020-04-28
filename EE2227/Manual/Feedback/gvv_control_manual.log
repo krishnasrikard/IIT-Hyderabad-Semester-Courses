@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.4.27)  28 APR 2020 02:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.4.27)  28 APR 2020 14:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1345,59 +1345,63 @@ File: utxsyc.fd 2000/12/15 v3.1
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 (./figs/ee18btech11014_figb.tex)
-Underfull \hbox (badness 5050) in paragraph at lines 13--23
+Underfull \hbox (badness 5050) in paragraph at lines 13--22
 \OT1/txr/bx/n/12 Solution: \OT1/txr/m/n/12 While draw-ing a Small-Signal
  []
 
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
-])
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [2])
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [2]
+ [3]
 Overfull \vbox (42.56163pt too high) has occurred while \output is active []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 321.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 322.
 
-[3
+[4
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 321.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 322.
  (./gvv_control_manual.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 321.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 321.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 322.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 322.
 Package rerunfilecheck Info: File `gvv_control_manual.out' has not changed.
-(rerunfilecheck)             Checksum: B08426F9C155A81BB5A30B2318BABEA9;2789.
+(rerunfilecheck)             Checksum: 378581C717EFD4F25D2C354880DD6811;2857.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 321.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 322.
  ) 
 Here is how much of TeX's memory you used:
- 32874 strings out of 492982
- 699459 string characters out of 6134896
- 921260 words of memory out of 5000000
- 35736 multiletter control sequences out of 15000+600000
- 83521 words of font info for 189 fonts, out of 8000000 for 9000
+ 32938 strings out of 492982
+ 700503 string characters out of 6134896
+ 925013 words of memory out of 5000000
+ 35781 multiletter control sequences out of 15000+600000
+ 84837 words of font info for 191 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 55i,11n,67p,510b,1129s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,11n,67p,693b,1129s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/share/texlive/texmf-dis
 t/fonts/type1/public/txfonts/rtxr.pfb></usr/share/texlive/texmf-dist/fonts/type
 1/public/txfonts/rtxsc.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/tx
-fonts/txsy.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb>
-</usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/urw/times/utmri8a.pfb>
-Output written on gvv_control_manual.pdf (3 pages, 76906 bytes).
+fonts/txex.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsy.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/urw/times/utmri8a.pfb>
+Output written on gvv_control_manual.pdf (4 pages, 84847 bytes).
 PDF statistics:
- 325 PDF objects out of 1000 (max. 8388607)
- 308 compressed objects within 4 object streams
- 61 named destinations out of 1000 (max. 500000)
- 397 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 356 PDF objects out of 1000 (max. 8388607)
+ 337 compressed objects within 4 object streams
+ 78 named destinations out of 1000 (max. 500000)
+ 405 words of extra memory for PDF output out of 10000 (max. 10000000)
 

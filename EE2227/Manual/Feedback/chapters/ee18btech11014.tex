@@ -1,7 +1,7 @@
 \begin{enumerate}[label=\thesubsection.\arabic*.,ref=\thesubsection.\theenumi]
 \numberwithin{equation}{enumi}
 
-\item For the feedback current amplifier shown in \ref{fig:Input}, Draw the small signal model
+\item For the feedback current amplifier shown in \ref{fig:Input}, Draw the Small-Signal Model
 \begin{figure}[h!]
 	\begin{center}
 		\resizebox{\columnwidth/2}{!}{\input{./figs/ee18btech11014_figa.tex}}
@@ -19,10 +19,63 @@ While drawing a Small-Signal Model, we goung all constant voltage sources and op
 	\caption{}
 	\label{fig:Input}
 \end{figure}
-%
-\item Find the Expression for the Open-Loop Gain $A=\frac{I_{o}}{I_{i}}$, from the Small-Signal Model. For simplicity, neglect the Early effect in $Q_{1}$ and $Q_{2}$.
 
-\item Find the Expression of the Feedback Factor $\beta = \frac{I_{f}}{I_{o}}$, from Small-Signal Model. For simplicity, neglect the Early effect in $Q_{1}$ and $Q_{2}$.
+%------------------------------------------------------------------------%
+\item Describe the importance of given Amplifier Topology.\\
+\solution 
+This Feedback Topology is also known as Shunt-Series Feedback because of the parallel (or shunt) resistance at the input, and the series resistance at the output. This topology not only stabilizes the current gain but also results in a lower input resistance, and a higher output resistance, both desirable properties for a current amplifier. The decrease in input resistance results because the feedback current $I_{f}$ subtracts from the input current $I_{s}$ , and thus a lower current enters the basic current amplifier. This in turn results in a lower voltage at the amplifier input, that is, across the current source $I_{s}$.
+%------------------------------------------------------------------------%
+\item Describe how the given circuit is a Negetive Feedback Amplifier.\\
+\solution 
+For the feedback to be negative, $I_{f}$ must have the same polarity as $I_{s}$. To ascertain that this is the case, we assume an increase in $I_{s}$ and follow the change around the loop: An increase in $I_{s}$ causes $I_{i}$ to increase and the drain voltage of $Q_{1}$ will increase. Since this voltage is applied to the gate of the p-channel device $Q_{2}$ , its increase will cause $I_{s}$ , the drain current of $Q_{2}$, to decrease. Thus, the voltage across $R_{M}$ will decrease, which will cause $I_{f}$ to increase. This is the same polarity assumed for the initial change in
+$I_{s}$, verifying that the feedback is indeed negative.
+%------------------------------------------------------------------------%
+\item Find the Expression for the Open-Loop Gain $A=\frac{I_{o}}{I_{i}}$, from the Small-Signal Model. For simplicity, neglect the Early effect in $Q_{1}$ and $Q_{2}$.\\
+\solution
+In Small-Signal Model,
+\begin{align}
+v_{B} = I_{i}R_{D}\\
+v_{gs_{2}} = I_{i}R_{D}
+\end{align}
 
-\item Find the Expression for the Closed-Loop Gain $A_{f}=\frac{I_{o}}{I_{s}}$. For simplicity, neglect the Early effect in $Q_{1}$ and $Q_{2}$.
+In Small-Signal Analysis, P-MOSFET is modelled as a current source where current flows from Source to Drain, and the value of current is
+In Small-Signal Model,
+\begin{align}
+I_{o} =  -g_{m_{2}}v_{gs_{2}} = -g_{m_{2}}I_{i}R_{D}
+\end{align}
+So, the Open-Circuit Gain is
+\begin{align}
+A = \frac{I_{o}}{I_{i}} =  -g_{m_{2}}R_{D}
+\end{align}
+%------------------------------------------------------------------------%
+\item Find the Expression of the Feedback Factor $\beta = \frac{I_{f}}{I_{o}}$, from Small-Signal Model. For simplicity, neglect the Early effect in $Q_{1}$ and $Q_{2}$.\\
+\solution \\
+To obtain $\beta$ , we observe that $I_{o}$ is fed to a current divider formed by $R_{M}$ and $R_{F}$.
+It is assumed that $R_{F}$ is a Large Resistance compared to Input resistance of Amplifier and so most of the current flows through it. Hence the voltage at point 'A', $v_{A} \simeq 0$. So $R_{F}$ and $R_{M}$ are parallel and Voltage Drop across them is same.
+\begin{align}
+(I_{o} + I_{f})R_{M} \simeq -I_{f}R_{o}\\
+\frac{I_{f}}{I_{o}} \simeq -\frac{R_{M}}{R_{F}+R_{M}}
+\end{align}
+So, the Feedback Factor,
+\begin{align}
+\beta \equiv \frac{I_{f}}{I_{o}} \simeq-\frac{R_{M}}{R_{F}+R_{M}}
+\end{align}
+%------------------------------------------------------------------------%
+\item Find the Expression for the Closed-Loop Gain $A_{f}=\frac{I_{o}}{I_{s}}$. For simplicity, neglect the Early effect in $Q_{1}$ and $Q_{2}$.\\
+\solution \\
+From Open-Loop Gain and Feedback Factor,
+\begin{align}
+I_{s} = I_{i} + I_{f}\\
+I_{s} = \frac{I_{o}}{A} + \beta I_{o}\\
+AI_{s} = I_{o}(1+A\beta)\\
+\frac{I_{o}}{I_{s}} = \frac{A}{1+A\beta}\\
+\frac{I_{o}}{I_{s}}=-\frac{g_{m_{2}} R_{D}}{1+g_{m{2}} R_{D} /\left(1+\frac{R_{F}}{R_{M}}\right)}
+\end{align}
+
+So, the value of Closed-Loop Gain is
+\begin{align}
+A_{f} = \frac{I_{o}}{I_{s}}=-\frac{g_{m 2} R_{D}}{1+g_{m 2} R_{D} /\left(1+\frac{R_{F}}{R_{M}}\right)}
+\end{align}
+
+%------------------------------------------------------------------------%
 \end{enumerate}
