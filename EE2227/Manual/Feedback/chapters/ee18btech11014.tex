@@ -17,13 +17,9 @@ While drawing a Small-Signal Model, we ground all constant voltage sources and o
 		\resizebox{\columnwidth/2}{!}{\input{./figs/ee18btech11014_figb.tex}}
 	\end{center}
 	\caption{}
-	\label{fig:Input}
+	\label{fig:Small_Signal}
 \end{figure}
-%------------------------------------------------------------------------%
 
-\item Describe the importance of given Amplifier Topology.\\
-\solution 
-This Feedback Topology is also known as Shunt-Series Feedback because of the parallel (or shunt) resistance at the input, and the series resistance at the output. This topology not only stabilizes the current gain but also results in a lower input resistance, and a higher output resistance, both desirable properties for a current amplifier. The decrease in input resistance results because the feedback current $I_{f}$ subtracts from the input current $I_{s}$ , and thus a lower current enters the basic current amplifier. This in turn results in a lower voltage at the amplifier input, that is, across the current source $I_{s}$.
 %------------------------------------------------------------------------%
 
 \item Describe how the given circuit is a Negetive Feedback Amplifier.\\
@@ -74,10 +70,21 @@ GI_{s} = I_{o}(1+GH)\\
 \frac{I_{o}}{I_{s}}=-\frac{g_{m_{2}} R_{D}}{1+g_{m_{2}} R_{D} /\left(1+\frac{R_{F}}{R_{M}}\right)}
 \end{align}
 
+So the Block Diagram of Feedback Current Amplifier is
+\begin{figure}[ht!]
+	\begin{center}
+		\resizebox{\columnwidth}{!}{\input{./figs/ee18btech11014_figc.tex}}
+	\end{center}
+	\caption{}
+	\label{fig:Control_System}
+\end{figure}
+
+where $G = -g_{m_{2}} R_{D}$ and $H = -\frac{R_{M}}{R_{F}+R_{M}}$\\
+
 So, the value of Closed-Loop Gain is
 \begin{align}
 T = \frac{I_{o}}{I_{s}}=-\frac{g_{m_{2}} R_{D}}{1+g_{m_{2}} R_{D} /\left(1+\frac{R_{F}}{R_{M}}\right)}
 \end{align}
-
 %------------------------------------------------------------------------%
+
 \end{enumerate}
