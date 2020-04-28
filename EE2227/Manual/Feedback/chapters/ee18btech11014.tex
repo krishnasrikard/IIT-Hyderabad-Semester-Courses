@@ -55,7 +55,7 @@ G = \frac{I_{o}}{I_{i}} =  -g_{m_{2}}R_{D}
 $I_{o}$ is fed to a current divider formed by $R_{M}$ and $R_{F}$.
 $R_{F}$ is a Large Resistance compared to Input resistance of Amplifier and so most of the current flows through it leaving a small current as input to Amplifier. Hence the voltage at point 'A' is very small and is considered, $v_{A} \simeq 0$. So $R_{F}$ and $R_{M}$ are parallel and Voltage Drop across them is same.
 \begin{align}
-(I_{o} + I_{f})R_{M} \simeq -I_{f}R_{o}\\
+(I_{o} + I_{f})R_{M} \simeq -I_{f}R_{F}\\
 \frac{I_{f}}{I_{o}} \simeq -\frac{R_{M}}{R_{F}+R_{M}}
 \end{align}
 So, the Feedback Factor,
@@ -71,12 +71,12 @@ I_{s} = I_{i} + I_{f}\\
 I_{s} = \frac{I_{o}}{G} + H I_{o}\\
 GI_{s} = I_{o}(1+GH)\\
 \frac{I_{o}}{I_{s}} = \frac{G}{1+GH}\\
-\frac{I_{o}}{I_{s}}=-\frac{g_{m_{2}} R_{D}}{1+g_{m{2}} R_{D} /\left(1+\frac{R_{F}}{R_{M}}\right)}
+\frac{I_{o}}{I_{s}}=-\frac{g_{m_{2}} R_{D}}{1+g_{m_{2}} R_{D} /\left(1+\frac{R_{F}}{R_{M}}\right)}
 \end{align}
 
 So, the value of Closed-Loop Gain is
 \begin{align}
-T = \frac{I_{o}}{I_{s}}=-\frac{g_{m 2} R_{D}}{1+g_{m 2} R_{D} /\left(1+\frac{R_{F}}{R_{M}}\right)}
+T = \frac{I_{o}}{I_{s}}=-\frac{g_{m_{2}} R_{D}}{1+g_{m_{2}} R_{D} /\left(1+\frac{R_{F}}{R_{M}}\right)}
 \end{align}
 
 %------------------------------------------------------------------------%

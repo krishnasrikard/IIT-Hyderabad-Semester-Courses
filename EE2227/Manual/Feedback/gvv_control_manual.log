@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.4.27)  28 APR 2020 15:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.4.27)  28 APR 2020 18:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1384,7 +1384,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 322.
 Here is how much of TeX's memory you used:
  32982 strings out of 492982
  701557 string characters out of 6134896
- 929960 words of memory out of 5000000
+ 929959 words of memory out of 5000000
  35825 multiletter control sequences out of 15000+600000
  84837 words of font info for 191 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
@@ -1398,7 +1398,7 @@ fb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/
 texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-
 dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type
 1/urw/times/utmri8a.pfb>
-Output written on gvv_control_manual.pdf (4 pages, 84853 bytes).
+Output written on gvv_control_manual.pdf (4 pages, 84849 bytes).
 PDF statistics:
  356 PDF objects out of 1000 (max. 8388607)
  337 compressed objects within 4 object streams
