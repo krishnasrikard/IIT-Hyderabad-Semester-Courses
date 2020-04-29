@@ -19,7 +19,7 @@
     \node [block, below of=controller] (measurements) {$H$};
 
     % Once the nodes are placed, connecting them is easy. 
-    \draw [draw,->] (input) -- node {$I_{s}$} (sum);
+    \draw [draw,->] (input) -- node[pos=0.99] {$+$} node {$I_{s}$} (sum);
     \draw [->] (sum) -- node {$I_{i}$} (controller);
     \draw [->] (controller) -- node [name=y] {$I_{o}$}(output);
     \draw [->] (y) |- (measurements);
