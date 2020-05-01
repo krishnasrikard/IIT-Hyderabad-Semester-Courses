@@ -1,22 +1,22 @@
 \begin{enumerate}[label=\thesubsection.\arabic*.,ref=\thesubsection.\theenumi]
 \numberwithin{equation}{enumi}
 
-\item For the feedback current amplifier shown in \ref{fig:Input}, Draw the Small-Signal Model
+\item For the feedback current amplifier shown in \ref{fig:Input}, Draw the Small-Signal Model.eglect the Early effect in $Q_{1}$ and $Q_{2}$.\\
 \begin{figure}[h!]
 	\begin{center}
-		\resizebox{\columnwidth/2}{!}{\input{./figs/ee18btech11014/ee18btech11014_figa.tex}}
+		\resizebox{\columnwidth/1}{!}{\input{./figs/ee18btech11014/ee18btech11014_figa.tex}}
 	\end{center}
 	\caption{}
 	\label{fig:Input}
 \end{figure}
 
 \solution
-While drawing a Small-Signal Model, we ground all constant voltage sources and open all constant current sources. All Small-Signal paramters are obtained from DC-Analysis of the circuit.
+While drawing a Small-Signal Model, we ground all constant voltage sources and open all constant current sources. All Small-Signal paramters are obtained from DC-Analysis of the circuit. Neglecting Early effect, in Small-Signal Analysis a N-MOSFET is modelled as a Current Source with value of current equal to $g_{m}v_{gs}$ flowing from Drain to Source. Whereas a P-MOSFET is modelled as a Current Source with value of current equal to $g_{m}v_{sg}$ flowing from Source to Drain.
 \begin{figure}[h!]
 	\begin{center}
-		\resizebox{\columnwidth/2}{!}{\input{./figs/ee18btech11014/ee18btech11014_figb.tex}}
+		\resizebox{\columnwidth/1}{!}{\input{./figs/ee18btech11014/ee18btech11014_figb.tex}}
 	\end{center}
-	%\caption{}
+	\caption{Small Signal Model}
 	\label{fig:Small_Signal}
 \end{figure}
 

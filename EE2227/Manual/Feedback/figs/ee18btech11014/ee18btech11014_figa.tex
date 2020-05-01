@@ -11,8 +11,7 @@
 \draw (Q1.D) -- (1,6);
 
 \draw (6,6)node[pmos,](Q2){};
-\draw (Q2.D) -- (6,5.5);
-\draw (6,5.5) to[R=$R_{L}$,i=$I_{0}$] (6,3);
+\draw (Q2.D) to[R=$R_{L}$,i=$I_{o}$] (6,3);
 \draw (Q2.center) node[right]{{$Q_{2}$}};
 \draw (Q2.G) -- (1,6);
 \draw (Q2.S) -- (6,9) node[vcc](VCC){$V_{CC}$} (6,10);
