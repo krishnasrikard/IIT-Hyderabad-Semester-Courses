@@ -19,9 +19,9 @@
     \node [block, below of=controller] (measurements) {$H$};
 
     % Once the nodes are placed, connecting them is easy. 
-    \draw [draw,->] (input) -- node[pos=0.99] {$+$} node {$V_{s}$} (sum);
-    \draw [->] (sum) -- node {$V_{i}$} (controller);
-    \draw [->] (controller) -- node [name=y] {$V_{o}$}(output);
+    \draw [draw,->] (input) -- node[pos=0.99] {$+$} node {$v_{s}$} (sum);
+    \draw [->] (sum) -- node {$v_{i}$} (controller);
+    \draw [->] (controller) -- node [name=y] {$v_{o}$}(output);
     \draw [->] (y) |- (measurements);
-    \draw [->] (measurements) -| node[pos=0.99] {$-$} node [near end] {$V_{f}$} (sum);
+    \draw [->] (measurements) -| node[pos=0.99] {$-$} node [near end] {$v_{f}$} (sum);
 \end{tikzpicture}

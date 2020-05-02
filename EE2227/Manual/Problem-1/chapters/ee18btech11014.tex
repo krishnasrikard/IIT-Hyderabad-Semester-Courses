@@ -46,11 +46,6 @@ Phase of Open-Loop Transfer Function = $\phi$
 \end{align}
 %-------------------------------------------------------------------------------------------------%
 
-%\item Determine on which Segment of Phase Bode Plot does $\phi = -180^{\circ}$\\
-%\solution \\
-%Assuming the Poles are widely spread, the phase is approximately $-45^{\circ}$ at the first pole frequency, $-135^{\circ}$ at the second, and $-225^{\circ}$ at the third. So, the phase is $-180^{\circ}$ between the Second and Third Pole or $10^{6} < f < 10^{7}$. So, the frequency at which the phase of $G(f)$ is $-180^{\circ}$ lies on the -40-dB/decade segment.\\
-%-------------------------------------------------------------------------------------------------%
-
 \item Determine the Closed-Loop Voltage Gain of the System assuming $|GH|\gg1$ and also assuming the block diagram of Control System is \ref{fig:Control}
 \begin{figure}[ht!]
 	\begin{center}
@@ -189,8 +184,100 @@ The minimum value of Closed-Loop Gain occurs at $|GH| \gg 1$ and the value of Cl
 T = \frac{1}{H} = 10^{4}
 \end{align}
 
-\textbf{So, The minimum value of Closed-Loop Gain with Phase Margin equal to $\alpha=45^{\circ}$ is $T_{min} = 10^{4}$.}
+\textbf{So, The minimum value of Closed-Loop Gain with Phase Margin equal to $\alpha=45^{\circ}$ is $T_{min} = 10^{4}$.}\\
 %-------------------------------------------------------------------------------------------------%
 
+\item Design a Circuit Model that follows the Transfer Function $G(f)$\\
+\solution\\
+\begin{figure}[ht!]
+	\begin{center}
+		\resizebox{\columnwidth/1}{!}{\input{./figs/ee18btech11014/ee18btech11014_figc.tex}}
+	\end{center}
+	\caption{}
+	\label{fig:Circuit}
+\end{figure}
+ 
+Assuming, N-MOSFETs are identical and properties of N-MOSFET are,
+\begin{align}
+\mu_{n}C_{ox} = 100 \mu A/V^{2}\\
+\frac{W}{L} = 500\\
+V_{T} = 1 V
+\end{align}
+
+$V_{CC}$ is divided across $4.9\times 10^{3} \ohm$ and $1.1\times 10^{3} \ohm$
+\begin{align}
+V_{GS} = 1.1V
+\end{align}
+
+Small Signal Parameter $g_{m}$,
+\begin{align}
+g_{m} = \mu_{n}C_{ox}\frac{W}{L}(V_{GS} - V_{TH})\\
+g_{m} = 5\times 10^{-3} \ohm^{-1}
+\end{align}
+
+Small Signal Model of the circuit is
+\begin{figure}[ht!]
+	\begin{center}
+		\resizebox{\columnwidth/1}{!}{\input{./figs/ee18btech11014/ee18btech11014_figd.tex}}
+	\end{center}
+	\caption{}
+	\label{fig:Circuit}
+\end{figure}
+
+The cascade of RC Circuits introduces poles in the circuit. The RC Circuits introduces poles at $f=10^{5} Hz, 10^{6} Hz, 10^{7} Hz$ respectively from left to right. So, the value of $v_{gs_{1}}$ is
+
+\begin{align}
+v_{gs_{1}} = \dfrac{v_{s}}{\left(1+j\frac{f}{10^{5}}\right)\left(1+j\frac{f}{10^{6}}\right)\left(1+j\frac{f}{10^{7}}\right)}
+\end{align}
+
+The MOSFETs used in the circuit are Self-Biased with $V_{GS} = 1.1V$ for all 3 N-MOSFETs. 3 N-MOSFETs are used to achieve a large gain of $10^{5}$. At 3rd N-MOSFET, Terminals of output are swaped, inorder to compensate for the negetive sign of gain.
+
+At the first N-MOSFET,
+\begin{align}
+v_{gs_{2}} = -g_{m}v_{gs_{1}}\times 15.6\times 10^{3}\\
+v_{gs_{2}} = -78\times v_{gs_{1}}
+\end{align}
+\begin{align}
+v_{gs_{2}} = \dfrac{-78\times v_{s}}{\left(1+j\frac{f}{10^{5}}\right)\left(1+j\frac{f}{10^{6}}\right)\left(1+j\frac{f}{10^{7}}\right)}
+\end{align}
+
+Similarly, at the second N-MOSFET,
+\begin{align}
+v_{gs_{3}} = -g_{m}v_{gs_{2}}\times 15.6\times 10^{3}\\
+v_{gs_{3}} = -78 \times v_{gs_{2}}
+\end{align}
+\begin{align}
+v_{gs_{3}} = \dfrac{6084\times v_{s}}{\left(1+j\frac{f}{10^{5}}\right)\left(1+j\frac{f}{10^{6}}\right)\left(1+j\frac{f}{10^{7}}\right)}\\
+\end{align}
+
+Similarly, at the third N-MOSFET,
+\begin{align}
+-v_{o} = -g_{m}v_{gs_{3}}\times 3.29\times 10^{3}\\
+v_{o} = 16.45 \times v_{gs_{3}}
+\end{align}
+\begin{align}
+v_{o} = \dfrac{10^{5}\times v_{s}}{\left(1+j\frac{f}{10^{5}}\right)\left(1+j\frac{f}{10^{6}}\right)\left(1+j\frac{f}{10^{7}}\right)}\\
+\frac{v_{o}}{v_{s}} = \dfrac{10^{5}}{\left(1+j\frac{f}{10^{5}}\right)\left(1+j\frac{f}{10^{6}}\right)\left(1+j\frac{f}{10^{7}}\right)}\\
+G(f) = \dfrac{10^{5}}{\left(1+j\frac{f}{10^{5}}\right)\left(1+j\frac{f}{10^{6}}\right)\left(1+j\frac{f}{10^{7}}\right)}
+\end{align}
+%-------------------------------------------------------------------------------------------------%
+
+\item Design a Circuit Model that follows the Transfer Function $H(f)$\\
+\solution\\
+On Bode Plot is $H$ is independent of frequency. So, $H$  should not involve any Reactive Elements. So, $H$ is a combination of Resistors or a Voltage Divider.
+\begin{figure}[ht!]
+	\begin{center}
+		\resizebox{\columnwidth/2}{!}{\input{./figs/ee18btech11014/ee18btech11014_fige.tex}}
+	\end{center}
+	\caption{}
+	\label{fig:Circuit}
+\end{figure}
+
+\begin{align}
+v_{f} = \frac{10}{10 + 10^{5}} \times v_{o}\\
+v_{f} \approx 10^{-4} v_{o}\\
+\frac{v_{f}}{v_{o}} \approx 10^{-4}\\
+H(f) = 10^{-4}
+\end{align}
 
 \end{enumerate}

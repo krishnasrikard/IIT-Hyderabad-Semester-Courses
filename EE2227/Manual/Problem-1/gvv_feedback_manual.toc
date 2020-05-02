@@ -1,15 +1,15 @@
 \contentsline {section}{\numberline {1}Signal Flow Graph}{1}{section.1}
 \contentsline {section}{\numberline {2}Gain of Feedback Circuits}{1}{section.2}
 \contentsline {subsection}{\numberline {2.1}Estimation of Voltage Gain}{1}{subsection.2.1}
-\contentsline {section}{\numberline {3}Bode Plot}{4}{section.3}
-\contentsline {section}{\numberline {4}Second order System}{4}{section.4}
-\contentsline {section}{\numberline {5}Routh Hurwitz Criterion}{4}{section.5}
-\contentsline {section}{\numberline {6}State-Space Model}{4}{section.6}
-\contentsline {section}{\numberline {7}Nyquist Plot}{4}{section.7}
-\contentsline {section}{\numberline {8}Compensators}{4}{section.8}
-\contentsline {section}{\numberline {9}Gain Margin}{4}{section.9}
-\contentsline {section}{\numberline {10}Phase Margin}{4}{section.10}
-\contentsline {section}{\numberline {11}Oscillator}{4}{section.11}
-\contentsline {section}{\numberline {12}Root Locus}{4}{section.12}
-\contentsline {section}{\numberline {13}Polar Plot}{4}{section.13}
-\contentsline {section}{\numberline {14}PID Controller}{4}{section.14}
+\contentsline {section}{\numberline {3}Bode Plot}{5}{section.3}
+\contentsline {section}{\numberline {4}Second order System}{5}{section.4}
+\contentsline {section}{\numberline {5}Routh Hurwitz Criterion}{5}{section.5}
+\contentsline {section}{\numberline {6}State-Space Model}{5}{section.6}
+\contentsline {section}{\numberline {7}Nyquist Plot}{5}{section.7}
+\contentsline {section}{\numberline {8}Compensators}{5}{section.8}
+\contentsline {section}{\numberline {9}Gain Margin}{5}{section.9}
+\contentsline {section}{\numberline {10}Phase Margin}{5}{section.10}
+\contentsline {section}{\numberline {11}Oscillator}{5}{section.11}
+\contentsline {section}{\numberline {12}Root Locus}{5}{section.12}
+\contentsline {section}{\numberline {13}Polar Plot}{5}{section.13}
+\contentsline {section}{\numberline {14}PID Controller}{5}{section.14}

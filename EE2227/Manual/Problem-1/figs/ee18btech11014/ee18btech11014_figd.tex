@@ -1,0 +1,39 @@
+\begin{circuitikz}[american]
+\ctikzset{tripoles/mos style/arrows}
+\draw (0,0) node[ground](GND){} to[vsourcesin, l= $v_{i}$] (0,2);
+\draw (0,2) to[R=$10^{4}\ohm$] (2.25,2) to[C,l_=$\frac{10^{-9}}{2\pi}F$] (2.25,0) node[ground](GND){};
+\draw (2.25,2) to[R=$10^{3}\ohm$] (4.5,2) to[C,l_=$\frac{10^{-9}}{2\pi}F$] (4.5,0) node[ground](GND){};
+\draw (4.5,2) to[R=$10^{2}\ohm$] (6.75,2) to[C,l_=$\frac{10^{-9}}{2\pi}F$] (6.75,0) node[ground](GND){};
+
+\draw (6.75,2) -- (8.75,2);
+\draw (8.75,0) node[ground](GND){} to[R=$1.07k\ohm$] (8.75,2);
+
+\draw (8.75,2) to[short, -o] (9.25,2) node[label={below:$+$}]{};
+\draw (9.25,2) node[label={above:$v_{gs_{1}}$}]{};
+\draw (8.75,0.01) to[short, -o] (9.25,0.01) node[label={above:$-$}]{};
+\draw (10.25,2) to[cisource, l= $g_{m}v_{gs_{1}}$] (10.25,0);
+\draw (10.25,0) node[ground](GND){};
+\draw (10.25,2) -- (12.25,2) to[R=$15.6k\ohm$] (12.25,0);
+\draw (12.25,0) node[ground](GND){};
+
+\draw (12.25,2) to[short, -o] (13,2) node[label={below:$+$}]{};
+\draw (13,2) node[label={above:$v_{gs_{2}}$}]{};
+\draw (12.25,0.01) to[short, -o] (13,0.01) node[label={above:$-$}]{};
+\draw (14.25,2) to[cisource, l= $g_{m}v_{gs_{2}}$] (14.25,0);
+\draw (14.25,0) node[ground](GND){};
+\draw (14.25,2) -- (16.25,2) to[R=$15.6k\ohm$] (16.25,0);
+\draw (16.25,0) node[ground](GND){};
+
+\draw (16.25,2) to[short, -o] (17,2) node[label={below:$+$}]{};
+\draw (17,2) node[label={above:$v_{gs_{3}}$}]{};
+\draw (16.25,0.01) to[short, -o] (17,0.01) node[label={above:$-$}]{};
+\draw (18.25,2) to[cisource, l= $g_{m}v_{gs_{3}}$] (18.25,0);
+\draw (18.25,0) node[ground](GND){};
+\draw (18.25,2) -- (20.25,2) to[R=$3.29k\ohm$] (20.25,0);
+\draw (20.25,0) node[ground](GND){};
+
+\draw (20.25,2) to[short, -o] (21,2) node[label={below:$-$}]{};
+\draw (21,0.01) node[label={right:$v_{o}$}]{};
+\draw (20.25,0.01) to[short, -o] (21,0.01) node[label={above:$+$}]{};
+
+\end{circuitikz}
