@@ -305,7 +305,7 @@ v_{gs_{2}} = -g_{m}v_{gs_{1}}\times 15.6\times 10^{3}\\
 v_{gs_{2}} = -78\times v_{gs_{1}}
 \end{align}
 \begin{align}
-v_{gs_{2}} = \dfrac{-78\times v_{s}}{\left(1+j\frac{f}{10^{5}}\right)\left(1+j\frac{f}{10^{6}}\right)\left(1+j\frac{f}{10^{7}}\right)}
+v_{gs_{2}} = \dfrac{-78\times v_{i}}{\left(1+j\frac{f}{10^{5}}\right)\left(1+j\frac{f}{10^{6}}\right)\left(1+j\frac{f}{10^{7}}\right)}
 \end{align}
 
 Similarly, at the second N-MOSFET,
@@ -314,7 +314,7 @@ v_{gs_{3}} = -g_{m}v_{gs_{2}}\times 15.6\times 10^{3}\\
 v_{gs_{3}} = -78 \times v_{gs_{2}}
 \end{align}
 \begin{align}
-v_{gs_{3}} = \dfrac{6084\times v_{s}}{\left(1+j\frac{f}{10^{5}}\right)\left(1+j\frac{f}{10^{6}}\right)\left(1+j\frac{f}{10^{7}}\right)}
+v_{gs_{3}} = \dfrac{6084\times v_{i}}{\left(1+j\frac{f}{10^{5}}\right)\left(1+j\frac{f}{10^{6}}\right)\left(1+j\frac{f}{10^{7}}\right)}
 \end{align}
 
 Similarly, at the third N-MOSFET,
@@ -323,8 +323,8 @@ Similarly, at the third N-MOSFET,
 v_{o} = 16.45 \times v_{gs_{3}}
 \end{align}
 \begin{align}
-v_{o} = \dfrac{10^{5}\times v_{s}}{\left(1+j\frac{f}{10^{5}}\right)\left(1+j\frac{f}{10^{6}}\right)\left(1+j\frac{f}{10^{7}}\right)}\\
-\frac{v_{o}}{v_{s}} = \dfrac{10^{5}}{\left(1+j\frac{f}{10^{5}}\right)\left(1+j\frac{f}{10^{6}}\right)\left(1+j\frac{f}{10^{7}}\right)}\\
+v_{o} = \dfrac{10^{5}\times v_{i}}{\left(1+j\frac{f}{10^{5}}\right)\left(1+j\frac{f}{10^{6}}\right)\left(1+j\frac{f}{10^{7}}\right)}\\
+\frac{v_{o}}{v_{i}} = \dfrac{10^{5}}{\left(1+j\frac{f}{10^{5}}\right)\left(1+j\frac{f}{10^{6}}\right)\left(1+j\frac{f}{10^{7}}\right)}\\
 G(f) = \dfrac{10^{5}}{\left(1+j\frac{f}{10^{5}}\right)\left(1+j\frac{f}{10^{6}}\right)\left(1+j\frac{f}{10^{7}}\right)}
 \end{align}
 %-------------------------------------------------------------------------------------------------%
