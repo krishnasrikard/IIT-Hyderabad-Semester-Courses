@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.4.27)  3 MAY 2020 17:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.4.27)  3 MAY 2020 18:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1180,6 +1180,9 @@ Package: chngcntr 2009/09/02 v1.0a change counter resetting
 )
 (./gvv_feedback_manual.aux
 
+LaTeX Warning: Label `fig:RC Circuit' multiply defined.
+
+
 LaTeX Warning: Label `fig:Circuit' multiply defined.
 
 
@@ -1431,44 +1434,45 @@ Underfull \hbox (badness 10000) in paragraph at lines 187--189
 
  []
 
-(./figs/ee18btech11014/ee18btech11014_figf.tex)
+(./figs/ee18btech11014/ee18btech11014_figh.tex)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [3]
-Underfull \hbox (badness 10000) in paragraph at lines 209--211
+(./figs/ee18btech11014/ee18btech11014_figf.tex)
+Underfull \hbox (badness 10000) in paragraph at lines 221--223
 
  []
 
 (./figs/ee18btech11014/ee18btech11014_figg.tex)
-Underfull \hbox (badness 10000) in paragraph at lines 224--227
+Underfull \hbox (badness 10000) in paragraph at lines 236--239
 
  []
 
 
-Underfull \hbox (badness 2237) in paragraph at lines 228--232
+Underfull \hbox (badness 2237) in paragraph at lines 240--244
 []\OT1/txr/m/n/12 Design a Cir-cuit Model that fol-lows the
  []
 
 
-Underfull \hbox (badness 6110) in paragraph at lines 228--232
+Underfull \hbox (badness 6110) in paragraph at lines 240--244
 \OT1/txr/m/n/12 Our De-sign for Mod-elling the Trans-fer
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 228--232
+Underfull \hbox (badness 10000) in paragraph at lines 240--244
 
  []
 
 (./figs/ee18btech11014/ee18btech11014_figc.tex)
-Underfull \hbox (badness 2680) in paragraph at lines 242--243
+Underfull \hbox (badness 2680) in paragraph at lines 254--255
 []\OT1/txr/m/n/12 Assuming, N-MOSFETs are iden-ti-cal and
  []
 
 (./figs/ee18btech11014/ee18btech11014_figd.tex)
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 5908) has occurred while \output is active []
 
  [4]
-Underfull \hbox (badness 10000) in paragraph at lines 300--301
+Underfull \hbox (badness 10000) in paragraph at lines 312--313
 
  []
 
@@ -1476,17 +1480,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 300--301
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
-(./figs/ee18btech11014/ee18btech11014_fige.tex))
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [5]
+(./figs/ee18btech11014/ee18btech11014_fige.tex)) [5]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 275.
-
-[6
+ [6
 
 ]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 275.
- (./gvv_feedback_manual.aux)
+
+(./gvv_feedback_manual.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 275.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 275.
 Package rerunfilecheck Info: File `gvv_feedback_manual.out' has not changed.
@@ -1498,11 +1499,11 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 275.
  ) 
 Here is how much of TeX's memory you used:
- 34104 strings out of 492982
- 728295 string characters out of 6134896
- 1008547 words of memory out of 5000000
- 36890 multiletter control sequences out of 15000+600000
- 83461 words of font info for 189 fonts, out of 8000000 for 9000
+ 34117 strings out of 492982
+ 728279 string characters out of 6134896
+ 1013421 words of memory out of 5000000
+ 36896 multiletter control sequences out of 15000+600000
+ 84837 words of font info for 191 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  55i,14n,67p,511b,1116s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
@@ -1515,10 +1516,10 @@ re/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/t
 ype1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/
 utmri8a.pfb>
-Output written on gvv_feedback_manual.pdf (6 pages, 247880 bytes).
+Output written on gvv_feedback_manual.pdf (6 pages, 248866 bytes).
 PDF statistics:
- 290 PDF objects out of 1000 (max. 8388607)
- 267 compressed objects within 3 object streams
- 123 named destinations out of 1000 (max. 500000)
+ 292 PDF objects out of 1000 (max. 8388607)
+ 269 compressed objects within 3 object streams
+ 125 named destinations out of 1000 (max. 500000)
  138 words of extra memory for PDF output out of 10000 (max. 10000000)
 
