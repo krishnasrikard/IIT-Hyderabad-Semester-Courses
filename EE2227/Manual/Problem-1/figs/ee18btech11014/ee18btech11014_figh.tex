@@ -1,12 +1,12 @@
 \tikzstyle{block} = [draw, rectangle, 
-    minimum height=2em, minimum width=4em]
+    minimum height=1.5em, minimum width=3em]
 \tikzstyle{sum} = [draw, circle, node distance=1cm]
 \tikzstyle{input} = [coordinate]
 \tikzstyle{output} = [coordinate]
 \tikzstyle{pinstyle} = [pin edge={to-,thin,black}]
 
 % The block diagram code is probably more verbose than necessary
-\begin{tikzpicture}[auto, node distance=3cm,>=latex']
+\begin{tikzpicture}[auto, node distance=2.5cm,>=latex']
     % We start by placing the blocks
     \node [input, name=input] {};
     \node [block, right of=input] (p1) {$\frac{1}{1+\frac{s}{2\pi \times 10^{5}}}$};
