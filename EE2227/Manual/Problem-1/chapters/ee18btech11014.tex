@@ -212,7 +212,9 @@ V_{GS} = 1.1V
 Small Signal Parameter $g_{m}$,
 \begin{align}
 g_{m} = \mu_{n}C_{ox}\frac{W}{L}(V_{GS} - V_{TH})\\
-g_{m} = 5\times 10^{-3} \ohm^{-1}
+g_{m} = 5\times 10^{-3} \ohm^{-1} \\
+I_{D} = \frac{g_{m}}{2} (V_{GS} - V_{TH})\\
+I_{D} = 2.5\times 10^{-4} A
 \end{align}
 
 Small Signal Model of the circuit is
@@ -230,7 +232,7 @@ The cascade of RC Circuits introduces poles in the circuit. The RC Circuits intr
 v_{gs_{1}} = \dfrac{v_{s}}{\left(1+j\frac{f}{10^{5}}\right)\left(1+j\frac{f}{10^{6}}\right)\left(1+j\frac{f}{10^{7}}\right)}
 \end{align}
 
-The MOSFETs used in the circuit are Self-Biased with $V_{GS} = 1.1V$ for all 3 N-MOSFETs. 3 N-MOSFETs are used to achieve a large gain of $10^{5}$. At 3rd N-MOSFET, Terminals of output are swaped, inorder to compensate for the negetive sign of gain.
+The MOSFETs used in the circuit are Self-Biased with $V_{GS} = 1.1V$ and $I_{D}=2.5\times 10^{-4} A$ for all 3 N-MOSFETs. 3 N-MOSFETs are used to achieve a large gain of $10^{5}$. At 3rd N-MOSFET, Terminals of output are swaped, inorder to compensate for the negetive sign of gain.
 
 At the first N-MOSFET,
 \begin{align}
