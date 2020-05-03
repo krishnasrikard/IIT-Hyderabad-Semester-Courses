@@ -1,9 +1,9 @@
 \begin{circuitikz}[american]
 \ctikzset{tripoles/mos style/arrows}
 \draw (0,0) node[ground](GND){} to[vsourcesin, l= $v_{i}$] (0,2);
-\draw (0,2) to[R=$10^{4}\ohm$] (2.25,2) to[C,l_=$\frac{10^{-9}}{2\pi}F$] (2.25,0) node[ground](GND){};
-\draw (2.25,2) to[R=$10^{3}\ohm$] (4.5,2) to[C,l_=$\frac{10^{-9}}{2\pi}F$] (4.5,0) node[ground](GND){};
-\draw (4.5,2) to[R=$10^{2}\ohm$] (6.75,2) to[C,l_=$\frac{10^{-9}}{2\pi}F$] (6.75,0) node[ground](GND){};
+\draw (0,2) to[R=$10^{4}\ohm$] (2.25,2) node[label={above:$v_{a}$}]{} to[C,l_=$\frac{10^{-9}}{2\pi}F$] (2.25,0) node[ground](GND){};
+\draw (2.25,2) to[R=$10^{3}\ohm$] (4.5,2) node[label={above:$v_{b}$}]{} to[C,l_=$\frac{10^{-9}}{2\pi}F$] (4.5,0) node[ground](GND){};
+\draw (4.5,2) to[R=$10^{2}\ohm$] (6.75,2) node[label={above:$v_{c}$}]{} to[C,l_=$\frac{10^{-9}}{2\pi}F$] (6.75,0) node[ground](GND){};
 
 \draw (6.75,2) -- (9,2);
 \draw (8.75,0) node[ground](GND){} to[R=$1.1k\ohm$] (8.75,2) to[R=$3.9k\ohm$] (8.75,5) node[vcc](VCC){$V_{CC} = 5V$} (8.75,6);

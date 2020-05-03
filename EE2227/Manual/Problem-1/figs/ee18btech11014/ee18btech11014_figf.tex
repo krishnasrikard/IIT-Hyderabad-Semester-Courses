@@ -1,0 +1,6 @@
+\begin{circuitikz}[american]
+\ctikzset{tripoles/mos style/arrows}
+\draw (1,2) to[short, -o] (0,2) node[label={below:$v_{input}$}]{};
+\draw (1,2) to[R=$R$, i=$I$] (3,2) to[C=$C$] (3,0) node[ground](GND){};
+\draw (3,2) to[short, -o] (4,2) node[label={below:$v_{output}$}]{};
+\end{circuitikz}

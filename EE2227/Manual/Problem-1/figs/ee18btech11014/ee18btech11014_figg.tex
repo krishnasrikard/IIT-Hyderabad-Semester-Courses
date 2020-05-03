@@ -1,0 +1,12 @@
+\begin{circuitikz}[american]
+\ctikzset{tripoles/mos style/arrows}
+
+\draw (-2,2) to[short, -o] (-1,2) node[label={below:$+$}]{};
+\draw (-1,2) node[label={above:$v_{gs}$}]{};
+\draw (-2,0.01) to[short, -o] (-1,0.01) node[label={above:$-$}]{};
+
+\draw (0,2) to[cisource, l= $g_{m}v_{gs}$] (0,0) node[ground](GND){};
+\draw (0,2) -- (3,2);
+\draw (3,2) to[R=$R_{L}$] (3,0) node[ground](GND){};
+\draw (3,2) to[short, -o] (4,2) node[label={below:$v_{output}$}]{};
+\end{circuitikz}

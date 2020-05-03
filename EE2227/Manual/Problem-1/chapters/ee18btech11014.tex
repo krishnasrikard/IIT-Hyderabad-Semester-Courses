@@ -187,8 +187,50 @@ T = \frac{1}{H} = 10^{4}
 \textbf{So, The minimum value of Closed-Loop Gain with Phase Margin equal to $\alpha=45^{\circ}$ is $T_{min} = 10^{4}$.}\\
 %-------------------------------------------------------------------------------------------------%
 
+\item Find the Gain of RC-Circuit shown below \ref{fig:RC Circuit} and also identify the location of Poles.
+\begin{figure}[ht!]
+	\begin{center}
+		\resizebox{\columnwidth/2}{!}{\input{./figs/ee18btech11014/ee18btech11014_figf.tex}}
+	\end{center}
+	\caption{}
+	\label{fig:RC Circuit}
+\end{figure}
+
+\solution
+\begin{align}
+I = \frac{v_{input}}{R + \frac{1}{Cs}}\\
+v_{output} = I \times \frac{1}{Cs}\\
+v_{output} = \frac{v_{input} \times \frac{1}{Cs}}{R + \frac{1}{Cs}}\\
+\frac{v_{output}}{v_{input}} = \frac{1}{RCs + 1}\\
+s = j2\pi f\\
+Gain = \frac{v_{output}}{v_{input}} = \frac{1}{j2\pi RCf + 1}
+\end{align}
+
+So, there is a Pole at frequency $f = \frac{1}{2\pi RC}$ for the Transfer Function of Gain.\\
+%-------------------------------------------------------------------------------------------------%
+
+\item Find the Gain of Small-Signal of N-MOSFET. The circuit diagram of Small-Signal Model is \ref{fig:N-MOS Circuit}.
+\begin{figure}[ht!]
+	\begin{center}
+		\resizebox{\columnwidth/2}{!}{\input{./figs/ee18btech11014/ee18btech11014_figg.tex}}
+	\end{center}
+	\caption{}
+	\label{fig:N-MOS Circuit}
+\end{figure}
+
+\solution
+\begin{align}
+v_{output} = -g_{m}v_{gs}R_{L}
+\end{align}
+So, Gain of the above circuit is $-g_{m}v_{gs}R_{L}$.\\
+%-------------------------------------------------------------------------------------------------%
+
 \item Design a Circuit Model that follows the Transfer Function $G(f)$\\
 \solution\\
+Our Design for Modelling the Transfer Function is based on Poles of RC-Circuit and Gain of N-MOSFET.
+The cascade of RC Circuits are used to introduce poles in the circuit and N-MOSFETs are used to achieve the Gain required.\\
+
+So, the Circuit Diagram is,
 \begin{figure}[ht!]
 	\begin{center}
 		\resizebox{\columnwidth/1}{!}{\input{./figs/ee18btech11014/ee18btech11014_figc.tex}}
@@ -226,13 +268,36 @@ Small Signal Model of the circuit is
 	\label{fig:Circuit}
 \end{figure}
 
-The cascade of RC Circuits introduces poles in the circuit. The RC Circuits introduces poles at $f=10^{5} Hz, 10^{6} Hz, 10^{7} Hz$ respectively from left to right. So, the value of $v_{gs_{1}}$ is
-
+At the first RC-Circuit,
 \begin{align}
-v_{gs_{1}} = \dfrac{v_{s}}{\left(1+j\frac{f}{10^{5}}\right)\left(1+j\frac{f}{10^{6}}\right)\left(1+j\frac{f}{10^{7}}\right)}
+2\pi RC = 10^{-5}\\
+v_{a} = \frac{v_{i}}{1 + j\frac{f}{10^{5}}}
 \end{align}
 
-The MOSFETs used in the circuit are Self-Biased with $V_{GS} = 1.1V$ and $I_{D}=2.5\times 10^{-4} A$ for all 3 N-MOSFETs. 3 N-MOSFETs are used to achieve a large gain of $10^{5}$. At 3rd N-MOSFET, Terminals of output are swaped, inorder to compensate for the negetive sign of gain.
+At the second RC-Circuit,
+\begin{align}
+2\pi RC = 10^{-6}\\
+v_{b} = \frac{v_{a}}{1 + j\frac{f}{10^{6}}}\\
+v_{b} = \frac{v_{i}}{(1 + j\frac{f}{10^{5}})(1 + j\frac{f}{10^{6}})}
+\end{align}
+
+At the third RC-Circuit,
+\begin{align}
+2\pi RC = 10^{-7}\\
+v_{c} = \frac{v_{b}}{1 + j\frac{f}{10^{7}}}\\
+v_{gs_{1}} = v_{c}
+\end{align}
+\begin{align}
+v_{gs_{1}} = \frac{v_{i}}{(1 + j\frac{f}{10^{5}})(1 + j\frac{f}{10^{6}})(1 + j\frac{f}{10^{7}})}
+\end{align}
+
+The RC Circuits introduces poles at $f=10^{5} Hz, 10^{6} Hz, 10^{7} Hz$ respectively from left to right. So, the value of $v_{gs_{1}}$ is
+
+\begin{align}
+v_{gs_{1}} = \dfrac{v_{i}}{\left(1+j\frac{f}{10^{5}}\right)\left(1+j\frac{f}{10^{6}}\right)\left(1+j\frac{f}{10^{7}}\right)}
+\end{align}
+
+The MOSFETs used in the circuit are Self-Biased with $V_{GS} = 1.1V$ and $I_{D}=2.5\times 10^{-4} A$ for all 3 N-MOSFETs. 3 N-MOSFETs are used to achieve a large gain of $10^{5}$. At 3rd N-MOSFET, Terminals of output are swaped, inorder to compensate for the negetive sign of gain.\\
 
 At the first N-MOSFET,
 \begin{align}
@@ -249,7 +314,7 @@ v_{gs_{3}} = -g_{m}v_{gs_{2}}\times 15.6\times 10^{3}\\
 v_{gs_{3}} = -78 \times v_{gs_{2}}
 \end{align}
 \begin{align}
-v_{gs_{3}} = \dfrac{6084\times v_{s}}{\left(1+j\frac{f}{10^{5}}\right)\left(1+j\frac{f}{10^{6}}\right)\left(1+j\frac{f}{10^{7}}\right)}\\
+v_{gs_{3}} = \dfrac{6084\times v_{s}}{\left(1+j\frac{f}{10^{5}}\right)\left(1+j\frac{f}{10^{6}}\right)\left(1+j\frac{f}{10^{7}}\right)}
 \end{align}
 
 Similarly, at the third N-MOSFET,
