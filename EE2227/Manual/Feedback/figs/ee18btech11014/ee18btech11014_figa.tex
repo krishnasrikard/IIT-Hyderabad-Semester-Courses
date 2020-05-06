@@ -1,6 +1,6 @@
 \begin{circuitikz}[american]
 \ctikzset{tripoles/mos style/arrows}
-\draw  (0,0) node[ground](GND){} -- (0,1) to[isource, l= $I_{s}$] (0,3) -- (2,3) to[R=$R_{F}$, i=$I_{f}$] (4,3) -- (6,3)node[label={right:C}]{} to[R=$R_{m}$] (6,0) node[ground](GND){} (6,0);
+\draw  (0,0) node[ground](GND){} -- (0,1) to[isource, l= $I_{s}$] (0,3) -- (2,3) to[R=$R_{F}$, i=$I_{f}$] (4,3) -- (6,3)node[label={right:C}]{} to[R=$R_{M}$] (6,0) node[ground](GND){} (6,0);
 
 \draw (1,5) node[nmos,](Q1){};
 \draw (1,3) node[label={below:A}]{} to[short,i=$I_{i}$] (Q1.S);
@@ -10,9 +10,9 @@
 \draw  (1,6)node[label={left:B}]{} -- (1,6.5) to[R=$R_{D}$, i=$I_{i}$] (1,9);
 \draw (Q1.D) -- (1,6);
 
-\draw (6,6)node[pmos,](Q2){};
+\draw (6,6.5)node[pmos,](Q2){};
 \draw (Q2.D) to[R=$R_{L}$,i=$I_{o}$] (6,3);
 \draw (Q2.center) node[right]{{$Q_{2}$}};
-\draw (Q2.G) -- (1,6);
+\draw (Q2.G) -- (1,6.5);
 \draw (Q2.S) -- (6,9) node[vcc](VCC){$V_{CC}$} (6,10);
 \end{circuitikz}

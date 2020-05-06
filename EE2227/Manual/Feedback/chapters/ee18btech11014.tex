@@ -97,4 +97,55 @@ T = \frac{I_{o}}{I_{s}}=-\frac{g_{m_{2}} R_{D}}{1+g_{m_{2}} R_{D} /\left(1+\frac
 \end{align}
 %------------------------------------------------------------------------%
 
+\item Draw the Circuit Diagram of Feedback Network.\\
+\solution
+\begin{figure}[ht!]
+	\begin{center}
+		\resizebox{\columnwidth/2}{!}{\input{./figs/ee18btech11014/ee18btech11014_figd.tex}}
+	\end{center}
+	\caption{}
+	\label{fig:Control_System}
+\end{figure}
+
+So, Gain of Feedback Network is
+\begin{align}
+(I_{o} + I_{f})R_{M} = -I_{f}R_{F}\\
+\frac{I_{f}}{I_{o}} = -\frac{R_{M}}{R_{F}+R_{M}}\\
+H = -\frac{R_{M}}{R_{F}+R_{M}}
+\end{align}
+%------------------------------------------------------------------------%
+
+\item Find $R_{11}$ and $R_{22}$  of Feedback Network where $R_{11}$ is input resistance through Port-1 and $R_{22}$ is Input Resistance through Port-2.\\
+\solution\\
+While calculating $R_{11}$, Port-2 should be Opened. So, Net-Resistance seen through Port-1 is 
+\begin{align}
+R_{11} = R_{F} + R_{M}
+\end{align}
+While calculating $R_{22}$, Port-1 should be Shorted. So, Net-Resistance seen through Port-2 is 
+\begin{align}
+R_{22} = R_{F} || R_{M}\\
+R_{22} = \frac{R_{F}R_{M}}{R_{F}+R_{M}}
+\end{align}
+%------------------------------------------------------------------------%
+
+\item Draw the Circuit Diagram of Open-Loop Network.\\
+\solution\\
+As the ciruit is Shunt-Series Topology, $R_{11}$ is shunted across the Input Terminal and $R_{22}$ is added in series to Output Terminal.
+\begin{figure}[ht!]
+	\begin{center}
+		\resizebox{\columnwidth}{!}{\input{./figs/ee18btech11014/ee18btech11014_fige.tex}}
+	\end{center}
+	\caption{}
+	\label{fig:Control_System}
+\end{figure}
+
+Current Flowing through $R_{D}$ is approximately same as $I_{i}$, as $R_{F}$ is a Large Resistance.
+So,
+\begin{align}
+v_{B} = I_{i}R_{D}\\
+v_{gs_{2}} = v_{B} = I_{i}R_{D}\\
+I_{o} =  -g_{m_{2}}v_{gs_{2}} = -g_{m_{2}}I_{i}R_{D}\\
+G = \frac{I_{o}}{I_{i}} =  -g_{m_{2}}R_{D}
+\end{align}
+
 \end{enumerate}

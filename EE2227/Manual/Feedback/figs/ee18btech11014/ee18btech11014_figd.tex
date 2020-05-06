@@ -1,0 +1,9 @@
+\begin{circuitikz}[american]
+\ctikzset{tripoles/mos style/arrows}
+\draw (0,0) node[ground](GND){} -- (0,2) to[short, -o] (0.5,2) -- (0.5,2) to[R=$R_{F}$,i=$I_{F}$] (3,2);
+\draw (1,2) node[label={below:Port-1}]{};
+\draw (3,2) to[R=$R_{M}$] (3,0) node[ground](GND){};
+\draw (3,2) to[short, -o] (4,2) -- (5.5,2);
+\draw (4,2) node[label={above:Port-2}]{};
+\draw (5.5,0) node[ground](GND){} to[isource, l= $I_{o}$] (5.5,2);
+\end{circuitikz}

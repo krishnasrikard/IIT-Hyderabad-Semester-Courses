@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.4.27)  6 MAY 2020 14:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.4.27)  6 MAY 2020 15:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1178,14 +1178,20 @@ Package multicol Warning: May not work with the twocolumn option on input line
 ) (/usr/share/texlive/texmf-dist/tex/latex/chngcntr/chngcntr.sty
 Package: chngcntr 2009/09/02 v1.0a change counter resetting
 )
-(./gvv_feedback_manual.aux)
+(./gvv_feedback_manual.aux
+
+LaTeX Warning: Label `fig:Control_System' multiply defined.
+
+
+LaTeX Warning: Label `fig:Control_System' multiply defined.
+
+)
 \openout1 = `gvv_feedback_manual.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 88.
 LaTeX Font Info:    Try loading font information for OML+txmi on input line 88.
 
-
-(/usr/share/texlive/texmf-dist/tex/latex/txfonts/omltxmi.fd
+ (/usr/share/texlive/texmf-dist/tex/latex/txfonts/omltxmi.fd
 File: omltxmi.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    ... okay on input line 88.
@@ -1360,27 +1366,44 @@ Underfull \hbox (badness 10000) in paragraph at lines 92--93
 
  []
 
-)
+(./figs/ee18btech11014/ee18btech11014_figd.tex)
+Underfull \hbox (badness 4859) in paragraph at lines 118--121
+\OT1/txr/m/n/12 While cal-cu-lat-ing $\OML/txmi/m/it/12 R[]$\OT1/txr/m/n/12 , P
+ort-2 should be
+ []
+
+
+Underfull \hbox (badness 4859) in paragraph at lines 123--125
+\OT1/txr/m/n/12 While cal-cu-lat-ing $\OML/txmi/m/it/12 R[]$\OT1/txr/m/n/12 , P
+ort-1 should be
+ []
+
+(./figs/ee18btech11014/ee18btech11014_fige.tex) [3])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 275.
- [3
+ [4
 
 ]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 275.
- (./gvv_feedback_manual.aux)
+
+(./gvv_feedback_manual.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 275.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 275.
 Package rerunfilecheck Info: File `gvv_feedback_manual.out' has not changed.
 (rerunfilecheck)             Checksum: 308F00B1A77C79B5689ABC4DFE3DA320;769.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 275.
  ) 
 Here is how much of TeX's memory you used:
- 33230 strings out of 492982
- 707585 string characters out of 6134896
- 942076 words of memory out of 5000000
- 36100 multiletter control sequences out of 15000+600000
+ 33751 strings out of 492982
+ 719816 string characters out of 6134896
+ 950953 words of memory out of 5000000
+ 36599 multiletter control sequences out of 15000+600000
  84837 words of font info for 191 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 55i,11n,67p,706b,1131s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,11n,67p,706b,1135s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/share/texlive/texmf-dis
 t/fonts/type1/public/txfonts/rtxr.pfb></usr/share/texlive/texmf-dist/fonts/type
@@ -1390,10 +1413,10 @@ fb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/
 texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-
 dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type
 1/urw/times/utmri8a.pfb>
-Output written on gvv_feedback_manual.pdf (3 pages, 81482 bytes).
+Output written on gvv_feedback_manual.pdf (4 pages, 88692 bytes).
 PDF statistics:
- 178 PDF objects out of 1000 (max. 8388607)
- 162 compressed objects within 2 object streams
- 48 named destinations out of 1000 (max. 500000)
+ 200 PDF objects out of 1000 (max. 8388607)
+ 183 compressed objects within 2 object streams
+ 64 named destinations out of 1000 (max. 500000)
  133 words of extra memory for PDF output out of 10000 (max. 10000000)
 

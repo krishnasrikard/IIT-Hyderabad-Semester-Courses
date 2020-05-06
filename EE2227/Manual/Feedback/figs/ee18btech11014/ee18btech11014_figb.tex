@@ -1,6 +1,6 @@
 \begin{circuitikz}[american]
 \ctikzset{tripoles/mos style/arrows}
-\draw  (0,0) node[ground](GND){} -- (0,1) to[isource, l= $I_{s}$] (0,3) -- (2,3) to[R=$R_{F}$, i=$I_{f}$] (4,3) -- (6,3)node[label={right:C}]{} to[R=$R_{m}$] (6,0) node[ground](GND){} (6,0);
+\draw  (0,0) node[ground](GND){} -- (0,1) to[isource, l= $I_{s}$] (0,3) -- (2,3) to[R=$R_{F}$, i=$I_{f}$] (4,3) -- (6,3)node[label={right:C}]{} to[R=$R_{M}$] (6,0) node[ground](GND){} (6,0);
 
 \draw (1,3) node[label={below:A}]{} to[short,i=$I_{i}$] (1,4);
 \draw (1,6) node[label={right:B}]{} to[cisource, l= $-g_{m_{1}}v_{A}$] (1,4);
