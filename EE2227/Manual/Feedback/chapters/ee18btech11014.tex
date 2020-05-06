@@ -24,8 +24,17 @@ While drawing a Small-Signal Model, we ground all constant voltage sources and o
 
 \item Describe how the given circuit is a Negetive Feedback Current Amplifier.\\
 \solution 
-For the feedback to be negative, $I_{f}$ must have the same polarity as $I_{s}$. To ascertain that this is the case, we assume an increase in $I_{s}$ and follow the change around the loop: An increase in $I_{s}$ causes $I_{i}$ to increase and the drain voltage of $Q_{1}$ will increase. Since this voltage is applied to the gate of the p-channel device $Q_{2}$ , its increase will cause $I_{o}$ , the drain current of $Q_{2}$, to decrease. Thus, the voltage across $R_{M}$ will decrease, which will cause $I_{f}$ to increase. This is the same polarity assumed for the initial change in
-$I_{s}$, verifying that the feedback is indeed negative.
+For the feedback to be negative, $I_{f}$ must have the same polarity as $I_{s}$. To ascertain that this is the case, we assume an increase in $I_{s}$ and follow the change around the loop: An increase in $I_{s}$ causes $I_{i}$ to increase and the drain voltage of $Q_{1}$ will increase. Since this voltage is applied to the gate of the p-channel device $Q_{2}$ , its increase will cause $I_{o}$ , the drain current of $Q_{2}$, to decrease. Thus, the voltage across $R_{M}$ will decrease, which will cause $I_{f}$ to increase. This is the same polarity assumed for the initial change in $I_{s}$, verifying that the feedback is indeed negative.\\
+%------------------------------------------------------------------------%
+
+\item Write all KVL and KCL Equations\\
+\solution
+\begin{align}
+I_{i} = -g_{m_{1}}v_{A}\\
+v_{B} = I_{i}R_{D}\\
+I_{o} = -g_{m_{2}}v_{B}\\
+v_{A} = I_{F}R_{F} - (I_{F} + I_{o})R_{M}
+\end{align}
 %------------------------------------------------------------------------%
 
 \item Find the Expression for the Open-Loop Gain $G=\frac{I_{o}}{I_{i}}$, from the Small-Signal Model. For simplicity, neglect the Early effect in $Q_{1}$ and $Q_{2}$.\\
@@ -48,7 +57,9 @@ G = \frac{I_{o}}{I_{i}} =  -g_{m_{2}}R_{D}
 
 \item Find the Expression of the Feedback Factor $H = \frac{I_{f}}{I_{o}}$, from Small-Signal Model. For simplicity, neglect the Early effect in $Q_{1}$ and $Q_{2}$.\\
 \solution\\
-$I_{o}$ is fed to a current divider formed by $R_{M}$ and $R_{F}$. Current Mixing results in a reduced input resistance, the voltage at the source node of $Q_{2}$ will be close to zero. Hence the voltage at point 'A' is very small and is considered, $v_{A} \simeq 0$. So $R_{F}$ and $R_{M}$ are parallel and Voltage Drop across them is same.
+$I_{o}$ is fed to a current divider formed by $R_{M}$ and $R_{F}$. Assuming system has Good Gain, Most part of $I_{s}$ flows as $I_{F}$ leaving behind small $I_{i}$. As $I_{i}$ is small, the voltage at point 'A' is very small and is considered, $v_{A} \simeq 0$. So $R_{F}$ and $R_{M}$ are parallel and Voltage Drop across them is same.
+
+From (2.1.3.4),
 \begin{align}
 (I_{o} + I_{f})R_{M} \simeq -I_{f}R_{F}\\
 \frac{I_{f}}{I_{o}} \simeq -\frac{R_{M}}{R_{F}+R_{M}}

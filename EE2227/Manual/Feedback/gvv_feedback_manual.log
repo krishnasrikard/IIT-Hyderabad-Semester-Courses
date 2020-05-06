@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.4.27)  6 MAY 2020 12:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.4.27)  6 MAY 2020 13:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1347,18 +1347,22 @@ Underfull \hbox (badness 5050) in paragraph at lines 13--22
 
 
 ]
-(./figs/ee18btech11014/ee18btech11014_figc.tex)
-Underfull \hbox (badness 10000) in paragraph at lines 81--82
+Underfull \hbox (badness 10000) in paragraph at lines 25--29
 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [2])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 275.
+ [2]
+(./figs/ee18btech11014/ee18btech11014_figc.tex)
+Underfull \hbox (badness 10000) in paragraph at lines 92--93
 
-[3
+ []
+
+)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 275.
+ [3
 
 ]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 275.
@@ -1370,13 +1374,13 @@ Package rerunfilecheck Info: File `gvv_feedback_manual.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 275.
  ) 
 Here is how much of TeX's memory you used:
- 33225 strings out of 492982
- 707531 string characters out of 6134896
- 942076 words of memory out of 5000000
+ 33230 strings out of 492982
+ 707585 string characters out of 6134896
+ 942075 words of memory out of 5000000
  36100 multiletter control sequences out of 15000+600000
  84837 words of font info for 191 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 55i,11n,67p,647b,1131s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,11n,67p,706b,1131s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/share/texlive/texmf-dis
 t/fonts/type1/public/txfonts/rtxr.pfb></usr/share/texlive/texmf-dist/fonts/type
@@ -1386,10 +1390,10 @@ fb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/
 texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-
 dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type
 1/urw/times/utmri8a.pfb>
-Output written on gvv_feedback_manual.pdf (3 pages, 80942 bytes).
+Output written on gvv_feedback_manual.pdf (3 pages, 81488 bytes).
 PDF statistics:
- 173 PDF objects out of 1000 (max. 8388607)
- 157 compressed objects within 2 object streams
- 43 named destinations out of 1000 (max. 500000)
+ 178 PDF objects out of 1000 (max. 8388607)
+ 162 compressed objects within 2 object streams
+ 48 named destinations out of 1000 (max. 500000)
  133 words of extra memory for PDF output out of 10000 (max. 10000000)
 
