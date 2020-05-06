@@ -1,22 +1,13 @@
-\tikzstyle{block} = [draw, rectangle, 
-    minimum height=1.25em, minimum width=2.5em]
-\tikzstyle{sum} = [draw, circle, node distance=1cm]
-\tikzstyle{input} = [coordinate]
-\tikzstyle{output} = [coordinate]
-\tikzstyle{pinstyle} = [pin edge={to-,thin,black}]
+\begin{circuitikz}[american]
+\tikzset{quad/.style={draw, minimum height=2.4cm, minimum width=4cm}}
+\node[quad] (A) at (0,0) {$H$};
+\draw ($(A.north west)!.175!(A.west)$) to[short,-o] ++(-2,0) -- (-5,1)
+      ($(A.south west)!.175!(A.west)$) to[short,-o] ++(-2,0) -- (-5,-1)
+      ($(A.north east)!.175!(A.east)$) to[short,-o] ++(1,0)
+      ($(A.south east)!.175!(A.east)$) to[short,-o] ++(1,0);
 
-% The block diagram code is probably more verbose than necessary
-\begin{tikzpicture}[auto, node distance=2cm,>=latex']
-    % We start by placing the blocks
-    \node [input, name=input] {};
-    \node [block, right of=input] (controller) {$H = -\frac{R_{M}}{R_{F}+R_{M}}$};
-    
-    % We draw an edge between the controller and system block to 
-    % calculate the coordinate u. We need it to place the measurement block. 
-   
-    \node [output, right of=controller] (output) {};
+\draw (-5,-1) to[short, i=$I_{f}$] (-5,1);
 
-    % Once the nodes are placed, connecting them is easy. 
-    \draw [draw,->] (controller) -- node {$I_{F}$} (input);
-    \draw [->] (output) -- node {$I_{o}$} (controller);
-\end{tikzpicture}
+\draw (3,-1) -- (5,-1) to[isource, l= $I_{o}$] (5,1) -- (3,1);
+
+\end{circuitikz}
