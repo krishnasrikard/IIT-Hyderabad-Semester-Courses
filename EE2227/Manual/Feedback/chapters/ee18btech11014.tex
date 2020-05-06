@@ -99,20 +99,34 @@ T = \frac{I_{o}}{I_{s}}=-\frac{g_{m_{2}} R_{D}}{1+g_{m_{2}} R_{D} /\left(1+\frac
 
 \item Draw the Circuit Diagram of Feedback Network.\\
 \solution
+The Circuit Diagram of Feedback Network is \ref{fig:Feedback_Network}
 \begin{figure}[ht!]
 	\begin{center}
 		\resizebox{\columnwidth/2}{!}{\input{./figs/ee18btech11014/ee18btech11014_figd.tex}}
 	\end{center}
-	\caption{}
-	\label{fig:Control_System}
+	\caption{Feedback Network}
+	\label{fig:Feedback_Network}
 \end{figure}
+
+By KVL and KCL,
+\begin{align}
+(I_{o} + I_{f})R_{M} = -I_{f}R_{F}\\
+\frac{I_{f}}{I_{o}} = -\frac{R_{M}}{R_{F}+R_{M}}
+\end{align}
 
 So, Gain of Feedback Network is
 \begin{align}
-(I_{o} + I_{f})R_{M} = -I_{f}R_{F}\\
-\frac{I_{f}}{I_{o}} = -\frac{R_{M}}{R_{F}+R_{M}}\\
 H = -\frac{R_{M}}{R_{F}+R_{M}}
 \end{align}
+
+The Block Diagram of Feedback Network is
+\begin{figure}[ht!]
+	\begin{center}
+		\resizebox{\columnwidth/2}{!}{\input{./figs/ee18btech11014/ee18btech11014_figf.tex}}
+	\end{center}
+	\caption{Feedback Block Diagram}
+	\label{fig:Feedback_Block}
+\end{figure}
 %------------------------------------------------------------------------%
 
 \item Find $R_{11}$ and $R_{22}$  of Feedback Network where $R_{11}$ is input resistance through Port-1 and $R_{22}$ is Input Resistance through Port-2.\\
@@ -126,26 +140,49 @@ While calculating $R_{22}$, Port-1 should be Shorted. So, Net-Resistance seen th
 R_{22} = R_{F} || R_{M}\\
 R_{22} = \frac{R_{F}R_{M}}{R_{F}+R_{M}}
 \end{align}
+
+So,
+\begin{align}
+R_{11} = R_{F} + R_{M}\\
+R_{22} = \frac{R_{F}R_{M}}{R_{F}+R_{M}}
+\end{align}
 %------------------------------------------------------------------------%
 
 \item Draw the Circuit Diagram of Open-Loop Network.\\
 \solution\\
 As the ciruit is Shunt-Series Topology, $R_{11}$ is shunted across the Input Terminal and $R_{22}$ is added in series to Output Terminal.
+
+Current Flowing through $R_{D}$ is approximately same as $I_{i}$, as $R_{F}$ is a Large Resistance.
+
+The Circuit Diagram of Open-Loop Network is \ref{fig:OpenLoop_Network}
 \begin{figure}[ht!]
 	\begin{center}
 		\resizebox{\columnwidth}{!}{\input{./figs/ee18btech11014/ee18btech11014_fige.tex}}
 	\end{center}
-	\caption{}
-	\label{fig:Control_System}
+	\caption{Open-Loop Network}
+	\label{fig:OpenLoop_Network}
 \end{figure}
 
-Current Flowing through $R_{D}$ is approximately same as $I_{i}$, as $R_{F}$ is a Large Resistance.
-So,
+By KVL and KCL,
 \begin{align}
 v_{B} = I_{i}R_{D}\\
 v_{gs_{2}} = v_{B} = I_{i}R_{D}\\
 I_{o} =  -g_{m_{2}}v_{gs_{2}} = -g_{m_{2}}I_{i}R_{D}\\
+\frac{I_{o}}{I_{i}} = -g_{m_{2}}R_{D}
+\end{align}
+
+So, Open-Loop Gain is
+\begin{align}
 G = \frac{I_{o}}{I_{i}} =  -g_{m_{2}}R_{D}
 \end{align}
+
+The Block Diagram of Open-Loop Network is
+\begin{figure}[ht!]
+	\begin{center}
+		\resizebox{\columnwidth/2}{!}{\input{./figs/ee18btech11014/ee18btech11014_figg.tex}}
+	\end{center}
+	\caption{Open-Loop Block Diagram}
+	\label{fig:OpenLoop_Block}
+\end{figure}
 
 \end{enumerate}
