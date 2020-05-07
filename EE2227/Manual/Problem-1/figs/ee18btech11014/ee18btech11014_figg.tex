@@ -1,12 +1,11 @@
 \begin{circuitikz}[american]
 \ctikzset{tripoles/mos style/arrows}
 
-\draw (-2,2) to[short, -o] (-1,2) node[label={below:$+$}]{};
-\draw (-1,2) node[label={above:$v_{gs}$}]{};
-\draw (-2,0.01) to[short, -o] (-1,0.01) node[label={above:$-$}]{};
-
-\draw (0,2) to[cisource, l= $g_{m}v_{gs}$] (0,0) node[ground](GND){};
-\draw (0,2) -- (3,2);
-\draw (3,2) to[R=$R_{L}$] (3,0) node[ground](GND){};
-\draw (3,2) to[short, -o] (4,2) node[label={below:$v_{output}$}]{};
+\draw (0,0) node[ground](GND){} to[vsourcesin, l= $v_{c}$] (0,4) to[R=$R_{s}$] (2,4) to[short, -o] (2.25,4) node[label={below:$+$}]{};
+\draw (2.25,2) to[R=$R_{1}$, v=$v_{f}$] (2.25,0) node[ground](GND){};
+\draw (2.25,2) to[short, -o] (2.25,2.25) node[label={above:$-$}]{};
+\draw (2.25,2.65) node[label={$v_{i}$}]{};
+\draw (2.25,2.25) -- (3,2.25) to[R=$R_{2}$] (5,2.25) -- (5,4) -- (6,4) to[vsourcesin, l=$Gv_{i}$] (6,0) node[ground](GND){};
+\draw (6,4) -- (8.5,4) to[R=$R_{L}$] (8.5,0) node[ground](GND){};
+\draw (8.5,4) to[short,-o] (9,4) node[label={above:$v_{o}$}]{};
 \end{circuitikz}

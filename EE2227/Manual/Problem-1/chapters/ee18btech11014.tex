@@ -1,6 +1,6 @@
 \begin{enumerate}[label=\thesubsection.\arabic*.,ref=\thesubsection.\theenumi]
 \numberwithin{equation}{enumi}
-
+%2.1.1
 \item Consider the Magnitude Bode Plot and Phase Bode Plot \ref{fig:Bode} of Open-Loop Transfer Function of an Amplifier. Estimate the Open-Loop Transfer Function. (Assume $'A'$ as $'G'$ and $'\beta'$ as $'H'$)
 \begin{figure}[ht!]
 	\begin{center}
@@ -37,7 +37,7 @@ So, the Open-Loop Transfer Function $G(f)$ is
 	G(f) = \dfrac{10^{5}}{\left(1+j\frac{f}{10^{5}}\right)\left(1+j\frac{f}{10^{6}}\right)\left(1+j\frac{f}{10^{7}}\right)}
 \end{align}\\
 %-------------------------------------------------------------------------------------------------%
-
+%2.1.2
 \item Calculate the Phase of Open-Loop Transfer Function.\\
 \solution\\
 Phase of Open-Loop Transfer Function = $\phi$
@@ -45,7 +45,7 @@ Phase of Open-Loop Transfer Function = $\phi$
 \phi=-\left[\tan ^{-1}\left(f / 10^{5}\right)+\tan ^{-1}\left(f / 10^{6}\right)+\tan ^{-1}\left(f / 10^{7}\right)\right]
 \end{align}
 %-------------------------------------------------------------------------------------------------%
-
+%2.1.3
 \item Determine the Closed-Loop Voltage Gain of the System assuming $|GH|\gg1$ and also assuming the block diagram of Control System is \ref{fig:Control}
 \begin{figure}[ht!]
 	\begin{center}
@@ -80,7 +80,7 @@ T = \frac{1}{H}
 
 So, The value of Closed-Loop Voltage Gain of the Control System under the assumption, $|GH| \gg 1$ is $T = \frac{1}{H}$\\
 %-------------------------------------------------------------------------------------------------%
-
+%2.1.4
 \item What is the value of Loop-Gain?\\
 \solution\\
 The value of Loop-Gain can be calculated by the difference of 2-curves $20\log|A|$ and $20log(\frac{1}{H})$. The difference between the two curves will be
@@ -88,12 +88,12 @@ The value of Loop-Gain can be calculated by the difference of 2-curves $20\log|A
 20 \log |G|-20 \log \frac{1}{H}=20 \log |GH|
 \end{align}
 %-------------------------------------------------------------------------------------------------%
-
+%2.1.5
 \item Define Phase-Margin\\
 \solution\\
 \textbf{Phase-Margin:} The phase margin is defined as the angle in degrees by which the phase angle is smaller than $-180^{\circ}$ at the gain crossover, the gain crossover being the frequency at which the open-loop gain first reaches 1. \\
 %-------------------------------------------------------------------------------------------------%
-
+%2.1.6
 \item Find the frequencies for which phase margins are $90^{\circ}$ and $45^{\circ}$ respectively?\\
 \solution\\
 Let Phase Margin be $\alpha = 90^{\circ}$. Then,
@@ -133,7 +133,7 @@ So, by the definition of Phase-Margin, at $\phi = -135^{\circ}$ , $|GH| = 1 $.  
 
 So, the approximate value of $f$ at which Phase Margin is $45^{\circ}$ is $f=10^{6}$.\\
 %-------------------------------------------------------------------------------------------------%
-
+%2.1.7
 \item Find the minimum values of Closed-Loop Voltage Gain for which phase margins are $90^{\circ}$ and  $45^{\circ}$ respectively\\
 \solution\\
 For $\alpha=90^{\circ}$,
@@ -186,7 +186,7 @@ T = \frac{1}{H} = 10^{4}
 
 \textbf{So, The minimum value of Closed-Loop Gain with Phase Margin equal to $\alpha=45^{\circ}$ is $T_{min} = 10^{4}$.}\\
 %-------------------------------------------------------------------------------------------------%
-
+%2.1.8
 \item Break the Transfer Function $G(f)$ into Simple Blocks and Create a Block Diagram for $G(f)$.\\
 \solution\\
 \begin{figure}[ht!]
@@ -198,7 +198,7 @@ T = \frac{1}{H} = 10^{4}
 \end{figure}
 
 %-------------------------------------------------------------------------------------------------%
-
+%2.1.9
 \item Find the Gain of RC-Circuit shown below \ref{fig:RC Circuit} and also identify the location of Poles.
 \begin{figure}[ht!]
 	\begin{center}
@@ -220,27 +220,37 @@ Gain = \frac{v_{output}}{v_{input}} = \frac{1}{j2\pi RCf + 1}
 
 So, there is a Pole at frequency $f = \frac{1}{2\pi RC}$ for the Transfer Function of Gain.\\
 %-------------------------------------------------------------------------------------------------%
-
-\item Find the Gain of Small-Signal of N-MOSFET. The circuit diagram of Small-Signal Model is \ref{fig:N-MOS Circuit}.
+%2.1.10
+\item Find the Gain of Small-Signal of Operational Amplifier. The circuit diagram of Small-Signal Model is \ref{fig:OpAmp Circuit}.
 \begin{figure}[ht!]
 	\begin{center}
-		\resizebox{\columnwidth/2}{!}{\input{./figs/ee18btech11014/ee18btech11014_figg.tex}}
+		\resizebox{\columnwidth}{!}{\input{./figs/ee18btech11014/ee18btech11014_figg.tex}}
 	\end{center}
 	\caption{}
-	\label{fig:N-MOS Circuit}
+	\label{fig:OpAmp Circuit}
 \end{figure}
 
-\solution
+\solution\\
+Applying KVL and KCl,
 \begin{align}
-v_{output} = -g_{m}v_{gs}R_{L}
+v_{o} = Gv_{i}
 \end{align}
-So, Gain of the above circuit is $-g_{m}v_{gs}R_{L}$.\\
-%-------------------------------------------------------------------------------------------------%
 
+As no current flows through $R_{s}$,
+\begin{align}
+v_{i} = v_{c} - v_{f}\\
+v_{f} = \frac{R_{1}}{R_{1}+R_{2}}v_{o}\\
+v_{i} = \frac{v_{o}}{G}\\
+\frac{v_{o}}{G} = v_{c} - \frac{R_{1}}{R_{1}+R_{2}}v_{o}\\
+\frac{v_{o}}{v_{c}} = \frac{G}{1+G\frac{R_{1}}{R_{1}+R_{2}}}
+\end{align}
+
+So, Gain of the Circuit is $\frac{G}{1+G\frac{R_{1}}{R_{1}+R_{2}}}$
+%-------------------------------------------------------------------------------------------------%
+%2.1.11
 \item Design a Circuit Model that follows the Transfer Function $G(f)$\\
 \solution\\
-Our Design for Modelling the Transfer Function is based on Poles of RC-Circuit and Gain of N-MOSFET.
-The cascade of RC Circuits are used to introduce poles in the circuit and N-MOSFETs are used to achieve the Gain required.\\
+Our Design for Modelling the Transfer Function is based on Poles of RC-Circuit and Gain of Operational Amplifier.\\
 
 So, the Circuit Diagram is,
 \begin{figure}[ht!]
@@ -251,24 +261,9 @@ So, the Circuit Diagram is,
 	\label{fig:Circuit}
 \end{figure}
  
-Assuming, N-MOSFETs are identical and properties of N-MOSFET are,
+Assuming, Gain of Operational Amplifier is
 \begin{align}
-\mu_{n}C_{ox} = 100 \mu A/V^{2}\\
-\frac{W}{L} = 500\\
-V_{T} = 1 V
-\end{align}
-
-$V_{CC}$ is divided across $4.9\times 10^{3} \ohm$ and $1.1\times 10^{3} \ohm$
-\begin{align}
-V_{GS} = 1.1V
-\end{align}
-
-Small Signal Parameter $g_{m}$,
-\begin{align}
-g_{m} = \mu_{n}C_{ox}\frac{W}{L}(V_{GS} - V_{TH})\\
-g_{m} = 5\times 10^{-3} \ohm^{-1} \\
-I_{D} = \frac{g_{m}}{2} (V_{GS} - V_{TH})\\
-I_{D} = 2.5\times 10^{-4} A
+G = 10^{5}
 \end{align}
 
 Small Signal Model of the circuit is
@@ -280,68 +275,52 @@ Small Signal Model of the circuit is
 	\label{fig:Circuit}
 \end{figure}
 
+The cascade of RC Circuits are used to introduce poles in the circuit and Op-Amp are used to achieve the Gain required.\\
+
+At the Operational Amplifier,
+\begin{align}
+v_{i} = v_{s}\\
+v_{a} = 10^5 v_{i}\\
+v_{a} = 10^5 v_{s}
+\end{align}
+
 At the first RC-Circuit,
 \begin{align}
-2\pi RC = 10^{-5}\\
-v_{a} = \frac{v_{i}}{1 + j\frac{f}{10^{5}}}
+2\pi RC = 10^{-7}\\
+v_{b} = \frac{v_{a}}{1 + j\frac{f}{10^{7}}}\\
+v_{b} = \frac{10^5 v_{i}}{1 + j\frac{f}{10^{7}}}
 \end{align}
 
 At the second RC-Circuit,
 \begin{align}
 2\pi RC = 10^{-6}\\
-v_{b} = \frac{v_{a}}{1 + j\frac{f}{10^{6}}}\\
-v_{b} = \frac{v_{i}}{(1 + j\frac{f}{10^{5}})(1 + j\frac{f}{10^{6}})}
+v_{c} = \frac{v_{b}}{1 + j\frac{f}{10^{6}}}\\
+v_{c} = \frac{10^5 v_{i}}{(1 + j\frac{f}{10^{6}})(1 + j\frac{f}{10^{7}})}
 \end{align}
 
 At the third RC-Circuit,
 \begin{align}
-2\pi RC = 10^{-7}\\
-v_{c} = \frac{v_{b}}{1 + j\frac{f}{10^{7}}}\\
-v_{gs_{1}} = v_{c}
+2\pi RC = 10^{-5}\\
+v_{o} = \frac{v_{c}}{1 + j\frac{f}{10^{5}}}
 \end{align}
 \begin{align}
-v_{gs_{1}} = \frac{v_{i}}{(1 + j\frac{f}{10^{5}})(1 + j\frac{f}{10^{6}})(1 + j\frac{f}{10^{7}})}
+v_{o} = \frac{10^5 v_{i}}{(1 + j\frac{f}{10^{5}})(1 + j\frac{f}{10^{6}})(1 + j\frac{f}{10^{7}})}
 \end{align}
 
-The RC Circuits introduces poles at $f=10^{5} Hz, 10^{6} Hz, 10^{7} Hz$ respectively from left to right. So, the value of $v_{gs_{1}}$ is
+The RC Circuits introduces poles at $f=10^{7} Hz, 10^{6} Hz, 10^{5} Hz$ respectively from left to right and Op-Amp introduced a Gain = $10^5$. So, the value of $v_{o}$ is
 
 \begin{align}
-v_{gs_{1}} = \dfrac{v_{i}}{\left(1+j\frac{f}{10^{5}}\right)\left(1+j\frac{f}{10^{6}}\right)\left(1+j\frac{f}{10^{7}}\right)}
+v_{o} = \dfrac{10^5 v_{i}}{\left(1+j\frac{f}{10^{5}}\right)\left(1+j\frac{f}{10^{6}}\right)\left(1+j\frac{f}{10^{7}}\right)}
 \end{align}
 
-The MOSFETs used in the circuit are Self-Biased with $V_{GS} = 1.1V$ and $I_{D}=2.5\times 10^{-4} A$ for all 3 N-MOSFETs. 3 N-MOSFETs are used to achieve a large gain of $10^{5}$. At 3rd N-MOSFET, Terminals of output are swaped, inorder to compensate for the negetive sign of gain.\\
-
-At the first N-MOSFET,
+So, Open-Loop Gain is
 \begin{align}
-v_{gs_{2}} = -g_{m}v_{gs_{1}}\times 15.6\times 10^{3}\\
-v_{gs_{2}} = -78\times v_{gs_{1}}
-\end{align}
-\begin{align}
-v_{gs_{2}} = \dfrac{-78\times v_{i}}{\left(1+j\frac{f}{10^{5}}\right)\left(1+j\frac{f}{10^{6}}\right)\left(1+j\frac{f}{10^{7}}\right)}
+G = \dfrac{10^5}{\left(1+j\frac{f}{10^{5}}\right)\left(1+j\frac{f}{10^{6}}\right)\left(1+j\frac{f}{10^{7}}\right)}
 \end{align}
 
-Similarly, at the second N-MOSFET,
-\begin{align}
-v_{gs_{3}} = -g_{m}v_{gs_{2}}\times 15.6\times 10^{3}\\
-v_{gs_{3}} = -78 \times v_{gs_{2}}
-\end{align}
-\begin{align}
-v_{gs_{3}} = \dfrac{6084\times v_{i}}{\left(1+j\frac{f}{10^{5}}\right)\left(1+j\frac{f}{10^{6}}\right)\left(1+j\frac{f}{10^{7}}\right)}
-\end{align}
-
-Similarly, at the third N-MOSFET,
-\begin{align}
--v_{o} = -g_{m}v_{gs_{3}}\times 3.29\times 10^{3}\\
-v_{o} = 16.45 \times v_{gs_{3}}
-\end{align}
-\begin{align}
-v_{o} = \dfrac{10^{5}\times v_{i}}{\left(1+j\frac{f}{10^{5}}\right)\left(1+j\frac{f}{10^{6}}\right)\left(1+j\frac{f}{10^{7}}\right)}\\
-\frac{v_{o}}{v_{i}} = \dfrac{10^{5}}{\left(1+j\frac{f}{10^{5}}\right)\left(1+j\frac{f}{10^{6}}\right)\left(1+j\frac{f}{10^{7}}\right)}\\
-G(f) = \dfrac{10^{5}}{\left(1+j\frac{f}{10^{5}}\right)\left(1+j\frac{f}{10^{6}}\right)\left(1+j\frac{f}{10^{7}}\right)}
-\end{align}
 %-------------------------------------------------------------------------------------------------%
-
-\item Design a Circuit Model that follows the Transfer Function $H(f)$\\
+%2.1.12
+\item Design a Circuit Model that follows the Feedback Transfer Function $H(f)$\\
 \solution\\
 On Bode Plot is $H$ is independent of frequency. So, $H$  should not involve any Reactive Elements. So, $H$ is a combination of Resistors or a Voltage Divider.
 \begin{figure}[ht!]
@@ -357,6 +336,46 @@ v_{f} = \frac{10}{10 + 10^{5}} \times v_{o}\\
 v_{f} \approx 10^{-4} v_{o}\\
 \frac{v_{f}}{v_{o}} \approx 10^{-4}\\
 H(f) = 10^{-4}
+\end{align}
+
+%-------------------------------------------------------------------------------------------------%
+%2.1.13
+\item  Design a Closed-Loop Transfer Function by combining both the Open-Loop and Feedback Circuits. Also draw its Small-Signal Model\\
+\solution\\
+The Closed-Loop Circuit is
+\begin{figure}[ht!]
+	\begin{center}
+		\resizebox{\columnwidth}{!}{\input{./figs/ee18btech11014/ee18btech11014_figi.tex}}
+	\end{center}
+	\caption{}
+	\label{fig:Closed-Loop Circuit}
+\end{figure}
+
+The Small-Signal Model of Closed-Loop Circuit is
+\begin{figure}[ht!]
+	\begin{center}
+		\resizebox{\columnwidth}{!}{\input{./figs/ee18btech11014/ee18btech11014_figj.tex}}
+	\end{center},
+	\caption{}
+	\label{fig:Closed-Loop Small-Signal Circuit}
+\end{figure}
+
+From the Small-Signal Model \ref{fig:Closed-Loop Small-Signal Circuit},
+\begin{align}
+G = \frac{v_{o}}{v_{i}} = \dfrac{10^5}{\left(1+j\frac{f}{10^{5}}\right)\left(1+j\frac{f}{10^{6}}\right)\left(1+j\frac{f}{10^{7}}\right)}\\
+H = \frac{v_{f}}{v_{o}} = 10^{-4}
+\end{align}
+
+The Closed-Loop Gain,
+\begin{align}
+v_{i} = v_{s} - v_{f}\\
+\frac{v_{o}}{G} = v_{s} - Hv_{o}\\
+\frac{v_{o}}{v_{s}} = \frac{G}{1+GH}
+\end{align}
+
+So, the Closed-Loop Gain,
+\begin{align}
+T = \frac{v_{o}}{v_{s}} = \dfrac{10^5}{10 + \left(1+j\frac{f}{10^{5}}\right)\left(1+j\frac{f}{10^{6}}\right)\left(1+j\frac{f}{10^{7}}\right)}
 \end{align}
 
 \end{enumerate}

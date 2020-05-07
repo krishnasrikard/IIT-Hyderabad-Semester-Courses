@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.4.27)  3 MAY 2020 18:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.4.27)  7 MAY 2020 20:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1381,7 +1381,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 33--34
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 38--40
+Underfull \hbox (badness 10000) in paragraph at lines 38--41
 
  []
 
@@ -1399,12 +1399,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 58--60
 Underfull \vbox (badness 1728) has occurred while \output is active []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 81--83
+Underfull \hbox (badness 10000) in paragraph at lines 81--84
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 92--96
+Underfull \hbox (badness 10000) in paragraph at lines 92--97
 
  []
 
@@ -1417,7 +1417,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 123--124
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 134--136
+Underfull \hbox (badness 10000) in paragraph at lines 134--137
 
  []
 
@@ -1430,7 +1430,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 162--163
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 187--189
+Underfull \hbox (badness 10000) in paragraph at lines 187--190
 
  []
 
@@ -1439,48 +1439,45 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [3]
 (./figs/ee18btech11014/ee18btech11014_figf.tex)
-Underfull \hbox (badness 10000) in paragraph at lines 221--223
+Underfull \hbox (badness 10000) in paragraph at lines 221--224
 
  []
 
 (./figs/ee18btech11014/ee18btech11014_figg.tex)
-Underfull \hbox (badness 10000) in paragraph at lines 236--239
-
- []
-
-
-Underfull \hbox (badness 2237) in paragraph at lines 240--244
+Underfull \hbox (badness 2237) in paragraph at lines 251--254
 []\OT1/txr/m/n/12 Design a Cir-cuit Model that fol-lows the
  []
 
 
-Underfull \hbox (badness 6110) in paragraph at lines 240--244
+Underfull \hbox (badness 6110) in paragraph at lines 251--254
 \OT1/txr/m/n/12 Our De-sign for Mod-elling the Trans-fer
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 240--244
+Underfull \hbox (badness 10000) in paragraph at lines 251--254
 
  []
 
 (./figs/ee18btech11014/ee18btech11014_figc.tex)
-Underfull \hbox (badness 2680) in paragraph at lines 254--255
-[]\OT1/txr/m/n/12 Assuming, N-MOSFETs are iden-ti-cal and
- []
-
 (./figs/ee18btech11014/ee18btech11014_figd.tex)
-Underfull \vbox (badness 5908) has occurred while \output is active []
-
- [4]
-Underfull \hbox (badness 10000) in paragraph at lines 312--313
-
+Underfull \hbox (badness 1735) in paragraph at lines 278--279
+[]\OT1/txr/m/n/12 The cas-cade of RC Cir-cuits are used to
  []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 278--279
+
+ []
+
+[4] (./figs/ee18btech11014/ee18btech11014_fige.tex)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
-(./figs/ee18btech11014/ee18btech11014_fige.tex)) [5]
+(./figs/ee18btech11014/ee18btech11014_figi.tex)
+(./figs/ee18btech11014/ee18btech11014_figj.tex
+Missing character: There is no - in font nullfont!
+Missing character: There is no 1 in font nullfont!
+) [5])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 275.
  [6
 
@@ -1499,27 +1496,28 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 275.
  ) 
 Here is how much of TeX's memory you used:
- 34135 strings out of 492982
- 728723 string characters out of 6134896
- 1013418 words of memory out of 5000000
- 36914 multiletter control sequences out of 15000+600000
- 84837 words of font info for 191 fonts, out of 8000000 for 9000
+ 34374 strings out of 492982
+ 734481 string characters out of 6134896
+ 970754 words of memory out of 5000000
+ 37142 multiletter control sequences out of 15000+600000
+ 95538 words of font info for 226 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 55i,14n,67p,511b,1116s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,14n,67p,511b,1091s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/txfonts/rtxb.pfb></usr/share/texlive/texmf-dist
 /fonts/type1/public/txfonts/rtxmi.pfb></usr/share/texlive/texmf-dist/fonts/type
 1/public/txfonts/rtxr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txf
-onts/rtxsc.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txex.p
-fb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsy.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/
-utmri8a.pfb>
-Output written on gvv_feedback_manual.pdf (6 pages, 248901 bytes).
+onts/rtxsc.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txbsy.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txex.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/public/txfonts/txsy.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/font
+s/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/ti
+mes/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb
+>
+Output written on gvv_feedback_manual.pdf (6 pages, 252176 bytes).
 PDF statistics:
- 292 PDF objects out of 1000 (max. 8388607)
- 269 compressed objects within 3 object streams
+ 297 PDF objects out of 1000 (max. 8388607)
+ 273 compressed objects within 3 object streams
  125 named destinations out of 1000 (max. 500000)
  138 words of extra memory for PDF output out of 10000 (max. 10000000)
 
