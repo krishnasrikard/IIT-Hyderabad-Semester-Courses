@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.4.27)  7 MAY 2020 21:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.4.27)  7 MAY 2020 21:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1182,12 +1182,6 @@ Package: chngcntr 2009/09/02 v1.0a change counter resetting
 
 LaTeX Warning: Label `fig:RC Circuit' multiply defined.
 
-
-LaTeX Warning: Label `fig:Circuit' multiply defined.
-
-
-LaTeX Warning: Label `fig:Circuit' multiply defined.
-
 )
 \openout1 = `gvv_feedback_manual.aux'.
 
@@ -1496,10 +1490,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 275.
  ) 
 Here is how much of TeX's memory you used:
- 34373 strings out of 492982
- 734467 string characters out of 6134896
- 970752 words of memory out of 5000000
- 37142 multiletter control sequences out of 15000+600000
+ 34375 strings out of 492982
+ 734531 string characters out of 6134896
+ 970841 words of memory out of 5000000
+ 37144 multiletter control sequences out of 15000+600000
  95538 words of font info for 226 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  55i,14n,67p,511b,1091s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1514,10 +1508,10 @@ texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/font
 s/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/ti
 mes/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb
 >
-Output written on gvv_feedback_manual.pdf (6 pages, 252089 bytes).
+Output written on gvv_feedback_manual.pdf (6 pages, 252053 bytes).
 PDF statistics:
- 296 PDF objects out of 1000 (max. 8388607)
- 272 compressed objects within 3 object streams
+ 295 PDF objects out of 1000 (max. 8388607)
+ 271 compressed objects within 3 object streams
  124 named destinations out of 1000 (max. 500000)
  138 words of extra memory for PDF output out of 10000 (max. 10000000)
 

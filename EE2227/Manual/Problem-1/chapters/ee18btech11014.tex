@@ -221,7 +221,7 @@ Gain = \frac{v_{output}}{v_{input}} = \frac{1}{j2\pi RCf + 1}
 So, there is a Pole at frequency $f = \frac{1}{2\pi RC}$ for the Transfer Function of Gain.\\
 %-------------------------------------------------------------------------------------------------%
 %2.1.10
-\item Find the Gain of Small-Signal of Operational Amplifier. The circuit diagram of Small-Signal Model is \ref{fig:OpAmp Circuit}.
+\item Find the Gain of Operational Amplifier. The circuit diagram of Equivalent Circuit is \ref{fig:OpAmp Circuit}.
 \begin{figure}[ht!]
 	\begin{center}
 		\resizebox{\columnwidth}{!}{\input{./figs/ee18btech11014/ee18btech11014_figg.tex}}
@@ -231,7 +231,7 @@ So, there is a Pole at frequency $f = \frac{1}{2\pi RC}$ for the Transfer Functi
 \end{figure}
 
 \solution\\
-Applying KVL and KCl,
+Applying KVL and KCL,
 \begin{align}
 v_{o} = Gv_{i}
 \end{align}
@@ -258,17 +258,17 @@ So, the Circuit Diagram is,
 		\resizebox{\columnwidth/1}{!}{\input{./figs/ee18btech11014/ee18btech11014_figc.tex}}
 	\end{center}
 	\caption{}
-	\label{fig:Circuit}
+	\label{fig:Open-Loop Circuit}
 \end{figure}
  
 Assuming, Open-Loop Gain of Operational Amplifier is $10^{5}$ and also assuming Operational Amplifier doesnt have any Poles.\\
-Small Signal Model of the circuit is
+Equivalent Circuit of the circuit is
 \begin{figure}[ht!]
 	\begin{center}
 		\resizebox{\columnwidth/1}{!}{\input{./figs/ee18btech11014/ee18btech11014_figd.tex}}
 	\end{center}
 	\caption{}
-	\label{fig:Circuit}
+	\label{fig:Equivalent Open-Loop Circuit}
 \end{figure}
 
 The cascade of RC Circuits are used to introduce poles in the circuit and Op-Amp are used to achieve the Gain required.\\
@@ -324,7 +324,7 @@ On Bode Plot is $H$ is independent of frequency. So, $H$  should not involve any
 		\resizebox{\columnwidth/2}{!}{\input{./figs/ee18btech11014/ee18btech11014_fige.tex}}
 	\end{center}
 	\caption{}
-	\label{fig:Circuit}
+	\label{fig:Feedback Circuit}
 \end{figure}
 
 \begin{align}
@@ -336,7 +336,7 @@ H(f) = 10^{-4}
 
 %-------------------------------------------------------------------------------------------------%
 %2.1.13
-\item  Design a Closed-Loop Transfer Function by combining both the Open-Loop and Feedback Circuits. Also draw its Small-Signal Model\\
+\item  Design a Closed-Loop Transfer Function by combining both the Open-Loop and Feedback Circuits. Also draw its Equivalent Circuit\\
 \solution\\
 The Closed-Loop Circuit is
 \begin{figure}[ht!]
@@ -347,16 +347,16 @@ The Closed-Loop Circuit is
 	\label{fig:Closed-Loop Circuit}
 \end{figure}
 
-The Small-Signal Model of Closed-Loop Circuit is
+The Equivalent Circuit of Closed-Loop Circuit is
 \begin{figure}[ht!]
 	\begin{center}
 		\resizebox{\columnwidth}{!}{\input{./figs/ee18btech11014/ee18btech11014_figj.tex}}
 	\end{center},
 	\caption{}
-	\label{fig:Closed-Loop Small-Signal Circuit}
+	\label{fig:Closed-Loop Equivalent Circuit}
 \end{figure}
 
-From the Small-Signal Model \ref{fig:Closed-Loop Small-Signal Circuit},
+From the Equivalent Circuit Diagram,
 \begin{align}
 G = \frac{v_{o}}{v_{i}} = \dfrac{10^5}{\left(1+j\frac{f}{10^{5}}\right)\left(1+j\frac{f}{10^{6}}\right)\left(1+j\frac{f}{10^{7}}\right)}\\
 H = \frac{v_{f}}{v_{o}} = 10^{-4}
