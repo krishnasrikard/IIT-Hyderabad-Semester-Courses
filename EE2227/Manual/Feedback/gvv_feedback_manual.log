@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.4.27)  6 MAY 2020 18:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.4.27)  7 MAY 2020 11:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1392,10 +1392,10 @@ Package rerunfilecheck Info: File `gvv_feedback_manual.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 275.
  ) 
 Here is how much of TeX's memory you used:
- 34259 strings out of 492982
- 731995 string characters out of 6134896
+ 34244 strings out of 492982
+ 731325 string characters out of 6134896
  966503 words of memory out of 5000000
- 37096 multiletter control sequences out of 15000+600000
+ 37081 multiletter control sequences out of 15000+600000
  84837 words of font info for 191 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  55i,11n,67p,706b,1197s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1408,7 +1408,7 @@ fb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/
 texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-
 dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type
 1/urw/times/utmri8a.pfb>
-Output written on gvv_feedback_manual.pdf (4 pages, 92170 bytes).
+Output written on gvv_feedback_manual.pdf (4 pages, 92156 bytes).
 PDF statistics:
  208 PDF objects out of 1000 (max. 8388607)
  191 compressed objects within 2 object streams

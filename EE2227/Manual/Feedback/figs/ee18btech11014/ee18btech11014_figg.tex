@@ -6,11 +6,13 @@
       ($(A.north east)!.175!(A.east)$) to[short] ++(1,0)
       ($(A.south east)!.175!(A.east)$) to[short] ++(1,0);
 
-\draw (-4,-1) to[R=$R_{F}+R_{M}$] (-4,1);
-\draw (-4,-1) -- (-6,-1);
-\draw (-4,1) -- (-6,1);
-\draw (-6,-1) -- (-7,-1) to[isource, l= $I_{i}$] (-7,1) -- (-6,1);
+\draw (-5,-1) to[R,n=res1] (-5,1);
+\draw (-5,-1) -- (-6,-1);
+\draw (-5,1) -- (-6,1);
+\draw (-6,-1) -- (-7.5,-1) to[isource, l= $I_{i}$] (-7.5,1) -- (-6,1);
 
-\draw (3,-1) to[R=$\frac{R_{F}R_{M}}{R_{F}+R_{M}}$] (5,-1) -- (6,-1) to[R=$R_{L}$] (6,1) -- (3,1);
+\draw (3,-1) to[R,n=res2] (5,-1) -- (6,-1) to[R=$R_{L}$] (6,1) -- (3,1);
+\draw (res1.s) node[right]{$R_{11} = R_{F}+R_{M}$};
+\draw (res2.s) node[below]{$R_{22} = R_{F}||R_{M}$};
 
 \end{circuitikz}
