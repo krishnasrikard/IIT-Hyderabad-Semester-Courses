@@ -1,0 +1,6 @@
+\begin{circuitikz}[american]
+\ctikzset{tripoles/mos style/arrows}
+\draw (1,2) to[short, -o] (0,2) node[label={below:$v_{o}$}]{};
+\draw (1,2) to[R=$0.3162 M\ohm$] (2,2) -- (3,2) to[R=$10\ohm$] (3,0) node[ground](GND){};
+\draw (3,2) to[short, -o] (4,2) node[label={below:$v_{f}$}]{};
+\end{circuitikz}
