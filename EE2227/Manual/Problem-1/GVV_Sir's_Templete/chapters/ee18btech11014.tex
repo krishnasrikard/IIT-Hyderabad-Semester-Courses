@@ -382,7 +382,6 @@ So, Open-Loop Gain is
 \begin{align}
 G = \dfrac{10^5}{\left(1+j\frac{f}{10^{5}}\right)\left(1+j\frac{f}{10^{6}}\right)\left(1+j\frac{f}{10^{7}}\right)}
 \end{align}
-
 %-------------------------------------------------------------------------------------------------%
 %2.1.12
 \item Design a Circuit Model that follows the Feedback Transfer Function $H(f)$\\
@@ -402,6 +401,32 @@ v_{f} \approx 5.623\times 10^{-5} v_{o}\\
 \frac{v_{f}}{v_{o}} \approx 5.623\times 10^{-5}\\
 H(f) = 5.623\times 10^{-5}
 \end{align}
+%-------------------------------------------------------------------------------------------------%
+
+\item Draw the Magnitude and Phase Bode Plots of $G(f)$\\
+\solution
+Magnitude Plot is \ref{fig:Magnitude Plot}
+\begin{figure}[ht!]
+	\begin{center}
+		\includegraphics[width=\columnwidth]{./figs/ee18btech11014/Magnitude_Plot.eps}
+	\end{center}
+	\caption{Magnitude Bode Plot}
+	\label{fig:Magnitude Plot}
+\end{figure}
+
+Phase Plot is \ref{fig:Phase Plot}
+\begin{figure}[ht!]
+	\begin{center}
+		\includegraphics[width=\columnwidth]{./figs/ee18btech11014/Phase_Plot.eps}
+	\end{center}
+	\caption{Phase Bode Plot}
+	\label{fig:Phase Plot}
+\end{figure}
+
+Python Code for Magnitude and Phase Bode Plots is at
+\begin{lstlisting}
+codes/ee18btech11014/Bode_Plot.py
+\end{lstlisting}
 
 %-------------------------------------------------------------------------------------------------%
 %2.1.13
