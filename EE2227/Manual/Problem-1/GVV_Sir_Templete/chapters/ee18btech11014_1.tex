@@ -456,7 +456,7 @@ T = \frac{1}{H} = 10^{4}
 v_{f} = \frac{10}{10 + 10^{5}} \times v_{o}\\
 v_{f} \approx 10^{-4} v_{o}\\
 \frac{v_{f}}{v_{o}} \approx 10^{-4}\\
-H(f) = 10^{-4}
+H(s) = 10^{-4}
 \end{align}
 %-------------------------------------------------------------------------------------------------%
 
@@ -473,7 +473,7 @@ H(f) = 10^{-4}
 v_{f} = \frac{10}{10 + 3.162\times 10^{5}} \times v_{o}\\
 v_{f} \approx 3.162\times 10^{-5} v_{o}\\
 \frac{v_{f}}{v_{o}} \approx 3.162\times 10^{-5}\\
-H(f) = 3.162\times 10^{-5}
+H(s) = 3.162\times 10^{-5}
 \end{align}
 %-------------------------------------------------------------------------------------------------%
 
@@ -499,8 +499,8 @@ The Equivalent Circuit of Closed-Loop Circuit is
 
 From the Equivalent Circuit Diagram,
 \begin{align}
-G = \frac{v_{o}}{v_{i}} = \dfrac{10^5}{\left(1+j\frac{f}{10^{5}}\right)\left(1+j\frac{f}{10^{6}}\right)\left(1+j\frac{f}{10^{7}}\right)}\\
-H = \frac{v_{f}}{v_{o}} = 10^{-4}
+G(s) = \dfrac{10^5}{\left(1+\frac{s}{2\pi 10^{5}}\right)\left(1+\frac{s}{2\pi 10^{6}}\right)\left(1+\frac{s}{2\pi 10^{7}}\right)}\\
+H(s) = \frac{v_{f}}{v_{o}} = 10^{-4}
 \end{align}
 
 The Closed-Loop Gain,
@@ -512,7 +512,7 @@ v_{i} = v_{s} - v_{f}\\
 
 So, the Closed-Loop Gain,
 \begin{align}
-T = \frac{v_{o}}{v_{s}} = \dfrac{10^5}{10 + \left(1+j\frac{f}{10^{5}}\right)\left(1+j\frac{f}{10^{6}}\right)\left(1+j\frac{f}{10^{7}}\right)}
+T(s) = \frac{v_{o}}{v_{s}} = \dfrac{10^5}{10 + \left(1+s\frac{s}{2\pi 10^{5}}\right)\left(1+\frac{s}{2\pi 10^{6}}\right)\left(1+j\frac{s}{2\pi 10^{7}}\right)}
 \end{align}
 %-------------------------------------------------------------------------------------------------%
 
@@ -538,8 +538,8 @@ The Equivalent Circuit of Closed-Loop Circuit is
 
 From the Equivalent Circuit Diagram,
 \begin{align}
-G = \frac{v_{o}}{v_{i}} = \dfrac{10^5}{\left(1+j\frac{f}{10^{5}}\right)\left(1+j\frac{f}{10^{6}}\right)\left(1+j\frac{f}{10^{7}}\right)}\\
-H = \frac{v_{f}}{v_{o}} = 3.162\times 10^{-5}
+G(s) = \dfrac{10^5}{\left(1+\frac{s}{2\pi 10^{5}}\right)\left(1+\frac{s}{2\pi 10^{6}}\right)\left(1+\frac{s}{2\pi 10^{7}}\right)}\\
+H(s) = \frac{v_{f}}{v_{o}} = 3.162\times 10^{-5}
 \end{align}
 
 The Closed-Loop Gain,
@@ -551,6 +551,6 @@ v_{i} = v_{s} - v_{f}\\
 
 So, the Closed-Loop Gain,
 \begin{align}
-T = \frac{v_{o}}{v_{s}} = \dfrac{10^5}{3.162 + \left(1+j\frac{f}{10^{5}}\right)\left(1+j\frac{f}{10^{6}}\right)\left(1+j\frac{f}{10^{7}}\right)}
+T(s) = \frac{v_{o}}{v_{s}} = \dfrac{10^5}{3.162 + \left(1+s\frac{s}{2\pi 10^{5}}\right)\left(1+\frac{s}{2\pi 10^{6}}\right)\left(1+j\frac{s}{2\pi 10^{7}}\right)}
 \end{align}
 \end{enumerate}

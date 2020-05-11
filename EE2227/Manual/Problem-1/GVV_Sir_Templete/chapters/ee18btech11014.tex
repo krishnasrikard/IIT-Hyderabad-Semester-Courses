@@ -283,8 +283,7 @@ I = \frac{v_{i}}{R + \frac{1}{Cs}}\\
 v_{o} = I \times \frac{1}{Cs}\\
 v_{o} = \frac{v_{i} \times \frac{1}{Cs}}{R + \frac{1}{Cs}}\\
 \frac{v_{o}}{v_{i}} = \frac{1}{RCs + 1}\\
-s = j2\pi f\\
-Gain = \frac{v_{o}}{v_{i}} = \frac{1}{j2\pi RCf + 1}
+Gain = \frac{v_{o}}{v_{i}} = \frac{1}{RCs + 1}
 \end{align}
 
 So, there is a Pole at frequency $f = \frac{1}{2\pi RC}$ for the Transfer Function of Gain.\\
@@ -317,7 +316,7 @@ v_{i} = \frac{v_{o}}{G}\\
 So, Gain of the Circuit is $\frac{G}{1+G\frac{R_{1}}{R_{1}+R_{2}}}$
 %-------------------------------------------------------------------------------------------------%
 %2.1.11
-\item Design a Circuit Model that follows the Transfer Function $G(f)$\\
+\item Design a Circuit Model that follows the Transfer Function $G(s)$\\
 \solution\\
 Our Design for Modelling the Transfer Function is based on Poles of RC-Circuit and Gain of Operational Amplifier.\\
 
@@ -351,40 +350,59 @@ v_{a} = 10^5 v_{s}
 
 At the first RC-Circuit,
 \begin{align}
-2\pi RC = 10^{-7}\\
-v_{b} = \frac{v_{a}}{1 + j\frac{f}{10^{7}}}\\
-v_{b} = \frac{10^5 v_{i}}{1 + j\frac{f}{10^{7}}}
+p_{1} = \frac{1}{R_{1}C_{1}}\\
+v_{b} = \frac{v_{a}}{1 + \frac{s}{p_{1}}}\\
+v_{b} = \frac{10^5 v_{i}}{1 + \frac{s}{p_{1}}}
 \end{align}
 
 At the second RC-Circuit,
 \begin{align}
-2\pi RC = 10^{-6}\\
-v_{c} = \frac{v_{b}}{1 + j\frac{f}{10^{6}}}\\
-v_{c} = \frac{10^5 v_{i}}{(1 + j\frac{f}{10^{6}})(1 + j\frac{f}{10^{7}})}
+p_{2} = \frac{1}{R_{2}C_{2}}\\
+v_{c} = \frac{v_{b}}{1 + \frac{s}{p_{2}}}\\
+v_{c} = \frac{10^5 v_{i}}{(1 + \frac{s}{p_{1}})(1 + \frac{s}{p_{2}})}
 \end{align}
 
 At the third RC-Circuit,
 \begin{align}
-2\pi RC = 10^{-5}\\
-v_{o} = \frac{v_{c}}{1 + j\frac{f}{10^{5}}}
+p_{3} = \frac{1}{R_{3}C_{3}}\\
+v_{o} = \frac{v_{c}}{1 + \frac{s}{p_{3}}}
 \end{align}
 \begin{align}
-v_{o} = \frac{10^5 v_{i}}{(1 + j\frac{f}{10^{5}})(1 + j\frac{f}{10^{6}})(1 + j\frac{f}{10^{7}})}
+v_{o} = \frac{10^5 v_{i}}{(1 + \frac{s}{p_{1}})(1 + \frac{s}{p_{2}})(1 + \frac{s}{p_{3}})}
 \end{align}
 
-The RC Circuits introduces poles at $f=10^{7} Hz, 10^{6} Hz, 10^{5} Hz$ respectively from left to right and Op-Amp introduced a Gain = $10^5$. So, the value of $v_{o}$ is
+The RC Circuits should introduce poles at $f=10^{7} Hz, 10^{6} Hz, 10^{5} Hz$ respectively from left to right.\\
+Assuming the following values of circuit elements,\\
+\begin{table}[!ht]
+\centering
+\input{./tables/ee18btech11014/ee18btech11014_table1.tex}
+\caption{}
+\label{table:table1}
+\end{table}
 
+Frequency can be calculated as
 \begin{align}
-v_{o} = \dfrac{10^5 v_{i}}{\left(1+j\frac{f}{10^{5}}\right)\left(1+j\frac{f}{10^{6}}\right)\left(1+j\frac{f}{10^{7}}\right)}
+f = \frac{1}{2\pi RC}
+\end{align}
+\begin{table}[!ht]
+\centering
+\input{./tables/ee18btech11014/ee18btech11014_table2.tex}
+\caption{}
+\label{table:table1}
+\end{table}
+
+So, the value of
+\begin{align}
+v_{o} = \dfrac{10^5 v_{i}}{\left(1+\frac{s}{2\pi 10^{5}}\right)\left(1+\frac{s}{2\pi 10^{6}}\right)\left(1+\frac{s}{2\pi 10^{7}}\right)}
 \end{align}
 
 So, Open-Loop Gain is
 \begin{align}
-G = \dfrac{10^5}{\left(1+j\frac{f}{10^{5}}\right)\left(1+j\frac{f}{10^{6}}\right)\left(1+j\frac{f}{10^{7}}\right)}
+G(s) = \dfrac{10^5}{\left(1+\frac{s}{2\pi 10^{5}}\right)\left(1+\frac{s}{2\pi 10^{6}}\right)\left(1+\frac{s}{2\pi 10^{7}}\right)}
 \end{align}
 %-------------------------------------------------------------------------------------------------%
 %2.1.12
-\item Design a Circuit Model that follows the Feedback Transfer Function $H(f)$\\
+\item Design a Circuit Model that follows the Feedback Transfer Function $H(s)$\\
 \solution\\
 On Bode Plot is $H$ is independent of frequency. So, $H$  should not involve any Reactive Elements. So, $H$ is a combination of Resistors or a Voltage Divider.
 \begin{figure}[ht!]
@@ -394,36 +412,38 @@ On Bode Plot is $H$ is independent of frequency. So, $H$  should not involve any
 	\caption{}
 	\label{fig:ee18btech11014_Feedback Circuit}
 \end{figure}
+\begin{align}
+v_{f} = \frac{R_{F}}{R_{F} + R_{M}} \times v_{o}
+\end{align}
+Assuming,
+\begin{table}[!ht]
+\centering
+\input{./tables/ee18btech11014/ee18btech11014_table3.tex}
+\caption{}
+\label{table:table1}
+\end{table}
 
+On substituting,
 \begin{align}
 v_{f} = \frac{10}{10 + 1.778\times 10^{5}} \times v_{o}\\
 v_{f} \approx 5.623\times 10^{-5} v_{o}\\
 \frac{v_{f}}{v_{o}} \approx 5.623\times 10^{-5}\\
-H(f) = 5.623\times 10^{-5}
+H(s) = 5.623\times 10^{-5}
 \end{align}
 %-------------------------------------------------------------------------------------------------%
 
 \item Draw the Magnitude and Phase Bode Plots of $G(f)$\\
 \solution
-Magnitude Plot is \ref{fig:Magnitude Plot}
+Bode Plot is \ref{fig:Bode Plot}
 \begin{figure}[ht!]
 	\begin{center}
-		\includegraphics[width=\columnwidth]{./figs/ee18btech11014/Magnitude_Plot.eps}
+		\includegraphics[width=\columnwidth]{./figs/ee18btech11014/Bode_Plot.eps}
 	\end{center}
 	\caption{Magnitude Bode Plot}
-	\label{fig:Magnitude Plot}
+	\label{fig:Bode Plot}
 \end{figure}
 
-Phase Plot is \ref{fig:Phase Plot}
-\begin{figure}[ht!]
-	\begin{center}
-		\includegraphics[width=\columnwidth]{./figs/ee18btech11014/Phase_Plot.eps}
-	\end{center}
-	\caption{Phase Bode Plot}
-	\label{fig:Phase Plot}
-\end{figure}
-
-Python Code for Magnitude and Phase Bode Plots is at
+Python Code for Bode Plot is at
 \begin{lstlisting}
 codes/ee18btech11014/Bode_Plot.py
 \end{lstlisting}
@@ -452,8 +472,8 @@ The Equivalent Circuit of Closed-Loop Circuit is
 
 From the Equivalent Circuit Diagram,
 \begin{align}
-G = \frac{v_{o}}{v_{i}} = \dfrac{10^5}{\left(1+j\frac{f}{10^{5}}\right)\left(1+j\frac{f}{10^{6}}\right)\left(1+j\frac{f}{10^{7}}\right)}\\
-H = \frac{v_{f}}{v_{o}} = 5.623 \times 10^{-5}
+G(s) = \dfrac{10^5}{\left(1+\frac{s}{2\pi 10^{5}}\right)\left(1+\frac{s}{2\pi 10^{6}}\right)\left(1+\frac{s}{2\pi 10^{7}}\right)}\\
+H(s) = \frac{v_{f}}{v_{o}} = 5.623 \times 10^{-5}
 \end{align}
 
 The Closed-Loop Gain,
@@ -465,7 +485,10 @@ v_{i} = v_{s} - v_{f}\\
 
 So, the Closed-Loop Gain,
 \begin{align}
-T = \frac{v_{o}}{v_{s}} = \dfrac{10^5}{5.623 + \left(1+j\frac{f}{10^{5}}\right)\left(1+j\frac{f}{10^{6}}\right)\left(1+j\frac{f}{10^{7}}\right)}
+T(s) = \frac{v_{o}}{v_{s}}
+\end{align}
+\begin{align}
+T(s) = \dfrac{10^5}{\left(1+\frac{s}{2\pi 10^{5}}\right)\left(1+\frac{s}{2\pi 10^{6}}\right)\left(1+\frac{s}{2\pi 10^{7}}\right)+5.623}
 \end{align}
 
 \end{enumerate}
