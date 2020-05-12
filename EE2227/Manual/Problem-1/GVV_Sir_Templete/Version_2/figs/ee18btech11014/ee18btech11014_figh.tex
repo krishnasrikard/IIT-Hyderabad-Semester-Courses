@@ -1,0 +1,25 @@
+\tikzstyle{block} = [draw, rectangle, 
+    minimum height=1.5em, minimum width=3em]
+\tikzstyle{sum} = [draw, circle, node distance=1cm]
+\tikzstyle{input} = [coordinate]
+\tikzstyle{output} = [coordinate]
+\tikzstyle{pinstyle} = [pin edge={to-,thin,black}]
+
+% The block diagram code is probably more verbose than necessary
+\begin{tikzpicture}[auto, node distance=2.5cm,>=latex']
+    % We start by placing the blocks
+    \node [input, name=input] {};
+    \node [block, right of=input] (g) {$10^{5}$};
+    \node [block, right of=g] (p1) {$\frac{1}{1+\frac{s}{2\pi \times 10^{7}}}$};
+    \node [block, right of=p1] (p2) {$\frac{1}{1+\frac{s}{2\pi \times 10^{6}}}$};
+    \node [block, right of=p2] (p3) {$\frac{1}{1+\frac{s}{2\pi \times 10^{5}}}$};
+    \node [output, right of=p3] (output) {};
+
+    % Once the nodes are placed, connecting them is easy. 
+    \draw [draw,->] (input) -- node {$v_{s}$} (g);
+    \draw [->] (g) -- node {$v_{a}$} (p1);
+    \draw [->] (p1) -- node {$v_{b}$} (p2);
+    \draw [->] (p2) -- node {$v_{c}$} (p3);
+    \draw [->] (p3) -- node {$v_{o}$} (output);
+    
+\end{tikzpicture}

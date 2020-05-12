@@ -1,0 +1,365 @@
+%\begin{enumerate}[label=\arabic*.,ref=\theenumi]
+\begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
+\numberwithin{equation}{enumi}
+%2.1.1
+\item Consider the Magnitude Bode Plot and Phase Bode Plot \ref{fig:ee18btech11014_Bode} of Open-Loop Transfer Function of an Amplifier. Estimate the Open-Loop Transfer Function. (Assume $'A'$ as $'G'$ and $'\beta'$ as $'H'$)
+\begin{figure}[ht!]
+	\begin{center}
+		\includegraphics[width=\columnwidth]{./figs/ee18btech11014/ee18btech11014_figa.eps}
+	\end{center}
+	\caption{Magnitude and Phase Bode Plot}
+	\label{fig:ee18btech11014_Bode}
+\end{figure}\\
+\solution Let $G(f)$ be the Open-Loop Transfer Function,
+\begin{align}
+\label{eq:ee18btech11014_G_piece}
+G(f) = 
+\begin{cases} 
+      100 & 0 < f < 10^{5} \\
+      200-20\log(f) & 10^{5} < f < 10^{6} \\
+      320-40\log(f) & 10^{6} < f < 10^{7} \\
+      460-60\log(f) & 10^{7} < f  \\
+\end{cases}
+\end{align}
+
+\begin{align}
+\nabla G(f) &= \dfrac{d(G(f))}{d(\log(f))} =
+\begin{cases} 
+        0 & 0 < f < 10^{5} \\
+      -20 & 10^{5} < f < 10^{6} \\
+      -40 & 10^{6} < f < 10^{7} \\
+      -60 & 10^{7} < f  \\ 
+\end{cases}
+\end{align}
+
+As we know that, \textbf{When a pole is encountered the slope always decreases by 20 dB/decade} and \textbf{When a zero is encountered the slope always increases by 20 dB/decade}. So, by observing Fig. \ref{fig:ee18btech11014_Bode} it can be concluded that we are having Poles at $f=10^{5} Hz, 10^{6} Hz, 10^{7} Hz$ and No Zeros.\\
+
+So, the Open-Loop Transfer Function $G(f)$ is
+\begin{align}
+\label{eq:ee18btech11014_G}
+	G(f) = \dfrac{10^{5}}{\left(1+j\frac{f}{10^{5}}\right)\left(1+j\frac{f}{10^{6}}\right)\left(1+j\frac{f}{10^{7}}\right)}
+\end{align}\\
+%-------------------------------------------------------------------------------------------------%
+%2.1.2
+\item Calculate the Phase of Open-Loop Transfer Function.\\
+\solution
+%
+\begin{multline}
+\label{eq:ee18btech11014_G_ang}
+\phi\brak{f} =
+\\
+-\sbrak{\tan ^{-1}\brak{\frac{f}{10^{5}}}+\tan ^{-1}\brak{\frac{f}{10^{6}}}+\tan ^{-1}\brak{\frac{f}{10^{7}}}}
+\end{multline}
+%-------------------------------------------------------------------------------------------------%
+
+\item Verify  \eqref{eq:ee18btech11014_G} by plotting the 
+Magnitude and Phase Bode Plots of $G(f)$ and comparing with \eqref{eq:ee18btech11014_G_piece}
+\\
+\solution
+See Fig.  \ref{fig:ee18btech11014_Bode Plot}
+\begin{figure}[ht!]
+	\begin{center}
+		\includegraphics[width=\columnwidth]{./figs/ee18btech11014/Bode_Plot.eps}
+	\end{center}
+	\caption{Magnitude Bode Plot}
+	\label{fig:ee18btech11014_Bode Plot}
+\end{figure}
+
+Python Code for Bode Plot is at
+\begin{lstlisting}
+codes/ee18btech11014/Bode_Plot.py
+\end{lstlisting}
+
+%-------------------------------------------------------------------------------------------------%
+%2.1.3
+\item Find the PM from  Fig. 	\ref{fig:ee18btech11014_Bode}, given that he feedback gain $H(f)$ is constant and given by 
+\begin{align}
+20 \log \brak{\frac{1}{H(f) }} &= 85 dB
+\\
+\text{or, } H(f) &= 5.623 \times 10^{-5}.
+\label{eq:ee18btech11014_H}
+\end{align}
+\\
+\solution From the figure, 
+\begin{align}
+\label{eq:ee18btech11014_G_f1}
+20 \log \abs{G(f_1)} &= 85 dB
+\\
+\implies 20 \log \abs{G(f_1)} & = 20 \log \brak{\frac{1}{H(f_1) }}
+\\
+\text{or, } \abs{G(f_1)H(f_1)} &= 1
+\end{align}
+and 
+\begin{align}
+\label{eq:ee18btech11014_f1}
+f_1 = 0.493 MHz, 
+\end{align}
+from \eqref{eq:ee18btech11014_G_f1} and \eqref{eq:ee18btech11014_G}.
+Also,
+%
+\begin{align}
+\because \phase{H(f)} &= 0, \forall f
+\\
+\phase{G(f_1)H(f_1)} &= \phase{G(f_1)} = -108 \degree
+\\
+\implies PM &= 180 \degree - 108 \degree = 72 \degree
+\end{align}
+using \eqref{eq:ee18btech11014_f1} in \eqref{eq:ee18btech11014_G_ang}.
+
+%-------------------------------------------------------------------------------------------------%
+\item Find the GM.
+\\
+\solution The crossover frequency $f_{\pi}$ is defined as 
+\begin{align}
+\phase{G\brak{f_{\pi}}H\brak{f_{\pi}}} &= 180 \degree
+\\
+\implies \phase{G\brak{f_{\pi}}} &= 180 \degree
+\\
+\implies f_{\pi} &= 3.34 MHz
+\end{align}
+by solving \eqref{eq:ee18btech11014_G_ang}.
+From Fig. \ref{fig:ee18btech11014_Bode}, 
+\begin{align}
+%\label{eq:ee18btech11014_G_f1}
+20 \log \abs{G(f_\pi)} &= 60 dB
+\\
+\implies 20 \log \abs{G(f_\pi)} &-  20 \log \brak{\frac{1}{H(f_\pi) }}   
+\nonumber \\
+&= \brak{60 -85} dB
+\\
+\implies GM &= \abs{20 \log \abs{G(f_\pi)H(f_\pi) }} 
+\nonumber \\
+&= 25 dB
+\end{align}
+%
+
+%-------------------------------------------------------------------------------------------------%
+%2.1.8
+\item Break the Transfer Function $G(s)$ into Simple Blocks and create a block diagram.
+\\
+\solution From \eqref{eq:ee18btech11014_G}
+
+\begin{align}
+\label{eq:ee18btech11014_Gs}
+	G(s) = \dfrac{10^{5}}{\left(1+\frac{s}{2\pi10^{5}}\right)\left(1+\frac{s}{2\pi10^{6}}\right)\left(1+\frac{s}{2\pi10^{7}}\right)}
+\end{align}
+%
+The block diagram is available in 
+Fig. 	\ref{fig:ee18btech11014_RC Circuit_block}
+%
+\begin{figure}[ht!]
+	\begin{center}
+		\resizebox{\columnwidth}{!}{\input{./figs/ee18btech11014/ee18btech11014_figh.tex}}
+	\end{center}
+	\caption{}
+	\label{fig:ee18btech11014_RC Circuit_block}
+\end{figure}
+
+%-------------------------------------------------------------------------------------------------%
+%2.1.9
+\item Find the Gain of RC-Circuit in Fig. \ref{fig:ee18btech11014_RC Circuit} and identify the pole location.
+\begin{figure}[ht!]
+	\begin{center}
+		\resizebox{\columnwidth/2}{!}{\input{./figs/ee18btech11014/ee18btech11014_figf.tex}}
+	\end{center}
+	\caption{}
+	\label{fig:ee18btech11014_RC Circuit}
+\end{figure}
+
+\solution
+\begin{align}
+v_o &= v_i \frac{\frac{1}{sc}}{R + \frac{1}{sC}}
+\\
+\implies \frac{v_o}{v_i}&= \frac{1}{1+sCR}
+\label{eqLee18btech11014_RC}
+%I = \frac{v_{input}}{R + \frac{1}{Cs}}\\
+%v_{output} = I \times \frac{1}{Cs}\\
+%v_{output} = \frac{v_{input} \times \frac{1}{Cs}}{R + \frac{1}{Cs}}\\
+%\frac{v_{output}}{v_{input}} = \frac{1}{RCs + 1}\\
+%s = j2\pi f\\
+%Gain = \frac{v_{output}}{v_{input}} = \frac{1}{j2\pi RCf + 1}
+\end{align}
+%
+Thus, there is a pole at
+%
+\begin{align}
+s = -\frac{1}{RC}
+\end{align}
+%
+%-------------------------------------------------------------------------------------------------%
+%
+%2.1.11
+\item Design a circuit for $G(s)$.
+\\
+\solution \eqref{eq:ee18btech11014_Gs} can be expressed as
+%
+\begin{align}
+\because G(s) = \frac{G_0}{\brak{1+sC_1R_1}\brak{1+sC_2R_2}\brak{1+sC_3R_3}}
+\end{align}
+%
+where the parameters are available in Table \ref{table:ee18btech11014_table1}.  Choosing an OPAMP of gain %
+$G_0$ and noting from \eqref{eqLee18btech11014_RC} that each of the blocks in Fig. 	\ref{fig:ee18btech11014_RC Circuit_block} can be realised through the RC circuit in Fig. 	\ref{fig:ee18btech11014_RC Circuit} with parameters in Table \ref{table:ee18btech11014_table1}, the circuit design is available in 
+Fig. 	\ref{fig:ee18btech11014_Open-Loop Circuit}. 
+%
+\begin{table}[!ht]
+\centering
+\input{./tables/ee18btech11014/ee18btech11014_table1.tex}
+\caption{}
+\label{table:ee18btech11014_table1}
+\end{table}
+%
+\begin{figure}[ht!]
+	\begin{center}
+		\resizebox{\columnwidth/1}{!}{\input{./figs/ee18btech11014/ee18btech11014_figc.tex}}
+	\end{center}
+	\caption{}
+	\label{fig:ee18btech11014_Open-Loop Circuit}
+\end{figure}
+ 
+%Assuming, Open-Loop Gain of Operational Amplifier is $10^{5}$ and also assuming Operational Amplifier doesnt have any Poles.\\
+%Equivalent Circuit of the circuit is
+%\begin{figure}[ht!]
+%	\begin{center}
+%		\resizebox{\columnwidth/1}{!}{\input{./figs/ee18btech11014/ee18btech11014_figd.tex}}
+%	\end{center}
+%	\caption{}
+%	\label{fig:ee18btech11014_Equivalent Open-Loop Circuit}
+%\end{figure}
+%
+%The cascade of RC Circuits are used to introduce poles in the circuit and Op-Amp are used to achieve the Gain required.\\
+%
+%At the Operational Amplifier,
+%\begin{align}
+%v_{i} = v_{s}\\
+%v_{a} = 10^5 v_{i}\\
+%v_{a} = 10^5 v_{s}
+%\end{align}
+%
+%At the first RC-Circuit,
+%\begin{align}
+%p_{1} = \frac{1}{R_{1}C_{1}}\\
+%v_{b} = \frac{v_{a}}{1 + \frac{s}{p_{1}}}\\
+%v_{b} = \frac{10^5 v_{i}}{1 + \frac{s}{p_{1}}}
+%\end{align}
+%
+%At the second RC-Circuit,
+%\begin{align}
+%p_{2} = \frac{1}{R_{2}C_{2}}\\
+%v_{c} = \frac{v_{b}}{1 + \frac{s}{p_{2}}}\\
+%v_{c} = \frac{10^5 v_{i}}{(1 + \frac{s}{p_{1}})(1 + \frac{s}{p_{2}})}
+%\end{align}
+%
+%At the third RC-Circuit,
+%\begin{align}
+%p_{3} = \frac{1}{R_{3}C_{3}}\\
+%v_{o} = \frac{v_{c}}{1 + \frac{s}{p_{3}}}
+%\end{align}
+%\begin{align}
+%v_{o} = \frac{10^5 v_{i}}{(1 + \frac{s}{p_{1}})(1 + \frac{s}{p_{2}})(1 + \frac{s}{p_{3}})}
+%\end{align}
+%
+%The RC Circuits should introduce poles at $f=10^{7} Hz, 10^{6} Hz, 10^{5} Hz$ respectively from left to right.\\
+%Assuming the following values of circuit elements,\\
+%
+%Frequency can be calculated as
+%\begin{align}
+%f = \frac{1}{2\pi RC}
+%\end{align}
+%\begin{table}[!ht]
+%\centering
+%\input{./tables/ee18btech11014/ee18btech11014_table2.tex}
+%\caption{}
+%\label{table:ee18btech11014_table1}
+%\end{table}
+
+%So, the value of
+%\begin{align}
+%v_{o} = \dfrac{10^5 v_{i}}{\left(1+\frac{s}{2\pi 10^{5}}\right)\left(1+\frac{s}{2\pi 10^{6}}\right)\left(1+\frac{s}{2\pi 10^{7}}\right)}
+%\end{align}
+%
+%So, Open-Loop Gain is
+%\begin{align}
+%G(s) = \dfrac{10^5}{\left(1+\frac{s}{2\pi 10^{5}}\right)\left(1+\frac{s}{2\pi 10^{6}}\right)\left(1+\frac{s}{2\pi 10^{7}}\right)}
+%\end{align}
+%-------------------------------------------------------------------------------------------------%
+%2.1.12
+\item Design a circuit for $H(s)$.
+\\
+\solution From \eqref{eq:ee18btech11014_H}, $H$ is constant and should not involve any Reactive Elements. The simplest way to realise $H$ is through a voltage divider as shown in Fig. 	\ref{fig:ee18btech11014_Feedback Circuit}.  Thus, 
+\begin{align}
+H = \frac{R_{F}}{R_{F} + R_{M}} 
+\end{align}
+with resistance values  available in Table \ref{table:ee18btech11014_tableH}.
+%
+\begin{figure}[ht!]
+	\begin{center}
+		\resizebox{\columnwidth/2}{!}{\input{./figs/ee18btech11014/ee18btech11014_fige.tex}}
+	\end{center}
+	\caption{}
+	\label{fig:ee18btech11014_Feedback Circuit}
+\end{figure}
+%
+\begin{table}[!ht]
+\centering
+\input{./tables/ee18btech11014/ee18btech11014_table3.tex}
+\caption{}
+\label{table:ee18btech11014_tableH}
+\end{table}
+
+%On substituting,
+%\begin{align}
+%v_{f} = \frac{10}{10 + 1.778\times 10^{5}} \times v_{o}\\
+%v_{f} \approx 5.623\times 10^{-5} v_{o}\\
+%\frac{v_{f}}{v_{o}} \approx 5.623\times 10^{-5}\\
+%H(s) = 5.623\times 10^{-5}
+%\end{align}
+%-------------------------------------------------------------------------------------------------%
+%2.1.13
+\item  Find the closed loop transfer function $T(s)$ and draw the equivalent circuit.
+\\
+\solution The closed loop circuit is easily obtained from Figs. 		\ref{fig:ee18btech11014_Open-Loop Circuit}
+ and \ref{fig:ee18btech11014_Feedback Circuit} as shown in Fig. 	\ref{fig:ee18btech11014_Closed-Loop Circuit}
+
+
+\begin{figure}[ht!]
+	\begin{center}
+		\resizebox{\columnwidth}{!}{\input{./figs/ee18btech11014/ee18btech11014_figi.tex}}
+	\end{center}
+	\caption{}
+	\label{fig:ee18btech11014_Closed-Loop Circuit}
+\end{figure}
+
+%The Equivalent Circuit of Closed-Loop Circuit is
+%\begin{figure}[ht!]
+%	\begin{center}
+%		\resizebox{\columnwidth}{!}{\input{./figs/ee18btech11014/ee18btech11014_figj.tex}}
+%	\end{center},
+%	\caption{}
+%	\label{fig:ee18btech11014_Closed-Loop Equivalent Circuit}
+%\end{figure}
+%
+%From the Equivalent Circuit Diagram,
+%\begin{align}
+%G(s) = \dfrac{10^5}{\left(1+\frac{s}{2\pi 10^{5}}\right)\left(1+\frac{s}{2\pi 10^{6}}\right)\left(1+\frac{s}{2\pi 10^{7}}\right)}\\
+%H(s) = \frac{v_{f}}{v_{o}} = 5.623 \times 10^{-5}
+%\end{align}
+%
+%
+%\begin{align}
+%v_{i} = v_{s} - v_{f}\\
+%\frac{v_{o}}{G} = v_{s} - Hv_{o}\\
+%\frac{v_{o}}{v_{s}} = \frac{G}{1+GH}
+%\end{align}
+%
+%So, the Closed-Loop Gain,
+%\begin{align}
+%T(s) = \frac{v_{o}}{v_{s}}
+%\end{align}
+The closed loop gain,
+\begin{align}
+T(s) &= \frac{G(s)}{1+G(s)H}
+\\
+&=\dfrac{10^5}{\left(1+\frac{s}{2\pi 10^{5}}\right)\left(1+\frac{s}{2\pi 10^{6}}\right)\left(1+\frac{s}{2\pi 10^{7}}\right)+5.623}
+\end{align}
+
+\end{enumerate}

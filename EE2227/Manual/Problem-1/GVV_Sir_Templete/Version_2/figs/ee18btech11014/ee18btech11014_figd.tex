@@ -1,0 +1,13 @@
+\begin{circuitikz}[american]
+
+\draw (0,0) node[ground](GND){} to[vsourcesin, l= $v_{s}$] (0,2) to[short,-o] (1,2) node[label={below:$+$}]{};
+\draw (1,0) node[ground](GND){} to[short,-o] (1,0.1) node[label={above:$-$}] {};
+\draw (3,2) node[label={above:$v_{a}$}]{};
+\draw (1,0.625) node[label={$v_{i}$}] {};
+\draw (3,0) node[ground](GND){} to[vsourcesin, l= $10^5 v_{i}$] (3,2);
+\draw (3,2) to[R=$R_{1}$] (5.5,2) node[label={above:$v_{b}$}]{} to[C,l_=$C_{1}$] (5.5,0) node[ground](GND){};
+\draw (5.5,2) to[R=$R_{2}$] (8,2) node[label={above:$v_{c}$}]{} to[C,l_=$C_{2}$] (8,0) node[ground](GND){};
+\draw (8,2) to[R=$R_{3}$] (10.5,2) to[C,l_=$C_{3}$] (10.5,0) node[ground](GND){};
+\draw (10.5,2) -- (11.5,2) node[label={above:$v_{o}$}]{};
+
+\end{circuitikz}
