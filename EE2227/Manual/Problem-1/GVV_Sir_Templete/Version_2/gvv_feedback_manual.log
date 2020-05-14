@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.4.27)  12 MAY 2020 19:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.4.27)  14 MAY 2020 22:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1343,7 +1343,7 @@ eps>
 (epstopdf)                    size: 5300743 bytes
 (epstopdf)             Output file: <./figs/ee18btech11014/ee18btech11014_figa-
 eps-converted-to.pdf>
-(epstopdf)                    date: 2020-05-12 14:32:15
+(epstopdf)                    date: 2020-05-14 21:45:33
 (epstopdf)                    size: 149013 bytes
 (epstopdf)             Command: <repstopdf --outfile=./figs/ee18btech11014/ee18
 btech11014_figa-eps-converted-to.pdf ./figs/ee18btech11014/ee18btech11014_figa.
@@ -1374,11 +1374,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 41--44
  []
 
 Package epstopdf Info: Source file: <./figs/ee18btech11014/Bode_Plot.eps>
-(epstopdf)                    date: 2020-05-12 14:32:15
+(epstopdf)                    date: 2020-05-14 21:39:21
 (epstopdf)                    size: 74885 bytes
 (epstopdf)             Output file: <./figs/ee18btech11014/Bode_Plot-eps-conver
 ted-to.pdf>
-(epstopdf)                    date: 2020-05-12 14:32:15
+(epstopdf)                    date: 2020-05-14 21:45:34
 (epstopdf)                    size: 20270 bytes
 (epstopdf)             Command: <repstopdf --outfile=./figs/ee18btech11014/Bode
 _Plot-eps-converted-to.pdf ./figs/ee18btech11014/Bode_Plot.eps>
@@ -1419,52 +1419,106 @@ Plot-eps-converted-to.pdf>] (./tables/ee18btech11014/ee18btech11014_table1.tex
 (./figs/ee18btech11014/ee18btech11014_fige.tex)
 (./tables/ee18btech11014/ee18btech11014_table3.tex)
 (./figs/ee18btech11014/ee18btech11014_figi.tex)
-Overfull \hbox (2.81535pt too wide) detected at line 363
+Overfull \hbox (2.81535pt too wide) detected at line 364
 []
  []
 
-) (./chapters/ee18btech11014_1.tex [3]
+[3]) (./chapters/ee18btech11014_2.tex
+
+LaTeX Warning: Command \j invalid in math mode on input line 13.
+
+
+LaTeX Warning: Command \j invalid in math mode on input line 13.
+
+
+LaTeX Warning: Command \j invalid in math mode on input line 13.
+
+
+LaTeX Warning: Command \j invalid in math mode on input line 13.
+
+
+LaTeX Warning: Command \j invalid in math mode on input line 13.
+
+
+LaTeX Warning: Command \j invalid in math mode on input line 13.
+
+
+LaTeX Warning: Command \j invalid in math mode on input line 23.
+
+
+LaTeX Warning: Command \j invalid in math mode on input line 23.
+
+
+LaTeX Warning: Command \j invalid in math mode on input line 23.
+
+
+LaTeX Warning: Command \j invalid in math mode on input line 23.
+
+
+LaTeX Warning: Command \j invalid in math mode on input line 23.
+
+
+LaTeX Warning: Command \j invalid in math mode on input line 23.
+
+
+LaTeX Warning: Command \j invalid in math mode on input line 23.
+
+
+LaTeX Warning: Command \j invalid in math mode on input line 23.
+
+
+LaTeX Warning: Command \j invalid in math mode on input line 23.
+
+
+LaTeX Warning: Command \j invalid in math mode on input line 23.
+
+
+LaTeX Warning: Command \j invalid in math mode on input line 23.
+
+
+LaTeX Warning: Command \j invalid in math mode on input line 23.
+
+
+LaTeX Warning: Command \j invalid in math mode on input line 27.
+
+
+LaTeX Warning: Command \j invalid in math mode on input line 27.
+
+
+LaTeX Warning: Command \j invalid in math mode on input line 68.
+
+
+Overfull \hbox (3.53285pt too wide) detected at line 78
+ []$[] \OT1/txr/m/n/12 = \OMS/txsy/m/n/12 ^^@[] []$ []  
+ []
+
+
+Overfull \hbox (54.18205pt too wide) detected at line 98
+[]
+ []
+
+) (./chapters/ee18btech11014_1.tex [4]
 (./figs/ee18btech11014/ee18btech11014_figo.tex))
-(./chapters/ee18btech11014_2.tex
-Underfull \hbox (badness 10000) in paragraph at lines 5--8
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 22--26
-
- []
-
-
-Underfull \vbox (badness 2478) has occurred while \output is active []
-
- [4]
-Overfull \hbox (23.30786pt too wide) detected at line 61
-[]
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-) [5]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 265.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 265.
+ [5
 
-(./gvv_feedback_manual.aux)
+]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 265.
+ (./gvv_feedback_manual.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 265.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 265.
 Package rerunfilecheck Info: File `gvv_feedback_manual.out' has not changed.
-(rerunfilecheck)             Checksum: 1B2BF206C283ED8FD683C36EA6DE6D7E;154.
+(rerunfilecheck)             Checksum: 26963E08DA577E11569ACE1F11B2849B;154.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 265.
  ) 
 Here is how much of TeX's memory you used:
- 33702 strings out of 492982
- 719051 string characters out of 6134896
- 938190 words of memory out of 5000000
- 36488 multiletter control sequences out of 15000+600000
+ 33696 strings out of 492982
+ 718983 string characters out of 6134896
+ 938252 words of memory out of 5000000
+ 36489 multiletter control sequences out of 15000+600000
  90655 words of font info for 213 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 55i,14n,67p,511b,1458s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,16n,67p,511b,1083s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/txfonts/rtxb.pfb></usr/share/texlive/texmf-dist
 /fonts/type1/public/txfonts/rtxmi.pfb></usr/share/texlive/texmf-dist/fonts/type
@@ -1476,10 +1530,10 @@ texmf-dist/fonts/type1/public/txfonts/txsya.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw
 /times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.
 pfb>
-Output written on gvv_feedback_manual.pdf (5 pages, 251691 bytes).
+Output written on gvv_feedback_manual.pdf (5 pages, 250678 bytes).
 PDF statistics:
- 295 PDF objects out of 1000 (max. 8388607)
- 234 compressed objects within 3 object streams
- 105 named destinations out of 1000 (max. 500000)
+ 289 PDF objects out of 1000 (max. 8388607)
+ 228 compressed objects within 3 object streams
+ 98 named destinations out of 1000 (max. 500000)
  47 words of extra memory for PDF output out of 10000 (max. 10000000)
 

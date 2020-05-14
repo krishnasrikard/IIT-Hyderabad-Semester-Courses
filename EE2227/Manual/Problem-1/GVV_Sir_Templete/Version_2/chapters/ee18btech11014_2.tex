@@ -2,103 +2,104 @@
 \begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
 \numberwithin{equation}{enumi}
 %3.1
-\item Discuss relation between Stability and Phase Margin.\\
-\solution\\
-Assuming Loop Gain if $GH$. Denoting the frequency at which the magnitude of loop gain is unity by $\omega_{1}$, So it can be written as\\
-
-Assuming Phase-Margin = $\alpha$ as
+\item Discuss the relation between Stability and Phase Margin (PM).\\
+\solution Let the loop gain
 \begin{align}
-G(j\omega_{1})H = 1\times e^{-j\theta} \\
-\theta = 180^{\circ} - \alpha
+L(s) = G(s)H(s)
 \end{align}
-
-At $\omega_{1}$ the closed-loop gain is
+Then the closed loop gain 
 \begin{align}
-T(j\omega_{1}) = \frac{G(j\omega_{1})}{1+G(j\omega_{1})H}\\
-T(j\omega_{1}) = \frac{(1/H) e^{-j \theta}}{1+e^{-j \theta}}\\
-|T(j\omega_{1})| = \frac{1/H}{|1+e^{-j \theta}|}
+T\brak{\j\omega} = \frac{G\brak{\j\omega}}{1+L\brak{\j\omega}}%\\
 \end{align}
-
-When Phase-Margin $\alpha$ is reduced, eventually when $\theta=180^{\circ}$ system becomes Marginally Stable. And when $\theta > 180^{\circ}$, system becomes unstable.\\
-So, a system is \textbf{Stable} if $\alpha > 0$, \textbf{Marginally Stable} if $\alpha = 0$ and \textbf{Unstable} if $\alpha < 0$.\\
+and 
+%
+If 
+\begin{align}
+\abs{L\brak{\j\omega_0}} &= 1,
+\\
+T\brak{\j\omega_0} &= \frac{G\brak{\j\omega_0}}{1+L\brak{\j\omega_0}}\\
+\\
+ &= \frac{G\brak{\j\omega_0}}{1+\exp\cbrak{\phase{L\brak{\j\omega_0}}}},
+\end{align}
+and 
+\begin{align}
+PM = 180^{\degree} - \phase{L\brak{\j\omega_0}}
+\end{align}
+%
+and for
+\begin{align}
+PM
+\begin{cases}
+> 0 & T(s) \text{ stable}
+\\
+= 0 & T(s) \text{ marginally stable}
+\\
+< 0 & T(s) \text{ unstable}
+\end{cases}
+\end{align}
 %------------------------------------------------------------------------------------------------------%
 % 3.2
-\item If Phase of Loop Gain is $\phi$ at which the magnitude of loop gain is unity. Find range of $\phi$ for the system to be Stable, Marginally Stable and Unstable.\\
-\solution
-\begin{align}
-\phi = \alpha - 180^{\circ}\\
-\alpha = \phi + 180^{\circ}
-\end{align}
-
-For Stable,
-\begin{align}
-\alpha > 0\\
-\phi > -180^{\circ}
-\end{align}
-
-For Marginally Stable,
-\begin{align}
-\alpha = 0\\
-\phi = -180^{\circ}
-\end{align}
-
-For Unstable,
-\begin{align}
-\alpha < 0\\
-\phi < -180^{\circ}
-\end{align}
+%\item If Phase of Loop Gain is $\phi$ at which the magnitude of loop gain is unity. Find range of $\phi$ for the system to be Stable, Marginally Stable and Unstable.\\
+%\solution
+%\begin{align}
+%\phi = \alpha - 180^{\degree}\\
+%\alpha = \phi + 180^{\degree}
+%\end{align}
+%
+%For Stable,
+%\begin{align}
+%\alpha > 0\\
+%\phi > -180^{\degree}
+%\end{align}
+%
+%For Marginally Stable,
+%\begin{align}
+%\alpha = 0\\
+%\phi = -180^{\degree}
+%\end{align}
+%
+%For Unstable,
+%\begin{align}
+%\alpha < 0\\
+%\phi < -180^{\degree}
+%\end{align}
 %------------------------------------------------------------------------------------------------------%
 %3.3
-\item Find frequency at which $\phi = -180^{\circ}$. And Determine the region for Stability.\\
-\solution\\
-$H$ is a constant independent of Frequency. So
+\item For constant $H$, find the frequency at which $\phase{L\brak{\j\omega}} = -180^{\degree}$ and determine the region for Stability.
+\solution
 
 \begin{align}
 \phase{G(f)H(f)} = \phase{G(f)}
 \end{align}
+\begin{multline}
+\implies \phase{G(f)} = -180\degree
+\\
+=-\sbrak{\tan ^{-1}\brak{\frac{f}{10^{5}}}+\tan ^{-1}\brak{\frac{f}{10^{6}}}+\tan ^{-1}\brak{\frac{f}{10^{7}}}}
+\end{multline}
+or,
 \begin{align}
-\phase{G(f)} = -\sbrak{\tan ^{-1}\brak{\frac{f}{10^{5}}}+\tan ^{-1}\brak{\frac{f}{10^{6}}}+\tan ^{-1}\brak{\frac{f}{10^{7}}}}
+f = f_{\pi} = 3.34 M Hz.
 \end{align}
-
-As $\phi = -180^{\circ}$, frequency should be between $f=10^{6}Hz$ and $f=10^{7}Hz$.
-\begin{align}
-f = 3.34\times 10^6 Hz
-\end{align}
-%\begin{align}
-%\sbrak{\tan ^{-1}\brak{\frac{f}{10^{5}}}+\tan ^{-1}\brak{\frac{f}{10^{6}}}+\tan ^{-1}\brak{\frac{f}%{10^{7}}}} = 180\\
-%\tan ^{-1}\brak{\frac{f}{10^{5}}}+\tan ^{-1}\brak{\frac{f}{10^{6}}} = 180 - \tan ^{-1}\brak{\frac{f}{10^{7}}}
-%\end{align}
-%\begin{align}
-%\tan\sbrak{\tan ^{-1}\brak{\frac{f}{10^{5}}}+\tan ^{-1}\brak{\frac{f}{10^{6}}}} = \tan\sbrak{180 - \tan ^{-1}\brak{\frac{f}{10^{7}}}}\\
-%\end{align}
 
 So, for 
 \begin{itemize}
-\item $f > 3.34\times 10^6 Hz$, System is Unstable
-\item $f = 3.34\times 10^6 Hz$, System is Marginally Stable
-\item $f < 3.34\times 10^6 Hz$, System is Stable
+\item $f > 3.34 M Hz$, System is Unstable
+\item $f = 3.34 M Hz$, System is Marginally Stable
+\item $f < 3.34 M Hz$, System is Stable
 \end{itemize}
 %------------------------------------------------------------------------------------------------------%
 %3.4
 \item Determine the range of $H$ for Stability.\\
-\solution\\
-At $f = 3.34\times 10^6 Hz$,
+\solution
 \begin{align}
-G(f) = 320 - 40\log(f)\\
-G = 320 - 40\log(3.34\times 10^6)\\
-G = 59 dB \\
-G = 896
+\abs{G(f_{\pi})} &= 320 - 40\log(f_{\pi})\\
+ &= 59 dB = 896
+H &= 1.11 \times 10^{-3} \brak{\because \abs{G(f_{\pi})H} = 1}
 \end{align}
 
-If Loop Gain $|G(f)H| = 1$ at $f = 3.34\times 10^6 Hz$,
-\begin{align}
-G = 896\\
-H = 1.11 \times 10^{-3}
-\end{align}
+%If $f$ \textbf{decreases} below $f = 3.34\times 10^6 Hz$, $G$ increases and the value of $H$ at which Loop-Gain becomes unity \textbf{decreases} below $H = 1.11 \times 10^{-3}$.
 
-If $f$ \textbf{decreases} below $f = 3.34\times 10^6 Hz$, $G$ increases and the value of $H$ at which Loop-Gain becomes unity \textbf{decreases} below $H = 1.11 \times 10^{-3}$.
-
-So, for 
+Thus, 
 \begin{itemize}
 \item $H > 1.11 \times 10^{-3}$, System is Unstable
 \item $H = 1.11 \times 10^{-3}$, System is Marginally Stable
@@ -106,7 +107,7 @@ So, for
 \end{itemize}
 
 \item Verify the stablity from the value of $H$\\
-\solution\\
+\solution
 Run the following code to verify the results
 \begin{lstlisting}
 codes/ee18btech11014/Stability.py

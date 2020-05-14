@@ -8,6 +8,7 @@ Released under GNU GPL
 import numpy as np
 import matplotlib.pyplot as plt
 import subprocess
+from scipy.signal import lti, step2
 import shlex
 
 H = 1.11e-3
