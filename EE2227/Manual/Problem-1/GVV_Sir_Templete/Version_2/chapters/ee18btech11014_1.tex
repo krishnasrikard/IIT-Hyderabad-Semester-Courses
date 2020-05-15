@@ -77,7 +77,29 @@ using \eqref{eq:ee18btech11014_GH_PM_90}.
 	\caption{}
 	\label{fig:ee18btech11014_Closed-Loop Circuit alpha=90}
 \end{figure}
+%-------------------------------------------------------------------------------------------------%
 
+\item Using ngspice, find the output of the \ref{fig:ee18btech11014_Closed-Loop Circuit alpha=90} for Unit-Step Signal and Sinusoidal Signal as Input.\\
+\solution\\
+Check the following spice file for circuits for inputs Unit-Step and Sinusoidal Signal respectively.
+\begin{lstlisting}
+spice/ee18btech11014/ee18btech11014_1.net
+spice/ee18btech11014/ee18btech11014_2.net
+\end{lstlisting}
+
+Run the following Python Code for Visualising the Responses for Inputs.
+\begin{lstlisting}
+spice/ee18btech11014/EE18BTECH11014_Simulation-1,2.py
+\end{lstlisting}
+
+The Responses are shown in Fig.\ref{fig:PM=90}
+\begin{figure}[ht!]
+	\begin{center}
+		\includegraphics[width=\columnwidth]{./figs/ee18btech11014/ee18btech11014_Spice_Result_PM=90.eps}
+	\end{center}
+	\caption{}
+	\label{fig:PM=90}
+\end{figure}
 %-------------------------------------------------------------------------------------------------%
 \item Repeat all the above for $PM = 45\degree$.
 %-------------------------------------------------------------------------------------------------%

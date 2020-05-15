@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.4.27)  15 MAY 2020 10:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.4.27)  15 MAY 2020 22:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1378,18 +1378,12 @@ Package epstopdf Info: Source file: <./figs/ee18btech11014/Bode_Plot.eps>
 (epstopdf)                    size: 74885 bytes
 (epstopdf)             Output file: <./figs/ee18btech11014/Bode_Plot-eps-conver
 ted-to.pdf>
-(epstopdf)                    date: 2020-05-14 21:45:34
+(epstopdf)                    date: 2020-05-15 10:06:00
 (epstopdf)                    size: 20270 bytes
 (epstopdf)             Command: <repstopdf --outfile=./figs/ee18btech11014/Bode
 _Plot-eps-converted-to.pdf ./figs/ee18btech11014/Bode_Plot.eps>
 (epstopdf)             \includegraphics on input line 62.
-runsystem(repstopdf --outfile=./figs/ee18btech11014/Bode_Plot-eps-converted-to.
-pdf ./figs/ee18btech11014/Bode_Plot.eps)...executed safely (allowed).
-
-Package epstopdf Info: Result file: <./figs/ee18btech11014/Bode_Plot-eps-conver
-ted-to.pdf>
-(epstopdf)                    date: 2020-05-15 10:06:00
-(epstopdf)                    size: 20270 bytes.
+Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./figs/ee18btech11014/Bode_Plot-eps-converted-to
@@ -1435,7 +1429,35 @@ Overfull \hbox (2.81535pt too wide) detected at line 364
 []
  []
 
-[3]) (./chapters/ee18btech11014_2.tex
+[3]
+Package epstopdf Info: Source file: <./figs/ee18btech11014/ee18btech11014_Spice
+_Result_PM=72.eps>
+(epstopdf)                    date: 2020-05-15 22:37:42
+(epstopdf)                    size: 28918 bytes
+(epstopdf)             Output file: <./figs/ee18btech11014/ee18btech11014_Spice
+_Result_PM=72-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-05-15 22:37:49
+(epstopdf)                    size: 18008 bytes
+(epstopdf)             Command: <repstopdf --outfile=./figs/ee18btech11014/ee18
+btech11014_Spice_Result_PM=72-eps-converted-to.pdf ./figs/ee18btech11014/ee18bt
+ech11014_Spice_Result_PM=72.eps>
+(epstopdf)             \includegraphics on input line 382.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./figs/ee18btech11014/ee18btech11014_Spice_Resul
+t_PM=72-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at m
+ost version <1.5> allowed
+<./figs/ee18btech11014/ee18btech11014_Spice_Result_PM=72-eps-converted-to.pdf, 
+id=176, 578.16pt x 433.62pt>
+File: ./figs/ee18btech11014/ee18btech11014_Spice_Result_PM=72-eps-converted-to.
+pdf Graphic file (type pdf)
+<use ./figs/ee18btech11014/ee18btech11014_Spice_Result_PM=72-eps-converted-to.p
+df>
+Package pdftex.def Info: ./figs/ee18btech11014/ee18btech11014_Spice_Result_PM=7
+2-eps-converted-to.pdf  used on input line 382.
+(pdftex.def)             Requested size: 252.0pt x 189.00032pt.
+) (./chapters/ee18btech11014_2.tex
 
 LaTeX Warning: Command \j invalid in math mode on input line 13.
 
@@ -1509,14 +1531,77 @@ Overfull \hbox (54.18205pt too wide) detected at line 98
 []
  []
 
-) (./chapters/ee18btech11014_1.tex [4]
+
+Underfull \vbox (badness 1331) has occurred while \output is active []
+
+ [4 <./figs/ee18btech11014/ee18btech11014_Spice_Result_PM=72-eps-converted-to.p
+df>]
+Package epstopdf Info: Source file: <./figs/ee18btech11014/ee18btech11014_Spice
+_Result.eps>
+(epstopdf)                    date: 2020-05-15 22:31:44
+(epstopdf)                    size: 32241 bytes
+(epstopdf)             Output file: <./figs/ee18btech11014/ee18btech11014_Spice
+_Result-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-05-15 22:31:57
+(epstopdf)                    size: 18704 bytes
+(epstopdf)             Command: <repstopdf --outfile=./figs/ee18btech11014/ee18
+btech11014_Spice_Result-eps-converted-to.pdf ./figs/ee18btech11014/ee18btech110
+14_Spice_Result.eps>
+(epstopdf)             \includegraphics on input line 133.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./figs/ee18btech11014/ee18btech11014_Spice_Resul
+t-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most ve
+rsion <1.5> allowed
+<./figs/ee18btech11014/ee18btech11014_Spice_Result-eps-converted-to.pdf, id=257
+, 578.16pt x 433.62pt>
+File: ./figs/ee18btech11014/ee18btech11014_Spice_Result-eps-converted-to.pdf Gr
+aphic file (type pdf)
+<use ./figs/ee18btech11014/ee18btech11014_Spice_Result-eps-converted-to.pdf>
+Package pdftex.def Info: ./figs/ee18btech11014/ee18btech11014_Spice_Result-eps-
+converted-to.pdf  used on input line 133.
+(pdftex.def)             Requested size: 252.0pt x 189.00032pt.
+) (./chapters/ee18btech11014_1.tex
+Underfull \vbox (badness 2310) has occurred while \output is active []
+
+
 (./figs/ee18btech11014/ee18btech11014_figo.tex
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
-))
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 265.
- [5
+) [5 <./figs/ee18btech11014/ee18btech11014_Spice_Result-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <./figs/ee18btech11014/ee18btech11014_Spice
+_Result_PM=90.eps>
+(epstopdf)                    date: 2020-05-15 10:04:58
+(epstopdf)                    size: 63954 bytes
+(epstopdf)             Output file: <./figs/ee18btech11014/ee18btech11014_Spice
+_Result_PM=90-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-05-15 22:46:23
+(epstopdf)                    size: 27985 bytes
+(epstopdf)             Command: <repstopdf --outfile=./figs/ee18btech11014/ee18
+btech11014_Spice_Result_PM=90-eps-converted-to.pdf ./figs/ee18btech11014/ee18bt
+ech11014_Spice_Result_PM=90.eps>
+(epstopdf)             \includegraphics on input line 98.
+Package epstopdf Info: Output file is already uptodate.
 
+
+pdfTeX warning: pdflatex (file ./figs/ee18btech11014/ee18btech11014_Spice_Resul
+t_PM=90-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at m
+ost version <1.5> allowed
+<./figs/ee18btech11014/ee18btech11014_Spice_Result_PM=90-eps-converted-to.pdf, 
+id=343, 578.16pt x 867.24pt>
+File: ./figs/ee18btech11014/ee18btech11014_Spice_Result_PM=90-eps-converted-to.
+pdf Graphic file (type pdf)
+<use ./figs/ee18btech11014/ee18btech11014_Spice_Result_PM=90-eps-converted-to.p
+df>
+Package pdftex.def Info: ./figs/ee18btech11014/ee18btech11014_Spice_Result_PM=9
+0-eps-converted-to.pdf  used on input line 98.
+(pdftex.def)             Requested size: 252.0pt x 378.00064pt.
+)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 265.
+ [6
+
+ <./figs/ee18btech11014/ee18btech11014_Spice_Result_PM=90-eps-converted-to.pdf>
 ]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 265.
  (./gvv_feedback_manual.aux)
@@ -1527,13 +1612,13 @@ Package rerunfilecheck Info: File `gvv_feedback_manual.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 265.
  ) 
 Here is how much of TeX's memory you used:
- 33725 strings out of 492982
- 719409 string characters out of 6134896
- 949014 words of memory out of 5000000
- 36518 multiletter control sequences out of 15000+600000
+ 33760 strings out of 492982
+ 720791 string characters out of 6134896
+ 949123 words of memory out of 5000000
+ 36533 multiletter control sequences out of 15000+600000
  90655 words of font info for 213 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 55i,16n,67p,511b,1083s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,16n,67p,511b,1800s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/txfonts/rtxb.pfb></usr/share/texlive/texmf-dist
 /fonts/type1/public/txfonts/rtxmi.pfb></usr/share/texlive/texmf-dist/fonts/type
@@ -1545,10 +1630,10 @@ texmf-dist/fonts/type1/public/txfonts/txsya.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw
 /times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.
 pfb>
-Output written on gvv_feedback_manual.pdf (5 pages, 253441 bytes).
+Output written on gvv_feedback_manual.pdf (6 pages, 308067 bytes).
 PDF statistics:
- 289 PDF objects out of 1000 (max. 8388607)
- 228 compressed objects within 3 object streams
- 98 named destinations out of 1000 (max. 500000)
- 47 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 473 PDF objects out of 1000 (max. 8388607)
+ 283 compressed objects within 3 object streams
+ 115 named destinations out of 1000 (max. 500000)
+ 62 words of extra memory for PDF output out of 10000 (max. 10000000)
 

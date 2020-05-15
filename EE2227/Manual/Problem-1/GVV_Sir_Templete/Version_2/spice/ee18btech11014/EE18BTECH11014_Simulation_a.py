@@ -12,7 +12,7 @@ import shlex
 
 Data1 = np.loadtxt('ee18btech11014_a.dat')
 
-plt.figure(figsize=(8.0,10.0))
+plt.figure(figsize=(8.0,6.0))
 plt.plot(Data1[:,0],Data1[:,1])  
 plt.grid()
 plt.xlabel("Time")
