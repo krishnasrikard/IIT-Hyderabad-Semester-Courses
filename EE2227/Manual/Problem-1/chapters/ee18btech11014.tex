@@ -273,37 +273,37 @@ Equivalent Circuit of the circuit is
 
 The cascade of RC Circuits are used to introduce poles in the circuit and Op-Amp are used to achieve the Gain required.\\
 
-At the Operational Amplifier,
+At the First Operational Amplifier,
 \begin{align}
 v_{i} = v_{s}\\
-v_{a} = 10^5 v_{i}\\
-v_{a} = 10^5 v_{s}
+v_{a} = 10^3 v_{i}\\
+v_{a} = 10^3 v_{s}
 \end{align}
 
 At the first RC-Circuit,
 \begin{align}
 2\pi RC = 10^{-7}\\
 v_{b} = \frac{v_{a}}{1 + j\frac{f}{10^{7}}}\\
-v_{b} = \frac{10^5 v_{i}}{1 + j\frac{f}{10^{7}}}
+v_{b} = \frac{10^3 v_{i}}{1 + j\frac{f}{10^{7}}}
 \end{align}
 
-At the second RC-Circuit,
+At the Second Operational Amplifier and Second RC-Circuit,
 \begin{align}
 2\pi RC = 10^{-6}\\
-v_{c} = \frac{v_{b}}{1 + j\frac{f}{10^{6}}}\\
-v_{c} = \frac{10^5 v_{i}}{(1 + j\frac{f}{10^{6}})(1 + j\frac{f}{10^{7}})}
+v_{c} = \frac{10v_{b}}{1 + j\frac{f}{10^{6}}}\\
+v_{c} = \frac{10^4 v_{i}}{(1 + j\frac{f}{10^{6}})(1 + j\frac{f}{10^{7}})}
 \end{align}
 
-At the third RC-Circuit,
+At the Third Operational Amplifier and Third RC-Circuit,
 \begin{align}
 2\pi RC = 10^{-5}\\
-v_{o} = \frac{v_{c}}{1 + j\frac{f}{10^{5}}}
+v_{o} = \frac{10v_{c}}{1 + j\frac{f}{10^{5}}}
 \end{align}
 \begin{align}
 v_{o} = \frac{10^5 v_{i}}{(1 + j\frac{f}{10^{5}})(1 + j\frac{f}{10^{6}})(1 + j\frac{f}{10^{7}})}
 \end{align}
 
-The RC Circuits introduces poles at $f=10^{7} Hz, 10^{6} Hz, 10^{5} Hz$ respectively from left to right and Op-Amp introduced a Gain = $10^5$. So, the value of $v_{o}$ is
+The RC Circuits introduces poles at $f=10^{7} Hz, 10^{6} Hz, 10^{5} Hz$ respectively from left to right. The Op-Amps introduce a gain  $10^{3},10,10$. THe second and third Op-Amps act as a buffer. So, the value of $v_{o}$ is
 
 \begin{align}
 v_{o} = \dfrac{10^5 v_{i}}{\left(1+j\frac{f}{10^{5}}\right)\left(1+j\frac{f}{10^{6}}\right)\left(1+j\frac{f}{10^{7}}\right)}

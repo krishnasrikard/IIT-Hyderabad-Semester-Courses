@@ -336,71 +336,51 @@ Equivalent Circuit of the circuit is
 		\resizebox{\columnwidth/1}{!}{\input{./figs/ee18btech11014/ee18btech11014_figd.tex}}
 	\end{center}
 	\caption{}
-	\label{fig:ee18btech11014_Equivalent Open-Loop Circuit}
+	\label{fig:Equivalent Open-Loop Circuit}
 \end{figure}
 
 The cascade of RC Circuits are used to introduce poles in the circuit and Op-Amp are used to achieve the Gain required.\\
 
-At the Operational Amplifier,
+At the First Operational Amplifier,
 \begin{align}
 v_{i} = v_{s}\\
-v_{a} = 10^5 v_{i}\\
-v_{a} = 10^5 v_{s}
+v_{a} = 10^3 v_{i}\\
+v_{a} = 10^3 v_{s}
 \end{align}
 
 At the first RC-Circuit,
 \begin{align}
-p_{1} = \frac{1}{R_{1}C_{1}}\\
-v_{b} = \frac{v_{a}}{1 + \frac{s}{p_{1}}}\\
-v_{b} = \frac{10^5 v_{i}}{1 + \frac{s}{p_{1}}}
+2\pi RC = 10^{-7}\\
+v_{b} = \frac{v_{a}}{1 + j\frac{f}{10^{7}}}\\
+v_{b} = \frac{10^3 v_{i}}{1 + j\frac{f}{10^{7}}}
 \end{align}
 
-At the second RC-Circuit,
+At the Second Operational Amplifier and Second RC-Circuit,
 \begin{align}
-p_{2} = \frac{1}{R_{2}C_{2}}\\
-v_{c} = \frac{v_{b}}{1 + \frac{s}{p_{2}}}\\
-v_{c} = \frac{10^5 v_{i}}{(1 + \frac{s}{p_{1}})(1 + \frac{s}{p_{2}})}
+2\pi RC = 10^{-6}\\
+v_{c} = \frac{10v_{b}}{1 + j\frac{f}{10^{6}}}\\
+v_{c} = \frac{10^4 v_{i}}{(1 + j\frac{f}{10^{6}})(1 + j\frac{f}{10^{7}})}
 \end{align}
 
-At the third RC-Circuit,
+At the Third Operational Amplifier and Third RC-Circuit,
 \begin{align}
-p_{3} = \frac{1}{R_{3}C_{3}}\\
-v_{o} = \frac{v_{c}}{1 + \frac{s}{p_{3}}}
+2\pi RC = 10^{-5}\\
+v_{o} = \frac{10v_{c}}{1 + j\frac{f}{10^{5}}}
 \end{align}
 \begin{align}
-v_{o} = \frac{10^5 v_{i}}{(1 + \frac{s}{p_{1}})(1 + \frac{s}{p_{2}})(1 + \frac{s}{p_{3}})}
+v_{o} = \frac{10^5 v_{i}}{(1 + j\frac{f}{10^{5}})(1 + j\frac{f}{10^{6}})(1 + j\frac{f}{10^{7}})}
 \end{align}
 
-The RC Circuits should introduce poles at $f=10^{7} Hz, 10^{6} Hz, 10^{5} Hz$ respectively from left to right.\\
-Assuming the following values of circuit elements,\\
-\begin{table}[!ht]
-\centering
-\input{./tables/ee18btech11014/ee18btech11014_table1.tex}
-\caption{}
-\label{table:table1}
-\end{table}
+The RC Circuits introduces poles at $f=10^{7} Hz, 10^{6} Hz, 10^{5} Hz$ respectively from left to right. The Op-Amps introduce a gain  $10^{3},10,10$. THe second and third Op-Amps act as a buffer. So, the value of $v_{o}$ is
 
-Frequency can be calculated as
 \begin{align}
-f = \frac{1}{2\pi RC}
-\end{align}
-\begin{table}[!ht]
-\centering
-\input{./tables/ee18btech11014/ee18btech11014_table2.tex}
-\caption{}
-\label{table:table1}
-\end{table}
-
-So, the value of
-\begin{align}
-v_{o} = \dfrac{10^5 v_{i}}{\left(1+\frac{s}{2\pi 10^{5}}\right)\left(1+\frac{s}{2\pi 10^{6}}\right)\left(1+\frac{s}{2\pi 10^{7}}\right)}
+v_{o} = \dfrac{10^5 v_{i}}{\left(1+j\frac{f}{10^{5}}\right)\left(1+j\frac{f}{10^{6}}\right)\left(1+j\frac{f}{10^{7}}\right)}
 \end{align}
 
 So, Open-Loop Gain is
 \begin{align}
-G(s) = \dfrac{10^5}{\left(1+\frac{s}{2\pi 10^{5}}\right)\left(1+\frac{s}{2\pi 10^{6}}\right)\left(1+\frac{s}{2\pi 10^{7}}\right)}
-\end{align}
-%-------------------------------------------------------------------------------------------------%
+G = \dfrac{10^5}{\left(1+j\frac{f}{10^{5}}\right)\left(1+j\frac{f}{10^{6}}\right)\left(1+j\frac{f}{10^{7}}\right)}
+\end{align}%-------------------------------------------------------------------------------------------------%
 %2.1.12
 \item Design a Circuit Model that follows the Feedback Transfer Function $H(s)$\\
 \solution\\

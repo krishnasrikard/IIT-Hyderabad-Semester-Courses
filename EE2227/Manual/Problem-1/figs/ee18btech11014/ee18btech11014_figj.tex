@@ -1,18 +1,20 @@
 \begin{circuitikz}[american]-1
 \draw (-3,0) node[ground](GND){} to[vsourcesin, l= $v_{s}$] (-3,2) to[short,-o] (0.25,2) node[label={below:$+$}]{};
 \draw (0,0.1) to[R=$10\ohm$,v=$v_{f}$] (-2,0.1) node[ground](GND){}; 
-\draw (0,0.1) -- (1,0.1) -- (1,4) to[R=$10^{5}\ohm$] (10.5,4) -- (10.5,2);
+\draw (0,0.1) -- (1,0.1) -- (1,4) to[R=$10^{5}\ohm$] (13.5,4) -- (13.5,2);
 
+\draw (3,0) node[ground](GND){} to[vsourcesin, l= $10^3 v_{i}$] (3,2);
+\draw (3,2) to[R=$100$] (5.5,2) to[C,l_=$\frac{10^{-9}}{2\pi}$] (5.5,0) node[ground](GND){};
+\draw (5.5,2) to[short,-o] (6,2) node[label={above:$v_{b}$}]{};
+\draw (6,0) node[ground](GND){} to[short,-o] (6,0.1);
 
-\draw (0.25,0.1) to[short,-o] (0.25,0.1) node[label={above:$-$}]{};
-\draw (0.25,0.625) node[label={$v_{i}$}] {};
+\draw (7.5,0) node[ground](GND){} to[vsourcesin, l= $10v_{b}$] (7.5,2);
+\draw (7.5,2) to[R=$1K$] (9.5,2) to[C,l_=$\frac{10^{-9}}{2\pi}$] (9.5,0) node[ground](GND){};
+\draw (9.5,2) to[short,-o] (10,2) node[label={above:$v_{c}$}]{};
+\draw (10,0) node[ground](GND){} to[short,-o] (10,0.1);
 
-
-\draw (3,2) node[label={above:$v_{a}$}]{};
-\draw (3,0) node[ground](GND){} to[vsourcesin, l= $10^5 v_{i}$] (3,2);
-\draw (3,2) to[R=$10^{2}\ohm$] (5.5,2) node[label={above:$v_{b}$}]{} to[C,l_=$\frac{10^{-9}}{2\pi}F$] (5.5,0) node[ground](GND){};
-\draw (5.5,2) to[R=$10^{3}\ohm$] (8,2) node[label={above:$v_{c}$}]{} to[C,l_=$\frac{10^{-9}}{2\pi}F$] (8,0) node[ground](GND){};
-\draw (8,2) to[R=$10^{4}\ohm$] (10.5,2) to[C,l_=$\frac{10^{-9}}{2\pi}F$] (10.5,0) node[ground](GND){};
-\draw (10.5,2) -- (11.5,2) node[label={above:$v_{o}$}]{};
+\draw (11.5,0) node[ground](GND){} to[vsourcesin, l= $10v_{c}$] (11.5,2);
+\draw (11.5,2) to[R=$10K$] (13.5,2) to[C,l_=$\frac{10^{-9}}{2\pi}$] (13.5,0) node[ground](GND){};
+\draw (13.5,2) to[short,-o] (14,2) node[label={above:$v_{o}$}]{};
 
 \end{circuitikz}

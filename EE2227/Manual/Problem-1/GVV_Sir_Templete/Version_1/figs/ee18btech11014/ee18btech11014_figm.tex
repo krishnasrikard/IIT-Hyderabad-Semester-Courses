@@ -5,11 +5,23 @@
 \draw (OA.down) -- ++(0,-0.3) node[vee]{$-10V$};
 \draw (OA.+) -- (0,1.5) to[vsourcesin, l= $v_{s}$] (0,0) node[ground](GND){};
 \draw (OA.-) -- (0,2.5) to[R=$10\ohm$] (-2,2.5) node[ground, rotate=270](GND){};
-\draw (OA.out) -- (3,2) node[label={below:$v_{a}$}]{};
-\draw (3,2) to[R=$10^{2}\ohm$] (5.5,2) node[label={above:$v_{b}$}]{} to[C,l_=$\frac{10^{-9}}{2\pi}F$] (5.5,0) node[ground](GND){};
-\draw (5.5,2) to[R=$10^{3}\ohm$] (8,2) node[label={above:$v_{c}$}]{} to[C,l_=$\frac{10^{-9}}{2\pi}F$] (8,0) node[ground](GND){};
-\draw (8,2) to[R=$10^{4}\ohm$] (10.5,2) to[C,l_=$\frac{10^{-9}}{2\pi}F$] (10.5,0) node[ground](GND){};
-\draw (10.5,2) -- (11.5,2) node[label={above:$v_{o}$}]{};
-\draw (10.5,2) -- (10.5,4) to[R=$10^{5}\ohm$] (0,4) -- (0,2.5);
+\draw (OA.out) -- (3,2) node[label={above:$v_{a}$}]{};
+\draw (3,2) to[R=$R_{1}$] (5.5,2) node[label={above:$v_{b}$}]{} to[C,l_=$C_{1}$] (5.5,0) node[ground](GND){};
+
+\draw (7.5,2.5) node[op amp] (OB) {};
+\draw (OB.up) -- ++(0, 0.3) node[vcc]{$+10V$};
+\draw (OB.down) -- ++(0,-0.3) node[vee]{$-10V$};
+\draw (OB.+) -- (5.5,2);
+\draw (OB.-) -- ++(-0.5,0) node[ground,rotate=270](GND){};;
+\draw (OB.out) to[R=$R_{2}$] (10.5,2.5) node[label={above:$v_{c}$}]{} to[C,l_=$C_{2}$] (10.5,0) node[ground](GND){};
+
+\draw (12.5,3) node[op amp] (OC) {};
+\draw (OC.up) -- ++(0, 0.3) node[vcc]{$+10V$};
+\draw (OC.down) -- ++(0,-0.3) node[vee]{$-10V$};
+\draw (OC.+) -- (10.5,2.5);
+\draw (OC.-) -- ++(-0.5,0) node[ground,rotate=270](GND){};;
+\draw (OC.out) to[R=$R_{3}$] (15.5,3) node[label={right:$v_{o}$}]{} to[C,l_=$C_{3}$] (15.5,0) node[ground](GND){};
+
+\draw (15.5,2) -- (15.5,6) to[R=$10^{5}\ohm$] (0,6) -- (0,2.5);
 
 \end{circuitikz}

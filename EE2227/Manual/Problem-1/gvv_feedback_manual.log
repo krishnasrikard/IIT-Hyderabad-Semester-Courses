@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.4.27)  7 MAY 2020 21:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.4.27)  15 MAY 2020 08:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1342,11 +1342,11 @@ File: utxsyc.fd 2000/12/15 v3.1
  (./chapters/ee18btech11014.tex
 Package epstopdf Info: Source file: <./figs/ee18btech11014/ee18btech11014_figa.
 eps>
-(epstopdf)                    date: 2020-05-02 00:02:54
+(epstopdf)                    date: 2020-05-12 14:32:15
 (epstopdf)                    size: 5300743 bytes
 (epstopdf)             Output file: <./figs/ee18btech11014/ee18btech11014_figa-
 eps-converted-to.pdf>
-(epstopdf)                    date: 2020-05-03 16:45:55
+(epstopdf)                    date: 2020-05-14 21:45:33
 (epstopdf)                    size: 149013 bytes
 (epstopdf)             Command: <repstopdf --outfile=./figs/ee18btech11014/ee18
 btech11014_figa-eps-converted-to.pdf ./figs/ee18btech11014/ee18btech11014_figa.
@@ -1438,6 +1438,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 221--224
  []
 
 (./figs/ee18btech11014/ee18btech11014_figg.tex)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 Underfull \hbox (badness 2237) in paragraph at lines 251--254
 []\OT1/txr/m/n/12 Design a Cir-cuit Model that fol-lows the
  []
@@ -1452,7 +1455,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 251--254
 
  []
 
-(./figs/ee18btech11014/ee18btech11014_figc.tex)
+(./figs/ee18btech11014/ee18btech11014_figc.tex
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+)
 (./figs/ee18btech11014/ee18btech11014_figd.tex)
 Underfull \hbox (badness 1735) in paragraph at lines 274--275
 []\OT1/txr/m/n/12 The cas-cade of RC Cir-cuits are used to
@@ -1463,19 +1469,38 @@ Underfull \hbox (badness 10000) in paragraph at lines 274--275
 
  []
 
-[4] (./figs/ee18btech11014/ee18btech11014_fige.tex)
+[4]
+Underfull \hbox (badness 2875) in paragraph at lines 306--307
+\OT1/txr/m/n/12 10[]\OML/txmi/m/it/12 Hz; \OT1/txr/m/n/12 10[]\OML/txmi/m/it/12
+ Hz; \OT1/txr/m/n/12 10[]\OML/txmi/m/it/12 Hz$ \OT1/txr/m/n/12 re-spec-tively f
+rom left
+ []
+
+
+Underfull \hbox (badness 2261) in paragraph at lines 306--307
+\OT1/txr/m/n/12 to right. The Op-Amps in-tro-duce a gain
+ []
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
-(./figs/ee18btech11014/ee18btech11014_figi.tex)
+(./figs/ee18btech11014/ee18btech11014_fige.tex)
+(./figs/ee18btech11014/ee18btech11014_figi.tex
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+)
 (./figs/ee18btech11014/ee18btech11014_figj.tex
 Missing character: There is no - in font nullfont!
 Missing character: There is no 1 in font nullfont!
-) [5])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 275.
- [6
+)
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-]
+ [5])
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [6]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 275.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 275.
 
 (./gvv_feedback_manual.aux)
@@ -1490,10 +1515,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 275.
  ) 
 Here is how much of TeX's memory you used:
- 34375 strings out of 492982
- 734531 string characters out of 6134896
- 970841 words of memory out of 5000000
- 37144 multiletter control sequences out of 15000+600000
+ 34669 strings out of 492982
+ 741562 string characters out of 6134896
+ 1024760 words of memory out of 5000000
+ 37438 multiletter control sequences out of 15000+600000
  95538 words of font info for 226 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  55i,14n,67p,511b,1091s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1508,7 +1533,7 @@ texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/font
 s/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/ti
 mes/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb
 >
-Output written on gvv_feedback_manual.pdf (6 pages, 252053 bytes).
+Output written on gvv_feedback_manual.pdf (6 pages, 259238 bytes).
 PDF statistics:
  295 PDF objects out of 1000 (max. 8388607)
  271 compressed objects within 3 object streams
