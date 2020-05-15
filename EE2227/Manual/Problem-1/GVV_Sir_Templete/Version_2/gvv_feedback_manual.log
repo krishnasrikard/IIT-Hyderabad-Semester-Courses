@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.4.27)  15 MAY 2020 09:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.4.27)  15 MAY 2020 10:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1374,7 +1374,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 41--44
  []
 
 Package epstopdf Info: Source file: <./figs/ee18btech11014/Bode_Plot.eps>
-(epstopdf)                    date: 2020-05-14 21:39:21
+(epstopdf)                    date: 2020-05-15 10:03:50
 (epstopdf)                    size: 74885 bytes
 (epstopdf)             Output file: <./figs/ee18btech11014/Bode_Plot-eps-conver
 ted-to.pdf>
@@ -1383,7 +1383,13 @@ ted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=./figs/ee18btech11014/Bode
 _Plot-eps-converted-to.pdf ./figs/ee18btech11014/Bode_Plot.eps>
 (epstopdf)             \includegraphics on input line 62.
-Package epstopdf Info: Output file is already uptodate.
+runsystem(repstopdf --outfile=./figs/ee18btech11014/Bode_Plot-eps-converted-to.
+pdf ./figs/ee18btech11014/Bode_Plot.eps)...executed safely (allowed).
+
+Package epstopdf Info: Result file: <./figs/ee18btech11014/Bode_Plot-eps-conver
+ted-to.pdf>
+(epstopdf)                    date: 2020-05-15 10:06:00
+(epstopdf)                    size: 20270 bytes.
 
 
 pdfTeX warning: pdflatex (file ./figs/ee18btech11014/Bode_Plot-eps-converted-to
@@ -1523,7 +1529,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 265.
 Here is how much of TeX's memory you used:
  33725 strings out of 492982
  719409 string characters out of 6134896
- 949015 words of memory out of 5000000
+ 949014 words of memory out of 5000000
  36518 multiletter control sequences out of 15000+600000
  90655 words of font info for 213 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
@@ -1539,7 +1545,7 @@ texmf-dist/fonts/type1/public/txfonts/txsya.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw
 /times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.
 pfb>
-Output written on gvv_feedback_manual.pdf (5 pages, 253439 bytes).
+Output written on gvv_feedback_manual.pdf (5 pages, 253441 bytes).
 PDF statistics:
  289 PDF objects out of 1000 (max. 8388607)
  228 compressed objects within 3 object streams
