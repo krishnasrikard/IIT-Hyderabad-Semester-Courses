@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.4.27)  15 MAY 2020 23:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.4.27)  17 MAY 2020 11:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1441,7 +1441,7 @@ _Result_PM=72-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=./figs/ee18btech11014/ee18
 btech11014_Spice_Result_PM=72-eps-converted-to.pdf ./figs/ee18btech11014/ee18bt
 ech11014_Spice_Result_PM=72.eps>
-(epstopdf)             \includegraphics on input line 381.
+(epstopdf)             \includegraphics on input line 386.
 Package epstopdf Info: Output file is already uptodate.
 
 
@@ -1455,7 +1455,7 @@ pdf Graphic file (type pdf)
 <use ./figs/ee18btech11014/ee18btech11014_Spice_Result_PM=72-eps-converted-to.p
 df>
 Package pdftex.def Info: ./figs/ee18btech11014/ee18btech11014_Spice_Result_PM=7
-2-eps-converted-to.pdf  used on input line 381.
+2-eps-converted-to.pdf  used on input line 386.
 (pdftex.def)             Requested size: 252.0pt x 189.00032pt.
 ) (./chapters/ee18btech11014_2.tex
 
@@ -1513,6 +1513,10 @@ LaTeX Warning: Command \j invalid in math mode on input line 23.
 LaTeX Warning: Command \j invalid in math mode on input line 23.
 
 
+Underfull \vbox (badness 1817) has occurred while \output is active []
+
+
+
 LaTeX Warning: Command \j invalid in math mode on input line 27.
 
 
@@ -1526,8 +1530,11 @@ Overfull \hbox (3.53285pt too wide) detected at line 78
  []$[] \OT1/txr/m/n/12 = \OMS/txsy/m/n/12 ^^@[] []$ []  
  []
 
-[4 <./figs/ee18btech11014/ee18btech11014_Spice_Result_PM=72-eps-converted-to.pd
-f>]
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [4 <./figs/ee18btech11014/ee18btech11014_Spice_Result_PM=72-eps-converted-to.p
+df>]
 Package epstopdf Info: Source file: <./figs/ee18btech11014/ee18btech11014_Spice
 _Result.eps>
 (epstopdf)                    date: 2020-05-15 22:31:44
@@ -1539,25 +1546,22 @@ _Result-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=./figs/ee18btech11014/ee18
 btech11014_Spice_Result-eps-converted-to.pdf ./figs/ee18btech11014/ee18btech110
 14_Spice_Result.eps>
-(epstopdf)             \includegraphics on input line 133.
+(epstopdf)             \includegraphics on input line 138.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./figs/ee18btech11014/ee18btech11014_Spice_Resul
 t-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most ve
 rsion <1.5> allowed
-<./figs/ee18btech11014/ee18btech11014_Spice_Result-eps-converted-to.pdf, id=258
+<./figs/ee18btech11014/ee18btech11014_Spice_Result-eps-converted-to.pdf, id=257
 , 578.16pt x 433.62pt>
 File: ./figs/ee18btech11014/ee18btech11014_Spice_Result-eps-converted-to.pdf Gr
 aphic file (type pdf)
 <use ./figs/ee18btech11014/ee18btech11014_Spice_Result-eps-converted-to.pdf>
 Package pdftex.def Info: ./figs/ee18btech11014/ee18btech11014_Spice_Result-eps-
-converted-to.pdf  used on input line 133.
+converted-to.pdf  used on input line 138.
 (pdftex.def)             Requested size: 252.0pt x 189.00032pt.
 ) (./chapters/ee18btech11014_1.tex
-Underfull \vbox (badness 2310) has occurred while \output is active []
-
-
 (./figs/ee18btech11014/ee18btech11014_figo.tex
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -1573,7 +1577,7 @@ _Result_PM=90-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=./figs/ee18btech11014/ee18
 btech11014_Spice_Result_PM=90-eps-converted-to.pdf ./figs/ee18btech11014/ee18bt
 ech11014_Spice_Result_PM=90.eps>
-(epstopdf)             \includegraphics on input line 98.
+(epstopdf)             \includegraphics on input line 103.
 Package epstopdf Info: Output file is already uptodate.
 
 
@@ -1581,13 +1585,13 @@ pdfTeX warning: pdflatex (file ./figs/ee18btech11014/ee18btech11014_Spice_Resul
 t_PM=90-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at m
 ost version <1.5> allowed
 <./figs/ee18btech11014/ee18btech11014_Spice_Result_PM=90-eps-converted-to.pdf, 
-id=344, 578.16pt x 867.24pt>
+id=345, 578.16pt x 867.24pt>
 File: ./figs/ee18btech11014/ee18btech11014_Spice_Result_PM=90-eps-converted-to.
 pdf Graphic file (type pdf)
 <use ./figs/ee18btech11014/ee18btech11014_Spice_Result_PM=90-eps-converted-to.p
 df>
 Package pdftex.def Info: ./figs/ee18btech11014/ee18btech11014_Spice_Result_PM=9
-0-eps-converted-to.pdf  used on input line 98.
+0-eps-converted-to.pdf  used on input line 103.
 (pdftex.def)             Requested size: 252.0pt x 378.00064pt.
 )
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 265.
@@ -1604,10 +1608,10 @@ Package rerunfilecheck Info: File `gvv_feedback_manual.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 265.
  ) 
 Here is how much of TeX's memory you used:
- 33737 strings out of 492982
- 720198 string characters out of 6134896
- 949123 words of memory out of 5000000
- 36509 multiletter control sequences out of 15000+600000
+ 33767 strings out of 492982
+ 720889 string characters out of 6134896
+ 949124 words of memory out of 5000000
+ 36533 multiletter control sequences out of 15000+600000
  90655 words of font info for 213 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  55i,16n,67p,511b,1083s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1622,10 +1626,10 @@ texmf-dist/fonts/type1/public/txfonts/txsya.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw
 /times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.
 pfb>
-Output written on gvv_feedback_manual.pdf (6 pages, 308086 bytes).
+Output written on gvv_feedback_manual.pdf (6 pages, 308471 bytes).
 PDF statistics:
- 474 PDF objects out of 1000 (max. 8388607)
- 284 compressed objects within 3 object streams
- 116 named destinations out of 1000 (max. 500000)
+ 481 PDF objects out of 1000 (max. 8388607)
+ 291 compressed objects within 3 object streams
+ 122 named destinations out of 1000 (max. 500000)
  62 words of extra memory for PDF output out of 10000 (max. 10000000)
 
