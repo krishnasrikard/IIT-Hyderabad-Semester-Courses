@@ -12,5 +12,5 @@ ngspice filename
 ### Description
 1. ee18btech11014_1.net contains a Closed-Loop Feedback Circuit with Phase-Margin = 90 degrees. Here the input to the circuit is a **Unit-Step Signal**.
 2. ee18btech11014_2.net contains a Closed-Loop Feedback Circuit with Phase-Margin = 90 degrees. Here the input to the circuit is a **Sinusoidal Signal**.
-3. ee18btech11014_3.net contains a Closed-Loop Feedback Circuit of an Unstable. Here the input to the circuit is a **Unit-Step Signal**.
+3. ee18btech11014_3.net contains a Closed-Loop Feedback Circuit of an Unstable System. Here the input to the circuit is a **Unit-Step Signal**.
 4. ee18btech11014_a.net contains a Closed-Loop Feedback Circuit with Phase-Margin = 72 degrees. Here the input to the circuit is a **DC Signal**.
