@@ -108,7 +108,7 @@ Thus,
 
 \item Verify the stablity from the value of $H=9.9\times 10^{-3}$\\
 \solution\\
-\textbf{System is Unstable} as $H>1.11\times 10^{-3}$
+\textbf{System is Unstable} as $H>1.11\times 10^{-3}$.
 
 Run the following code to verify the stablity of the system
 \begin{lstlisting}
@@ -117,6 +117,12 @@ codes/ee18btech11014/Stability.py
 
 \item Using ngspice, find the Unit-Step Response for System for $H=9.9\times 10^{-3}$\\
 \solution\\
+ At $H=9.9\times 10^{-3}$, the Phase-Margin($\alpha$) of the system is
+\begin{align}
+\alpha \approx -38.5^{\circ}
+\end{align}
+So the system is \textbf{Unstable}.
+
 Check the following spice file for circuit.
 \begin{lstlisting}
 spice/ee18btech11014/ee18btech11014_3.net

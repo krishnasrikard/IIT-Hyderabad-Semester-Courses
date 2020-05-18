@@ -365,6 +365,12 @@ T(s) &= \frac{G(s)}{1+G(s)H}
 %-------------------------------------------------------------------------------------------------%
 \item Using ngspice, find the output of Fig. \ref{fig:ee18btech11014_Closed-Loop Circuit} for a DC input and verify that $T(s)$ in \eqref{eq:ee18btech11014_Ts} is stable.\\
 \solution\\
+Frequency of a DC Input is $0$. So, the Gain of the system for DC input should be
+\begin{align}
+f = 0\\
+s = 0\\
+T_{0} = T(0) = 15098.8
+\end{align} 
 Check the following spice file for circuit.
 \begin{lstlisting}
 spice/ee18btech11014/ee18btech11014_a.net
@@ -388,5 +394,7 @@ The Response of Closed-Loop System for DC Signal as Input is Fig.\ref{fig:DC}
 	\caption{}
 	\label{fig:DC}
 \end{figure}
+
+The value of Gain($T_{0}$) from simulation is $14969.4763$. The Error with theoritically calculated value is $0.8645\%$
 
 \end{enumerate}

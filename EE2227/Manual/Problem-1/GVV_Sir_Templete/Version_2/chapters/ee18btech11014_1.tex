@@ -81,6 +81,16 @@ using \eqref{eq:ee18btech11014_GH_PM_90}.
 
 \item Using ngspice, find the output of the \ref{fig:ee18btech11014_Closed-Loop Circuit alpha=90} for Unit-Step Signal and Sinusoidal Signal as Input.\\
 \solution\\
+For Unit-Step Signal as Input,
+\begin{align}
+T = 24026.91
+\end{align}
+
+For Sinusoidal Signal as Input,
+\begin{align}
+T = 354.5655
+\end{align}
+
 Check the following spice file for circuits for the inputs Unit-Step and Sinusoidal Signals respectively.
 \begin{lstlisting}
 spice/ee18btech11014/ee18btech11014_1.net
@@ -105,6 +115,21 @@ The Responses are shown in Fig.\ref{fig:PM=90}
 	\caption{}
 	\label{fig:PM=90}
 \end{figure}
+
+
+From Simulation, for Unit-Step Signal as Input,
+\begin{align}
+T = 23842.97
+\end{align}
+
+From Simulation, for Sinusoidal Signal as Input,
+\begin{align}
+T = 349.01
+\end{align}
+
+Percentage of Error from Theoritical and Simulation results when Unit-Step Signal is given as Input is $0.77\%$.
+
+Percentage of Error from Theoritical and Simulation results when Sinusoidal Signal is given as Input is $1.59\%$.
 %-------------------------------------------------------------------------------------------------%
 \item Repeat all the above for $PM = 45\degree$.
 %-------------------------------------------------------------------------------------------------%
