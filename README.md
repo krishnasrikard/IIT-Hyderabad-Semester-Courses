@@ -60,3 +60,7 @@ Presentations of the course Control Systems
 #### EE 2370 -- Advanced Digital Signal Processing by Kiran Kuchi Sir
 
 Codes and Reports of Coding Assignments
+
+#### EE 2211 -- Machines Lab by Ravi Kumar Sir
+
+Simulation in Simulink for Machines Lab Experiments.
