@@ -15,7 +15,7 @@ We will try to create a Voice Controlled Bot using Machine Learning. We will tra
 
 #### EE 1110 -- Applied Digital Logic Design by GVV Sharma Sir
 
-We had implemented various projects using Arduino,Seven Segment Display and Flip-Flops. 
+We had implemented various projects using Arduino,Seven Segment Display and Flip-Flops.
 
 #### ID 1350 -- Internet of Things by RajyaLakshmi Madam
 
@@ -64,3 +64,7 @@ Codes and Reports of Coding Assignments
 #### EE 2211 -- Machines Lab by Ravi Kumar Sir
 
 Simulation in Simulink for Machines Lab Experiments.
+
+#### CS2305 -- Research Internship by Srijith.P.K
+
+Understanding Neural ODEs
