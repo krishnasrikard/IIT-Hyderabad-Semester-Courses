@@ -68,3 +68,7 @@ Simulation in Simulink for Machines Lab Experiments.
 #### CS2305 -- Research Internship by Srijith.P.K
 
 Understanding Neural ODEs
+
+### EE5377 -- Introduction to Image Processing by Summohana Sir
+
+Learning Image Processing

@@ -4,7 +4,7 @@ from mpl_toolkits.mplot3d import Axes3D
 import cmath
 from matplotlib import cm
 
-Coeff = np.array([1,1,7,14,31,73,25,200])
+Coeff = np.array([1,4,5,6,3])
 Roots = np.roots(Coeff)
 l = Coeff.shape[0]
 
