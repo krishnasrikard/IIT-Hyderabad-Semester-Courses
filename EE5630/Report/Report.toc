@@ -1,0 +1,6 @@
+\beamer@sectionintoc {1}{Introduction}{3}{0}{1}
+\beamer@sectionintoc {2}{Data Augmentation}{5}{0}{2}
+\beamer@sectionintoc {3}{Gaussian Data Augmentation and Adversarial Training}{6}{0}{3}
+\beamer@sectionintoc {4}{2D-Gaussian Distribution}{8}{0}{4}
+\beamer@sectionintoc {5}{Hypothesis and Solution}{10}{0}{5}
+\beamer@sectionintoc {6}{Investigation}{11}{0}{6}
