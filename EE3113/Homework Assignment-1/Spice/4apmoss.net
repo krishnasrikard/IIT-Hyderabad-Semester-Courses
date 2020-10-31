@@ -1,0 +1,24 @@
+Question-4apmoss
+* Vgs value varies from -2,-0.5 with a step of 0.5 *
+
+* Circuit
+M	td	tg	0	0	pch_tt	W = 0.27u L = 0.18u
+Vgs	tg	0	DC	-0.5
+Vds	td	0	DC	-0.5
+
+* Model
+.include "TSMC180.lib"
+.model pch_tt pmos
+
+* Analysis
+.dc Vds -1.8 0 1m
+
+* Results
+.control
+run
+let ID = -Vds#branch
+wrdata ../Data/4a/pmoss1.dat	V(td)	ID
+plot ID vs V(td)
+.endc
+
+.end

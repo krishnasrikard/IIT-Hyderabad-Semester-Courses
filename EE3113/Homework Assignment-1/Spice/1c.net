@@ -1,0 +1,19 @@
+Question-1c
+
+* Circuit
+Vin	Vin	0	AC	1	SIN	0	1	1000
+R	Vin	Vout	1k
+C	Vout	1	1u
+Rs	1	0	100
+
+* Analysis
+.AC 	DEC 	10	1	1MEG
+
+* Results
+.control
+run
+plot db(Vout/Vin)
+plot 180*(phase(Vout) - phase(Vin))/PI
+.endc
+
+.end

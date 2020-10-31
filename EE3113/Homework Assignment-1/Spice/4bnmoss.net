@@ -1,0 +1,23 @@
+Question-4bnmoss
+
+* Circuit
+M	td	tg	0	0	nch_tt	W = 0.27u L = 0.18u
+Vgs	tg	0	DC	0.5
+Vdd	td	0	DC	1.8
+
+* Model
+.include "TSMC180.lib"
+.model nch_tt nmos
+
+* Analysis
+.dc Vgs 0 2 1m
+
+* Results
+.control
+run
+let ID = -Vdd#branch
+wrdata ../Data/4b/nmoss.dat	V(tg)-0.362	ID
+plot ID vs V(tg)-0.362
+.endc
+
+.end

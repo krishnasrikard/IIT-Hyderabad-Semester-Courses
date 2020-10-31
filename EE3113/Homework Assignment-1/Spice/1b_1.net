@@ -1,0 +1,18 @@
+Question-1b_1
+
+* Circuit
+Vin	Vin	0	AC	1	SIN	0	1	100
+R	Vin	Vout	1k
+C	Vout	1	1u
+Rs	1	0	100
+
+* Analysis
+.tran 1u 0.05
+
+* Results
+.control
+run
+plot Vin Vout
+.endc
+
+.end

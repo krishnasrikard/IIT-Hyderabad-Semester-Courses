@@ -1,0 +1,24 @@
+Question-4anmoss
+* Vgs value varies from 0.5,2 with a step of 0.5 *
+
+* Circuit
+M	td	tg	0	0	nch_tt	W = 0.27u L = 0.18u
+Vgs	tg	0	DC	1.5
+Vds	td	0	DC	0.5
+
+* Model
+.include "TSMC180.lib"
+.model nch_tt nmos
+
+* Analysis
+.dc Vds 0 1.8 1m
+
+* Results
+.control
+run
+let ID = -Vds#branch
+wrdata ../Data/4a/nmoss3.dat V(td) ID
+plot ID vs V(td)
+.endc
+
+.end

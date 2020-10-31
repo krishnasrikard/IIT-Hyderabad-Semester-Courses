@@ -1,0 +1,21 @@
+Question-3
+
+* Circuit
+Vin	0	1	AC	1	SIN	0	0.5	1k
+Rin	1	2	1k
+Rf	2	Vout	3k
+R	Vout	0	1
+G	Vout	0	2	0	1MEG
+
+* Analysis
+.tran 1u 0.005
+*.AC 	DEC 	10	10	10MEG
+
+* Results
+.control
+run
+plot -V(1) V(Vout)
+*plot -V(Vout)/V(1)
+.endc
+
+.end

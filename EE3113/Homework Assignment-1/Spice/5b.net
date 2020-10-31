@@ -1,0 +1,21 @@
+Question-5b
+
+* Circuit
+Vin	Vin	0	AC	1	PWL(0 0V  10ns 1V   1 1V)
+R	Vin	Vout	10
+C	Vout	0	1n
+
+* Analysis
+*.AC 	DEC 	10	10	10MEG
+.tran 10f 12.5ns 11n
+
+* Results
+.control
+run
+plot Vin Vout
+*plot -Vin#branch
+*plot Vout/Vin
+*plot phase(Vout) - phase(vin)
+.endc
+
+.end

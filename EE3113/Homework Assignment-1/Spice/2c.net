@@ -1,0 +1,23 @@
+Question-2c
+
+* Circuit
+V	Vin	0	DC	2.5
+R1	Vin	1	2k
+D1	1	Vout	CustomDiode
+R2	Vout	2	2k
+D2	2	0	CustomDiode
+
+* Model
+.model CustomDiode D
+
+* Analysis
+.op
+
+* Results
+.control
+let ID = -Vin#branch
+run
+print all
+.endc
+
+.end

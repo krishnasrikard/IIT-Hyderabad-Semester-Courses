@@ -1,0 +1,17 @@
+Question-5a
+
+* Circuit
+Vin	Vin	0	AC	1	PWL(0 0V   0 1V   1 1V)
+R	Vin	Vout	1000
+C	Vout	0	1u
+
+* Analysis
+.tran 1u 0.008
+
+* Results
+.control
+run
+plot Vin Vout
+.endc
+
+.end

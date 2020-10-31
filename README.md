@@ -65,3 +65,6 @@ Understanding Representation Learning and writing Algorithms in Python.
 
 #### EE5630 -- Topics in Signal Processing by Aditya Sir
 Report on Reasearch Paper "A Fourier Perspective on Model Robustness in Computer Vision".
+
+#### EE3113 -- Introduction to VLSI Design by Naresh Sir
+Spice Simulations for Assignments.

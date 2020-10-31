@@ -1,0 +1,18 @@
+Question-1a
+
+* Circuit
+Vin	Vin	0	DC	2.5
+R	Vin	Vout	1k
+C	Vout	1	1u
+Rs	1	0	100
+
+* Analysis
+.op
+
+* Results
+.control
+run
+print all
+.endc
+
+.end
