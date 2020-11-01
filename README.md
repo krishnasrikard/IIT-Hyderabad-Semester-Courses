@@ -61,10 +61,10 @@ Understanding Neural ODEs.
 Learning Image Processing and Implementation of basic OpenCV Commands.
 
 #### EE5601 -- Representation Learning by Summohana Sir
-Understanding Representation Learning and writing Algorithms in Python.
+Understanding Representation Learning and Coding Algorithms in Python.
 
 #### EE5630 -- Topics in Signal Processing by Aditya Sir
 Report on Reasearch Paper "A Fourier Perspective on Model Robustness in Computer Vision".
 
 #### EE3113 -- Introduction to VLSI Design by Naresh Sir
-Spice Simulations for Assignments.
+Spice Simulations for Assignments and Reports.
