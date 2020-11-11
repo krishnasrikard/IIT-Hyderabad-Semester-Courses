@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.6.29)  22 OCT 2020 21:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.6.29)  11 NOV 2020 02:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1359,12 +1359,12 @@ line 59.
 File: ot1mathkerncmss.fd 2013/03/27 Fontinst v1.933 font definitions for OT1/ma
 thkerncmss.
 )
-<../Images/cat-dog-train.jpg, id=116, 1185.96924pt x 365.9827pt>
+<../Images/cat-dog-train.jpg, id=158, 1185.96924pt x 365.9827pt>
 File: ../Images/cat-dog-train.jpg Graphic file (type jpg)
 <use ../Images/cat-dog-train.jpg>
 Package pdftex.def Info: ../Images/cat-dog-train.jpg  used on input line 59.
 (pdftex.def)             Requested size: 237.18965pt x 73.19524pt.
-<../Images/cat-dog-test.jpg, id=117, 1185.96924pt x 356.7173pt>
+<../Images/cat-dog-test.jpg, id=159, 1185.96924pt x 356.7173pt>
 File: ../Images/cat-dog-test.jpg Graphic file (type jpg)
 <use ../Images/cat-dog-test.jpg>
 Package pdftex.def Info: ../Images/cat-dog-test.jpg  used on input line 59.
@@ -1382,7 +1382,7 @@ Package pdftex.def Info: ../Images/cat-dog-test.jpg  used on input line 59.
 LaTeX Warning: File `../Images/Adversarial Training.png' not found on input lin
 e 86.
 
-<../Images/Adversarial Training.png, id=202, 607.26875pt x 279.0425pt>
+<../Images/Adversarial Training.png, id=244, 607.26875pt x 279.0425pt>
 File: ../Images/Adversarial Training.png Graphic file (type png)
 <use ../Images/Adversarial Training.png>
 Package pdftex.def Info: ../Images/Adversarial Training.png  used on input line
@@ -1394,7 +1394,7 @@ Package pdftex.def Info: ../Images/Adversarial Training.png  used on input line
 
 
  <../Images/Adversarial Training.png>]
-<../Images/Gaussian.png, id=261, 462.528pt x 346.896pt>
+<../Images/Gaussian.png, id=303, 462.528pt x 346.896pt>
 File: ../Images/Gaussian.png Graphic file (type png)
 <use ../Images/Gaussian.png>
 Package pdftex.def Info: ../Images/Gaussian.png  used on input line 115.
@@ -1404,7 +1404,7 @@ Overfull \hbox (5.65048pt too wide) in paragraph at lines 115--115
 [][] 
  []
 
-<../Images/ZeroCentered_Gaussian_DFT.png, id=262, 462.528pt x 346.896pt>
+<../Images/ZeroCentered_Gaussian_DFT.png, id=304, 462.528pt x 346.896pt>
 File: ../Images/ZeroCentered_Gaussian_DFT.png Graphic file (type png)
 <use ../Images/ZeroCentered_Gaussian_DFT.png>
 Package pdftex.def Info: ../Images/ZeroCentered_Gaussian_DFT.png  used on input
@@ -1415,7 +1415,7 @@ Overfull \hbox (5.65048pt too wide) in paragraph at lines 115--115
 [][] 
  []
 
-<../Images/Gaussian_HeatMap.png, id=263, 462.528pt x 346.896pt>
+<../Images/Gaussian_HeatMap.png, id=305, 462.528pt x 346.896pt>
 File: ../Images/Gaussian_HeatMap.png Graphic file (type png)
 <use ../Images/Gaussian_HeatMap.png>
 Package pdftex.def Info: ../Images/Gaussian_HeatMap.png  used on input line 115
@@ -1426,7 +1426,7 @@ Overfull \hbox (5.65048pt too wide) in paragraph at lines 115--115
 [][] 
  []
 
-<../Images/ZeroCentered_Gaussian_DFT_HeatMap.png, id=264, 462.528pt x 346.896pt
+<../Images/ZeroCentered_Gaussian_DFT_HeatMap.png, id=306, 462.528pt x 346.896pt
 >
 File: ../Images/ZeroCentered_Gaussian_DFT_HeatMap.png Graphic file (type png)
 <use ../Images/ZeroCentered_Gaussian_DFT_HeatMap.png>
@@ -1450,6 +1450,123 @@ png>]
 ] [11
 
 ]
+<../Images/Robustness.png, id=424, 933.4875pt x 590.205pt>
+File: ../Images/Robustness.png Graphic file (type png)
+<use ../Images/Robustness.png>
+Package pdftex.def Info: ../Images/Robustness.png  used on input line 156.
+(pdftex.def)             Requested size: 233.3713pt x 147.55089pt.
+ [12
+
+] [13
+
+
+ <../Images/Robustness.png>]
+<../Images/Augmentation.png, id=479, 814.04124pt x 359.3425pt>
+File: ../Images/Augmentation.png Graphic file (type png)
+<use ../Images/Augmentation.png>
+Package pdftex.def Info: ../Images/Augmentation.png  used on input line 174.
+(pdftex.def)             Requested size: 284.9187pt x 125.77174pt.
+ [14
+
+] [15
+
+
+ <../Images/Augmentation.png>] [16
+
+]
+<../Images/Observations.png, id=560, 1080.035pt x 440.64626pt>
+File: ../Images/Observations.png Graphic file (type png)
+<use ../Images/Observations.png>
+Package pdftex.def Info: ../Images/Observations.png  used on input line 200.
+(pdftex.def)             Requested size: 324.013pt x 132.19489pt.
+
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.200 \end{frame}
+                 
+? 
+[17
+
+ <../Images/Observations.png>] [18
+
+
+]
+! Undefined control sequence.
+<recently read> \qqaud 
+                       
+l.219 \end{frame}
+                 
+? 
+<../Images/Results.png, id=614, 1266.7325pt x 201.75375pt>
+File: ../Images/Results.png Graphic file (type png)
+<use ../Images/Results.png>
+Package pdftex.def Info: ../Images/Results.png  used on input line 219.
+(pdftex.def)             Requested size: 316.68234pt x 50.43831pt.
+<../Images/FrequencyResults.png, id=615, 1253.68375pt x 371.3875pt>
+File: ../Images/FrequencyResults.png Graphic file (type png)
+<use ../Images/FrequencyResults.png>
+Package pdftex.def Info: ../Images/FrequencyResults.png  used on input line 219
+.
+(pdftex.def)             Requested size: 313.42017pt x 92.84663pt.
+[19
+
+ <../Images/Results.png>] [20
+
+
+ <../Images/FrequencyResults.png>]
+! Undefined control sequence.
+<recently read> \qqaud 
+                       
+l.236 \end{frame}
+                 
+? 
+! Undefined control sequence.
+<recently read> \qqaud 
+                       
+l.236 \end{frame}
+                 
+? 
+<../Images/AdversarialFourier.png, id=670, 1307.88625pt x 395.4775pt>
+File: ../Images/AdversarialFourier.png Graphic file (type png)
+<use ../Images/AdversarialFourier.png>
+Package pdftex.def Info: ../Images/AdversarialFourier.png  used on input line 2
+36.
+(pdftex.def)             Requested size: 326.97076pt x 98.86913pt.
+
+! Package inputenc Error: Unicode char − (U+2212)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.236 \end{frame}
+                 
+? 
+
+! Package inputenc Error: Unicode char − (U+2212)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.236 \end{frame}
+                 
+? 
+[21
+
+] [22
+
+
+ <../Images/AdversarialFourier.png>] [23
+
+]
 \tf@nav=\write6
 \openout6 = `Report.nav'.
 
@@ -1459,37 +1576,41 @@ png>]
 \tf@snm=\write8
 \openout8 = `Report.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 139.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 139.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 247.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 247.
  (./Report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 139.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 139.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 247.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 247.
 Package rerunfilecheck Info: File `Report.out' has not changed.
-(rerunfilecheck)             Checksum: 40E291C21DA12E33CD5C598790037BC3;350.
+(rerunfilecheck)             Checksum: 6BBDA8C467C8CEA95D88EE875636E086;804.
  ) 
 Here is how much of TeX's memory you used:
- 28877 strings out of 492982
- 629609 string characters out of 6134896
- 784578 words of memory out of 5000000
- 31868 multiletter control sequences out of 15000+600000
- 16102 words of font info for 43 fonts, out of 8000000 for 9000
+ 29003 strings out of 492982
+ 631362 string characters out of 6134896
+ 789634 words of memory out of 5000000
+ 31954 multiletter control sequences out of 15000+600000
+ 18977 words of font info for 50 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 56i,15n,61p,792b,613s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 56i,15n,61p,809b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf
--dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmssi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmsy8.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss0500.pfb>
-</usr/share/texmf/fonts/type1/public/cm-super/sfss0600.pfb></usr/share/texmf/fo
-nts/type1/public/cm-super/sfss0700.pfb></usr/share/texmf/fonts/type1/public/cm-
-super/sfss0800.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss1095.pfb><
-/usr/share/texmf/fonts/type1/public/cm-super/sfsx0800.pfb>
-Output written on Report.pdf (11 pages, 647028 bytes).
+-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmssi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
+8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10
+.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0700.pfb></usr/share/tex
+mf/fonts/type1/public/cm-super/sfss0500.pfb></usr/share/texmf/fonts/type1/publi
+c/cm-super/sfss0600.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss0700.
+pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss0800.pfb></usr/share/texm
+f/fonts/type1/public/cm-super/sfss1095.pfb></usr/share/texmf/fonts/type1/public
+/cm-super/sfsx0800.pfb>
+Output written on Report.pdf (23 pages, 1731922 bytes).
 PDF statistics:
- 430 PDF objects out of 1000 (max. 8388607)
- 376 compressed objects within 4 object streams
- 36 named destinations out of 1000 (max. 500000)
- 156 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 820 PDF objects out of 1000 (max. 8388607)
+ 734 compressed objects within 8 object streams
+ 68 named destinations out of 1000 (max. 500000)
+ 242 words of extra memory for PDF output out of 10000 (max. 10000000)
 

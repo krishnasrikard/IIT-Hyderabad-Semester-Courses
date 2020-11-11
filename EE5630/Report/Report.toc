@@ -3,4 +3,11 @@
 \beamer@sectionintoc {3}{Gaussian Data Augmentation and Adversarial Training}{6}{0}{3}
 \beamer@sectionintoc {4}{2D-Gaussian Distribution}{8}{0}{4}
 \beamer@sectionintoc {5}{Hypothesis and Solution}{10}{0}{5}
-\beamer@sectionintoc {6}{Investigation}{11}{0}{6}
+\beamer@sectionintoc {6}{Perturbations and Investigation}{11}{0}{6}
+\beamer@sectionintoc {7}{Understanding Robustness Problem}{12}{0}{7}
+\beamer@sectionintoc {8}{Trade-off and Correlation between Corruptions: A Fourier Perspective}{14}{0}{8}
+\beamer@sectionintoc {9}{Observations}{16}{0}{9}
+\beamer@sectionintoc {10}{Results}{17}{0}{10}
+\beamer@sectionintoc {11}{AutoAugment}{19}{0}{11}
+\beamer@sectionintoc {12}{Fourier Perspective on Adversarial Examples}{21}{0}{12}
+\beamer@sectionintoc {13}{Conclusion}{23}{0}{13}

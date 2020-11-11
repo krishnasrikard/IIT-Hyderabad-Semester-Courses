@@ -3,4 +3,11 @@
 \BOOKMARK [2][]{Outline0.3}{Gaussian Data Augmentation and Adversarial Training}{}% 3
 \BOOKMARK [2][]{Outline0.4}{2D-Gaussian Distribution}{}% 4
 \BOOKMARK [2][]{Outline0.5}{Hypothesis and Solution}{}% 5
-\BOOKMARK [2][]{Outline0.6}{Investigation}{}% 6
+\BOOKMARK [2][]{Outline0.6}{Perturbations and Investigation}{}% 6
+\BOOKMARK [2][]{Outline0.7}{Understanding Robustness Problem}{}% 7
+\BOOKMARK [2][]{Outline0.8}{Trade-off and Correlation between Corruptions: A Fourier Perspective}{}% 8
+\BOOKMARK [2][]{Outline0.9}{Observations}{}% 9
+\BOOKMARK [2][]{Outline0.10}{Results}{}% 10
+\BOOKMARK [2][]{Outline0.11}{AutoAugment}{}% 11
+\BOOKMARK [2][]{Outline0.12}{Fourier Perspective on Adversarial Examples}{}% 12
+\BOOKMARK [2][]{Outline0.13}{Conclusion}{}% 13
