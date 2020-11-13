@@ -1,0 +1,27 @@
+Question-5a
+
+* Model
+.include "TSMC180.lib"
+.model nch_tt nmos
+
+* Circuit
+VG	G	0	1.8
+M	D	G	0	0	nch_tt W=540n L=180n
+R	D	2	75k
+V	2	0	DC	2.5
+
+* Analysis
+.dc VG 0 1.8 1m
+
+* Results
+.control
+run 
+let ID = -V#branch
+let Vout = V(D)
+let Vin = V(G)
+plot	Vout
+plot	deriv(Vout)
+.endc
+
+.end
+

@@ -1,0 +1,25 @@
+Question-1 for P-MOSFET
+
+* Model
+.include "TSMC180.lib"
+.model pch_tt pmos
+
+* Circuit
+Vdd	G	0	DC	-0.6
+V	1	D	DC	0
+M	D	G	0	0	pch_tt W=240n L=180n
+C	1	0	1p
+
+* Analysis
+.tran	1p	200n
+
+* Results
+.ic	V(1) = -0.6
+.control
+run
+let ID = V#branch 
+plot	ID vs V(D)
+plot	V(D)/ID vs V(D)
+.endc
+
+.end

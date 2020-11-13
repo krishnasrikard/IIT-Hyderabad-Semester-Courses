@@ -1,0 +1,28 @@
+Question-5b
+*Load Resistance is varies from 10k to 100k as steps of 10k*
+
+* Model
+.include "TSMC180.lib"
+.model nch_tt nmos
+
+* Circuit
+VG	G	0	1.8
+M	D	G	0	0	nch_tt W=540n L=180n
+R	D	2	100k
+V	2	0	DC	2.5
+
+* Analysis
+.dc VG 0 1.8 1m
+
+* Results
+.control
+run 
+let ID = -V#branch
+let Vout = V(D)
+let Vin = V(G)
+*plot	Vout
+plot	deriv(Vout) vs V(G)
+wrdata ../Data/5b/10.dat		V(G)	deriv(Vout)
+.endc
+
+.end

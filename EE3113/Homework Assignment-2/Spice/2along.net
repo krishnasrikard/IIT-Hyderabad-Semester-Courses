@@ -1,0 +1,32 @@
+Question-2a Long Channel N-MOSFET
+
+* Model
+.include "TSMC180.lib"
+.model nch_tt nmos
+
+* Circuit
+Vs	G	1	AC	SIN(0 0.00159154943 100)
+Vcm	1	0	DC	-1.8
+M	0	G	0	0	nch_tt W=25u L=10u
+
+* Results
+.control
+run
+
+let Vg = -1.8
+let X = vector(180)
+let Y = vector(180)
+
+while Vg < 1.81
+	alter @Vcm Vg
+	tran	10u	10m
+	meas	tran	Capacitance	FIND	Vs#branch	AT = 10m
+	let X[50*(Vg+1.8)] = Vg
+	let Y[50*(Vg+1.8)] = -Capacitance
+
+	let Vg = Vg + 0.02
+end
+plot	Y vs X
+
+.endc
+.end

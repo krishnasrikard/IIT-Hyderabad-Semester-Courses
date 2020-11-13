@@ -1,0 +1,32 @@
+Question-2b Short Channel N-MOSFET for f = 10MEG Hz
+
+* Model
+.include "TSMC180.lib"
+.model nch_tt nmos
+
+* Circuit
+Vs	G	1	AC	SIN(0 0.000000015915 10MEG)
+Vcm	1	0	DC	-1.8
+M	0	G	0	0	nch_tt W=450n L=180n
+
+* Results
+.control
+run
+
+let Vg = -1.8
+let X = vector(180)
+let Y = vector(180)
+
+while Vg < 1.81
+	alter @Vcm Vg
+	tran	1n	0.1u		
+	meas	tran	Capacitance	FIND	Vs#branch	AT = 0.1u
+	let X[50*(Vg+1.8)] = Vg
+	let Y[50*(Vg+1.8)] = -Capacitance
+
+	let Vg = Vg + 0.02
+end
+plot	Y vs X
+
+.endc
+.end
