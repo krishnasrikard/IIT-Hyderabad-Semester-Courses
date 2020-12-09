@@ -58,10 +58,13 @@ Understanding Neural ODEs.
 
 ### Semester-5 Fall(2020)
 #### EE5377 -- Introduction to Image Processing by Summohana Sir
-Learning Image Processing and Implementation of basic OpenCV Commands.
+Learning Image Processing and Coding Algorithms in Python.
 
 #### EE5601 -- Representation Learning by Summohana Sir
-Understanding Representation Learning and Coding Algorithms in Python.
+Learning Representation Learning and Coding Algorithms in Python.
+
+#### EE5602 -- Probabilistic Graphical Models
+Learning PGM and Coding Algorithms in Python.
 
 #### EE5630 -- Topics in Signal Processing by Aditya Sir
 Report on Reasearch Paper "A Fourier Perspective on Model Robustness in Computer Vision".
