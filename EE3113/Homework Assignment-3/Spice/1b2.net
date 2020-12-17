@@ -1,0 +1,24 @@
+Question-1b Impact of Wn
+
+* Model
+.include "TSMC180.lib"
+.model nch_tt nmos
+.model pch_tt pmos
+
+* Circuit
+Vdd	S	0	DC	1.8
+MP	D	G	S	S	pch_tt W=1.165u L=0.18u
+MN	D	G	0	0	nch_tt W=1.8u L=0.18u
+Vin	G	0	PULSE(0	1.8 0 0 0 0.5u 1u 0)
+C	D	0	20p
+
+* Analysis
+.tran	1n	1u
+
+* Results
+.control
+run
+plot	V(D)	V(G)
+.endc
+
+.end

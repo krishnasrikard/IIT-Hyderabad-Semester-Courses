@@ -1,0 +1,23 @@
+Question-1a(i)
+
+* Model
+.include "TSMC180.lib"
+.model nch_tt nmos
+.model pch_tt pmos
+
+* Circuit
+Vdd	S	0	DC	1.8
+MP	D	G	S	S	pch_tt W=11.65u L=0.18u
+MN	D	G	0	0	nch_tt W=1.8u L=0.18u
+Vin	G	0	PULSE(0	1.8 0 0 0 0.5n 1n 0)
+
+* Analysis
+.tran	0.1p	1n
+
+* Results
+.control
+run
+plot	V(D)	V(G)
+.endc
+
+.end
