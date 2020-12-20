@@ -63,7 +63,7 @@ Learning Image Processing and Coding Algorithms in Python.
 #### EE5601 -- Representation Learning by Summohana Sir
 Learning Representation Learning and Coding Algorithms in Python.
 
-#### EE5602 -- Probabilistic Graphical Models
+#### EE5602 -- Probabilistic Graphical Models by Summohana Sir
 Learning PGM and Coding Algorithms in Python.
 
 #### EE5630 -- Topics in Signal Processing by Aditya Sir
