@@ -71,3 +71,7 @@ Report on Reasearch Paper "A Fourier Perspective on Model Robustness in Computer
 
 #### EE3113 -- Introduction to VLSI Design by Naresh Sir
 Spice Simulations for Assignments and Reports.
+
+### Semester-6 Spring(2021)
+#### EE3015-EE3025 -- Independent Project by GVV Sharma Sir
+Learning Signal Processing and Filter Designs
