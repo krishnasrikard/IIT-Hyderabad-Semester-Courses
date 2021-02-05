@@ -1,5 +1,6 @@
 import soundfile as sf
 import numpy as np
+import matplotlib.pyplot as plt
 from scipy import signal
 
 def H(z,num,den):
@@ -10,17 +11,19 @@ def H(z,num,den):
 x,fs = sf.read('Sound_Noise.wav')
 order = 4
 fc = 4000.0
-Wn = 2*fc/fs
+Wn = fc/fs
+print ("Wn =",Wn)
 
-num,den = signal.butter(order,Wn,'low')
-w = np.linspace(-Wn,Wn,len(x),endpoint=True)
-z = np.exp(1j * w)
+# Filter Design
+num, den = signal.butter(4, Wn, 'low', analog=False)
+w = np.linspace(-np.pi,np.pi,len(x),endpoint=True)
+H = H(np.exp(1j*w),num,den)
 
-H = H(z,num,den)
-X = np.fft.fft(x)
+# Input in Frequency Domain
+X = np.fft.fftshift(np.fft.fft(x))
 
+# Output in Freqency Domain
 Y = np.multiply(H,X)
-y = np.fft.ifft(Y).real
-
+y = np.fft.ifft(np.fft.ifftshift(Y)).real
 sf.write('Sound_with_ReducedNoise_7.1.wav',y,fs)
 
