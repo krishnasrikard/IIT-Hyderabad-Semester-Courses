@@ -66,6 +66,6 @@ plt.savefig('../figs/Plot.eps')
 plt.savefig('../figs/Plot.pdf')
 
 ''' If using Termux '''
-subprocess.run(shlex.split("termux-open ./figs/Plot.pdf"))
+subprocess.run(shlex.split("termux-open ../figs/Plot.pdf"))
 
 #plt.show()

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.6.29)  7 FEB 2021 01:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.6.29)  7 FEB 2021 01:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1336,10 +1336,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 188--193
  []
 
 Package epstopdf Info: Source file: <./figs/Plot.eps>
-(epstopdf)                    date: 2021-02-07 01:07:21
+(epstopdf)                    date: 2021-02-07 01:18:45
 (epstopdf)                    size: 43072 bytes
 (epstopdf)             Output file: <./figs/Plot-eps-converted-to.pdf>
-(epstopdf)                    date: 2021-02-07 01:07:36
+(epstopdf)                    date: 2021-02-07 01:19:04
 (epstopdf)                    size: 13556 bytes
 (epstopdf)             Command: <repstopdf --outfile=./figs/Plot-eps-converted-
 to.pdf ./figs/Plot.eps>
@@ -1354,9 +1354,9 @@ File: ./figs/Plot-eps-converted-to.pdf Graphic file (type pdf)
 <use ./figs/Plot-eps-converted-to.pdf>
 Package pdftex.def Info: ./figs/Plot-eps-converted-to.pdf  used on input line 1
 98.
-(pdftex.def)             Requested size: 277.20154pt x 231.00682pt.
+(pdftex.def)             Requested size: 289.79846pt x 241.50224pt.
 
-Overfull \hbox (25.20154pt too wide) in paragraph at lines 198--199
+Overfull \hbox (37.79846pt too wide) in paragraph at lines 198--199
 [][] 
  []
 
@@ -1390,7 +1390,7 @@ fb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsya.pfb></usr/sh
 are/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/t
 ype1/urw/times/utmri8a.pfb>
-Output written on ee18btech11014.pdf (1 page, 56309 bytes).
+Output written on ee18btech11014.pdf (1 page, 56311 bytes).
 PDF statistics:
  113 PDF objects out of 1000 (max. 8388607)
  81 compressed objects within 1 object stream
