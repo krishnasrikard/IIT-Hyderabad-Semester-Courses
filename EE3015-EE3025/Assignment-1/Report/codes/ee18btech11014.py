@@ -1,5 +1,10 @@
+# The Following is written to run in Termux
+
 import numpy as np
 import matplotlib.pyplot as plt
+# Import the below Libraries if running on Termux
+import subprocess
+import shlex
 
 def h(N):
 	h = []
@@ -24,9 +29,43 @@ def DFT(s):
 	return S
 	
 x = [1,2,3,4,2,1]
-N = len(x)
+
+N = 200
 h = h(N)
 
-print ("DFT of x(n)\n",DFT(x))
+X = DFT(x)
+H = DFT(h)
+
+print ("DFT of x(n)\n",X)
 print()
-print ("DFT of h(n)\n",DFT(h))
+print ("DFT of h(n)\n",H)
+
+plt.figure(figsize=(9,7.5))
+
+plt.subplot(2,2,1)
+plt.stem(np.abs(X))
+plt.title(r'$|X(k)|$')
+plt.grid()
+
+plt.subplot(2,2,2)
+plt.stem(np.angle(X))
+plt.title(r'$\angle{X(k)}$')
+plt.grid()
+
+plt.subplot(2,2,3)
+plt.plot(np.abs(H))
+plt.title(r'$|H(k)|$')
+plt.grid()
+
+plt.subplot(2,2,4)
+plt.plot(np.angle(H))
+plt.title(r'$\angle{H(k)}$')
+plt.grid()
+
+plt.savefig('../figs/Plot.eps')
+plt.savefig('../figs/Plot.pdf')
+
+''' If using Termux '''
+subprocess.run(shlex.split("termux-open ./figs/Plot.pdf"))
+
+#plt.show()
