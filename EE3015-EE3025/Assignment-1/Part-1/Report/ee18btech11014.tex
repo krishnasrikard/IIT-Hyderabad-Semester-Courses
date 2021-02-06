@@ -122,13 +122,23 @@ columns=fullflexible
      \def\topbox#1{\raisebox{-\baselineskip}[0in][0in]{#1}}
      \def\midbox#1{\raisebox{-0.5\baselineskip}[0in][0in]{#1}}
 \vspace{3cm}
-\title{EE3015 Assignment-1}
+\title{EE3025 Assignment-1}
 \author{Krishna Srikar Durbha - EE18BTECH11014}
 \maketitle
 \newpage
 \bigskip
 \renewcommand{\thefigure}{\theenumi}
 \renewcommand{\thetable}{\theenumi}
+Download all python codes from 
+\begin{lstlisting}
+https://github.com/dks2000dks/IIT-Hyderabad-Semester-Courses/tree/master/EE3015-EE3025/Assignment-1/Part-1/Report/codes
+\end{lstlisting}
+%
+and latex-tikz codes from 
+%
+\begin{lstlisting}
+https://github.com/dks2000dks/IIT-Hyderabad-Semester-Courses/tree/master/EE3015-EE3025/Assignment-1/Part-1/Report
+\end{lstlisting}
 
 \section{Problem}
 \begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
@@ -163,6 +173,7 @@ So, Impulse Response of the System is
 \begin{align}
     h(n) + \frac{1}{2}h(n-1) = \delta(n) + \delta(n-2)	
 \end{align}
+$h(n)$ is an IIR Filter.
 
 \item DFT of a Input Signal $x(n)$ is 
 \begin{align}
@@ -175,47 +186,12 @@ So, Impulse Response of the System is
 \end{align}
 
 \item Code for Computing DFT of $x(n)$ and $h(n)$
-\solution
-\begin{lstlisting}[language=Python]
-    import numpy as np
-    import matplotlib.pyplot as plt
-    
-    def h(N):
-        h = []
-        for i in range(N):
-            o = 0;
-            if i >= 0:
-                o += pow(-0.5,i)
-            if i-2 >= 0:
-                o += pow(-0.5,i-2)
-            h.append(o)
-            
-        return h
-    
-    def DFT(s):
-        S = []
-        N = len(s)
-        for k in range(N):
-            o = 0 * 1j
-            for n in range(N):
-                o += s[n] * np.exp(-1j*2*np.pi*k*n/N)
-            S.append(o)
-        return S
-        
-    x = [1,2,3,4,2,1]
-    N = len(x)
-    h = h(N)
-    
-    print ("DFT of x(n)\n",DFT(x))
-    print()
-    print ("DFT of h(n)\n",DFT(h))
-    
-\end{lstlisting}
-The above code is in
+\solution\\
+Assuming length of $h(n)$ is same of length of $x(n)$ for calculations.
+Code is in
 \begin{lstlisting}
     codes/ee18btech11014.py
 \end{lstlisting}
-
 \end{enumerate}
 
 \end{document}
