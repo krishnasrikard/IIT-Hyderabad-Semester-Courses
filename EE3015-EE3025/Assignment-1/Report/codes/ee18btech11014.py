@@ -27,14 +27,25 @@ def DFT(s):
 			o += s[n] * np.exp(-1j*2*np.pi*k*n/N)
 		S.append(o)
 	return S
+
+def DFTMatrix(s):
+	N = len(s)
+	W = 1j * np.zeros((N,N))
+	w = np.exp(-1j * 2.0 * np.pi/N)
+	for i in range(N):
+		for j in range(N):
+			W[i][j] = pow(w,i*j)
+	
+	S = np.dot(W,s)
+	return S
 	
 x = [1,2,3,4,2,1]
 
 N = 200
 h = h(N)
 
-X = DFT(x)
-H = DFT(h)
+X = DFTMatrix(x)
+H = DFTMatrix(h)
 
 print ("DFT of x(n)\n",X)
 print()
