@@ -11,7 +11,8 @@ def H(z,num,den):
 x,fs = sf.read('Sound_Noise.wav')
 order = 4
 fc = 4000.0
-Wn = fc/fs
+# Wn = Half-cycles/sample
+Wn = 2*fc/fs
 print ("Wn =",Wn)
 
 # Filter Design

@@ -11,7 +11,8 @@ def H(z,num,den):
 x,fs = sf.read('Sound_Noise.wav')
 order = 10
 fc = 4000.0
-Wn = fc/fs
+# Wn = Half-cycles/sample
+Wn = 2*fc/fs
 print ("Wn =",Wn)
 
 # Filter Design
@@ -25,4 +26,4 @@ X = np.fft.fftshift(np.fft.fft(x))
 # Output in Freqency Domain
 Y = np.multiply(H,X)
 y = np.fft.ifft(np.fft.ifftshift(Y)).real
-sf.write('Sound_with_ReducedNoise_7.2.wav',y,fs)
+sf.write('Sound_with_ReducedNoise_7.5.wav',y,fs)
