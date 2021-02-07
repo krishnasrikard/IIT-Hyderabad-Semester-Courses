@@ -32,16 +32,16 @@ def DFTMatrix(s):
 	N = len(s)
 	W = 1j * np.zeros((N,N))
 	w = np.exp(-1j * 2.0 * np.pi/N)
+	W[1] = np.power(w*np.ones((N,)),1.0*np.arange(N))
 	for i in range(N):
-		for j in range(N):
-			W[i][j] = pow(w,i*j)
+		W[i] = np.power(W[1],i)
 	
 	S = np.dot(W,s)
 	return S
 	
 x = [1,2,3,4,2,1]
 
-N = 200
+N = 250
 h = h(N)
 
 X = DFTMatrix(x)
