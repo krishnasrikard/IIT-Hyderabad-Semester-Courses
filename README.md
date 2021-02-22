@@ -74,4 +74,7 @@ Spice Simulations for Assignments and Reports.
 
 ### Semester-6 Spring(2021)
 #### EE3015-EE3025 -- Independent Project by GVV Sharma Sir
-Learning Signal Processing and Filter Designs
+Learning Signal Processing and Filter Designs.
+
+#### EE3320 -- Wireless Communications by Zafar Sir
+Signal Transmission through various Channels.
