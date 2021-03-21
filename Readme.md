@@ -84,3 +84,6 @@ Signal Transmission through various Channels.
 
 #### EE5390 -- Source Coding by Shashank Sir
 Implementing various Source Coding Techniques.
+
+#### EE5342 -- Detection Theory by Lakshmi Prasad Natrajan Sir
+Implemeting Detection Techniques.
