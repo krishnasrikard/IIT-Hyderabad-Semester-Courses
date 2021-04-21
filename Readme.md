@@ -87,3 +87,9 @@ Implementing various Source Coding Techniques.
 
 #### EE5342 -- Detection Theory by Lakshmi Prasad Natrajan Sir
 Implemeting Detection Techniques.
+
+#### EE6317 -- ChannelCoding by Shashank Sir
+Implementing various Channel Coding Techniques.
+
+#### EE5357 -- Estimation Theory by Shashank Sir
+Implemeting Estimation Techniques.
