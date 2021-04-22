@@ -88,8 +88,13 @@ Implementing various Source Coding Techniques.
 #### EE5342 -- Detection Theory by Lakshmi Prasad Natrajan Sir
 Implemeting Detection Techniques.
 
-#### EE6317 -- ChannelCoding by Shashank Sir
+#### EE6317 -- Channel Coding by Shashank Sir
 Implementing various Channel Coding Techniques.
 
 #### EE5357 -- Estimation Theory by Shashank Sir
 Implemeting Estimation Techniques.
+
+#### MA4240 -- Applied Statistics by Sameen Naqvi
+Research Paper: [https://arxiv.org/pdf/2007.01935.pdf](https://arxiv.org/pdf/2007.01935.pdf)\
+Implementation of Research Paper on a Dataset.\
+Dataset: Smoker Condition
