@@ -93,8 +93,3 @@ Implementing various Channel Coding Techniques.
 
 #### EE5357 -- Estimation Theory by Shashank Sir
 Implemeting Estimation Techniques.
-
-#### MA4240 -- Applied Statistics by Sameen Naqvi
-Research Paper: [https://arxiv.org/pdf/2007.01935.pdf](https://arxiv.org/pdf/2007.01935.pdf)\
-Implementation of Research Paper on a Dataset.\
-Dataset: Smoker Condition
