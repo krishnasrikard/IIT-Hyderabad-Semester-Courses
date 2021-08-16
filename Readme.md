@@ -11,6 +11,8 @@ We had implemented various projects using Arduino,Seven Segment Display and Flip
 #### ID 1350 -- Internet of Things by RajyaLakshmi Madam
 We interfaced many different sensors using Arduino.
 
+---
+
 ### Semester-2 Spring(2019)
 #### EE 1193 -- Introduction to Hardware Description languages by Shishir Kumar Sir
 We will use Verilog to code different kinds of implementations.
@@ -20,6 +22,8 @@ We will try to create a Voice Controlled Bot using Machine Learning. We will tra
 
 #### EE 1360 -- Communication Systems by Sai Dheeraj Sir
 Convolution of Audio Signal with Impulse in MatLab.
+
+---
 
 ### Semester-3 Fall(2019)
 #### EE 2350 -- DSP(Digital Signal Processing) by K.Sri Rama Murthy Sir
@@ -36,6 +40,8 @@ Understanding Linux Operating System.
 
 #### EE 2133 -- Analog Electronics by Gajendranath Sir
 Analog Circuits Simulation in LTSpice.
+
+---
 
 ### Semester-4 Spring(2020)
 #### EE 2340 -- Information Sciences by Shashank Sir
@@ -56,6 +62,8 @@ Simulation in Simulink for Machines Lab Experiments.
 #### CS2305 -- Research Internship by Srijith.P.K Sir
 Understanding Neural ODEs.
 
+---
+
 ### Semester-5 Fall(2020)
 #### EE5377 -- Introduction to Image Processing by Summohana Sir
 Learning Image Processing and Coding Algorithms in Python.
@@ -75,6 +83,8 @@ Spice Simulations for Assignments and Reports.
 #### CS3550 -- DBMS-1 by Manohar Sir
 Learning Basics of DBMS.
 
+---
+
 ### Semester-6 Spring(2021)
 #### EE3015-EE3025 -- Independent Project by GVV Sharma Sir
 Learning Signal Processing and Filter Designs.
@@ -93,3 +103,9 @@ Implementing various Channel Coding Techniques.
 
 #### EE5357 -- Estimation Theory by Shashank Sir
 Implemeting Estimation Techniques.
+
+---
+
+### Semester-7 Fall(2021)
+#### EE4013 -- C and Data Structures by GVV Sharma Sir
+Learning and Practicing C and Data Structures.
