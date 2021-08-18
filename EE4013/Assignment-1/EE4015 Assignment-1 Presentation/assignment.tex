@@ -1,0 +1,101 @@
+\documentclass[8pt]{beamer}
+\mode<presentation>
+{
+  % https://deic-web.uab.cat/~iblanes/beamer_gallery/index.html
+  \usetheme{Rochester}
+  \usefonttheme{default}
+  \usecolortheme{whale}
+}
+\renewcommand{\baselinestretch}{1.35}
+%\usepackage[legalpaper, landscape, margin=2in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{multicol}
+\usepackage{listings}
+\setlength{\columnsep}{4.5cm}
+
+\title[Report]{EE4013 Assignment-1 Presentation}
+\author{Krishna Srikar Durbha (EE18BTECH11014)}
+\date{$16^{\text{th}}$ August 2021}
+
+\begin{document}
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\section{Euclidean Algorithm by Subtraction}
+\begin{frame}[allowframebreaks]{Euclidean Algorithm by Subtraction}
+Euclidean Algorithm is a recursive method of finding Greatest Common Divisor of 2 numbers. For some positive integers $a$ and $b$, it works by repeatedly subtracting the smaller number from the larger one until they become equal. At this point, the value of either term is the greatest common divisor of our inputs.
+
+\textbf{Algorithm:}\\
+Step-1: If $a = b$, then return the value of a\\
+Step-2: Otherwise, if a > b then let a = a - b and return to Step-1\\
+Step-3: Otherwise, if a < b, then let b = b - a and return to Step-1\\
+
+\vspace{0.2in}
+
+\textbf{Proof}:\\
+Proof involves proving that, subtracting between $a$ and $b$ doesn't change GCD. Let $a$, $b$ be 2 positive integers such that $gcd(a,b) = m$ and $a > b$. So, it can be written as,
+\begin{align}
+    a = a_{1} \times m \\
+    b = b_{1} \times m \\
+    gcd(a,b) = m \implies gcd(a_{1}, b_{1}) = 1
+\end{align}
+
+\framebreak
+We need to prove that $gcd(a-b,b) = m$. We will prove it by contradiction. Let $gcd(a-b,b) = M$ where $M > m \implies  k \neq 1$
+\begin{align}
+    a-b = (a_{1} - b_{1}) \times m\\
+    b =  b_{1} \times m\\
+    gcd(a-b,b) = M \implies M = k \times m \text{ (For some integer $k$)}\\
+    a-b \equiv 0\ (\textrm{mod}\ M) \text{ and } b \equiv 0\ (\textrm{mod}\ M)\\
+    \implies a-b \equiv 0\ (\textrm{mod}\ km) \text{ and } b \equiv 0\ (\textrm{mod}\ km)\\
+    \implies a_{1} - b_{1} \equiv 0\ (\textrm{mod}\ k) \text{ and } b_{1} \equiv 0\ (\textrm{mod}\ k)\\
+    \implies a_{1} \equiv 0\ (\textrm{mod}\ k) \text{ and } b_{1} \equiv 0\ (\textrm{mod}\ k)
+\end{align}
+We know that $gcd(a_{1}, b_{1}) = 1$, so there doesn't exist a $M \neq m$ such that $gcd(a-b, b) = M$. So, from contradiction, $gcd(a, b) = gcd(a-b, b) = M$ for $a > b$. Worst Case Time-Complexity is $\mathcal{O}(a+b)$.
+\end{frame}
+
+\section{Euclidean Algorithm by Division}
+\begin{frame}[allowframebreaks]{Euclidean Algorithm by Division}
+Euclidean Algorithm by Division involves divison rather than subtraction. For some positive integers $a$ and $b$, $gcd(a, b) = gcd(b, a \textrm{ mod}\ b)$. We repeat the procedure until convergence.\\
+
+ Let $a$, $b$ be 2 positive integers such that $a > b$. By applying Euclid's Algorithm from $0^{th}$-step ,
+ \begin{align}
+     a = q_{0}b + r_{0}\\
+     b = q_{1}r_{0} + r_{1}\\
+     r_{0} = q_{2}r_{1} + r_{2}\\
+     r_{1} = q_{3}r_{2} + r_{3}...
+ \end{align}
+ Here $a > b$, $ b > r_{0}$, $r_{0} > r_{1}$, $r_{1} > r_{2}$.. and so on. So, remainders are decreasing after each step.
+ 
+ \framebreak
+ 
+ Let at $n^{th}$-step $r_{n-2} = q_{n}r_{n-1}$ i.e $r_{n} = 0$.
+ \begin{align}
+    r_{n-2} = q_{n}r_{n-1}\\
+    r_{n-3} = q_{n-1}r_{n-2} + r_{n-1}\\
+    \implies r_{n-1} \text{ divides } r_{n-2}, r_{n-3}, r_{n-4},..., r_{1}, r_{0}, b, a\\
+    \implies a \equiv 0\ (\textrm{mod}\ r_{n-1}) \text{ and } b \equiv 0\ (\textrm{mod}\ r_{n-1})
+\end{align}
+So, the proof goes as $gcd(a,b) = r_{n-1}$. We will prove it by contraction. Let  $gcd(a,b) = M \implies M > r_{n-1}$,
+
+\begin{align}
+    a = a_{1} \times M \text{ and } b = b_{1} \times M\\
+    r_{0} = a - q_{0}b = M(a_{1} - q_{0}b_{1})\\
+    r_{1} = b - q_{1}r{0} = M(b_{1} - a_{1} + q_{0}b_{1})
+\end{align}
+
+\framebreak
+
+So, M divides $a, b, r_{0}, r_{1}, ... $ and so on all the following remainders. So, $M$ should divide $r_{n-1}$, which implies $r_{n-1} \geq M$ which is a contraction from $M > r_{n-1}$.\\
+\vspace{0.2in}
+So, there doesn't exist a $M > r_{n-1}$ which is a divisor of $a$ and $b$. So, $gcd(a,b)  = r_{n-1}$.
+\end{frame}
+
+\end{document}
