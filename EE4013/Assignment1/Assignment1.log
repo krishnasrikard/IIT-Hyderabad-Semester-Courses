@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2021.7.27)  18 AUG 2021 19:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2021.7.27)  19 AUG 2021 15:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1168,13 +1168,13 @@ Package multicol Warning: May not work with the twocolumn option on input line
 ) (/usr/share/texlive/texmf-dist/tex/latex/chngcntr/chngcntr.sty
 Package: chngcntr 2009/09/02 v1.0a change counter resetting
 )
-(./Assignment1.aux)
+No file Assignment1.aux.
 \openout1 = `Assignment1.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 65.
 LaTeX Font Info:    Try loading font information for OML+txmi on input line 65.
 
- (/usr/share/texlive/texmf-dist/tex/latex/txfonts/omltxmi.fd
+(/usr/share/texlive/texmf-dist/tex/latex/txfonts/omltxmi.fd
 File: omltxmi.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    ... okay on input line 65.
@@ -1185,7 +1185,8 @@ LaTeX Font Info:    ... okay on input line 65.
 LaTeX Font Info:    Checking defaults for OMS/txsy/m/n on input line 65.
 LaTeX Font Info:    Try loading font information for OMS+txsy on input line 65.
 
- (/usr/share/texlive/texmf-dist/tex/latex/txfonts/omstxsy.fd
+
+(/usr/share/texlive/texmf-dist/tex/latex/txfonts/omstxsy.fd
 File: omstxsy.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    ... okay on input line 65.
@@ -1278,8 +1279,6 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 65.
 LaTeX Info: Redefining \pageref on input line 65.
 LaTeX Info: Redefining \nameref on input line 65.
-
-(./Assignment1.out) (./Assignment1.out)
 \@outlinefile=\write4
 \openout4 = `Assignment1.out'.
 
@@ -1343,30 +1342,35 @@ LaTeX Font Info:    Font shape `OML/txr/m/n' in size <12> not available
 (Font)              Font shape `OML/txmi/m/it' tried instead on input line 151.
 
 
-Underfull \hbox (badness 1502) in paragraph at lines 182--184
+Overfull \hbox (4.71411pt too wide) detected at line 166
+[]
+ []
+
+
+Underfull \hbox (badness 1502) in paragraph at lines 193--195
 \OT1/txr/m/n/12 We know that $\OML/txmi/m/it/12 gcd\OT1/txr/m/n/12 (\OML/txmi/m
 /it/12 a[]; b[]\OT1/txr/m/n/12 ) = 1$, so $\OML/txmi/m/it/12 a$ \OT1/txr/m/n/12
  and $\OML/txmi/m/it/12 b$
  []
 
 
-Underfull \hbox (badness 2495) in paragraph at lines 182--184
+Underfull \hbox (badness 2495) in paragraph at lines 193--195
 \OT1/txr/m/n/12 can-not have a com-mon di-vi-sor $\OML/txmi/m/it/12 k$\OT1/txr/
 m/n/12 . Hence by
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 182--184
+Underfull \hbox (badness 10000) in paragraph at lines 193--195
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 188--189
-
+Underfull \hbox (badness 5939) in paragraph at lines 196--197
+[] \OT1/txr/m/n/12 Worst Case Time-Complexity of Eu-clidean
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 190--191
+Underfull \hbox (badness 10000) in paragraph at lines 196--197
 
  []
 
@@ -1374,45 +1378,60 @@ Underfull \hbox (badness 10000) in paragraph at lines 190--191
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 205--207
+Underfull \hbox (badness 10000) in paragraph at lines 205--206
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 211--213
+Underfull \hbox (badness 10000) in paragraph at lines 207--208
 
  []
 
 
-Underfull \hbox (badness 5939) in paragraph at lines 214--215
+Underfull \hbox (badness 10000) in paragraph at lines 222--224
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 228--230
+
+ []
+
+
+Underfull \hbox (badness 5939) in paragraph at lines 231--232
 [] \OT1/txr/m/n/12 Worst Case Time-Complexity of Eu-clidean
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 214--215
+Underfull \hbox (badness 10000) in paragraph at lines 231--232
 
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 227.
-[2
-
-]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 227.
+[2]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 244.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 244.
  (./Assignment1.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 227.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 227.
-Package rerunfilecheck Info: File `Assignment1.out' has not changed.
-(rerunfilecheck)             Checksum: 7C9789F14B38A243C7F1D6EC502C052A;303.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 227.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 244.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 244.
+
+
+Package rerunfilecheck Warning: File `Assignment1.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `Assignment1.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  7C9789F14B38A243C7F1D6EC502C052A;303.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 244.
  ) 
 Here is how much of TeX's memory you used:
- 31675 strings out of 492982
- 669632 string characters out of 6134896
- 953354 words of memory out of 5000000
- 34582 multiletter control sequences out of 15000+600000
+ 31663 strings out of 492982
+ 669464 string characters out of 6134896
+ 956395 words of memory out of 5000000
+ 34576 multiletter control sequences out of 15000+600000
  69772 words of font info for 154 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 55i,13n,67p,451b,1256s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,15n,67p,451b,1256s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/share/texlive/texmf-dis
 t/fonts/type1/public/txfonts/rtxr.pfb></usr/share/texlive/texmf-dist/fonts/type
@@ -1421,10 +1440,10 @@ fonts/txsy.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsyc.
 pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-
 dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Assignment1.pdf (2 pages, 55436 bytes).
+Output written on Assignment1.pdf (2 pages, 55808 bytes).
 PDF statistics:
- 125 PDF objects out of 1000 (max. 8388607)
- 111 compressed objects within 2 object streams
+ 108 PDF objects out of 1000 (max. 8388607)
+ 95 compressed objects within 1 object stream
  48 named destinations out of 1000 (max. 500000)
- 53 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
