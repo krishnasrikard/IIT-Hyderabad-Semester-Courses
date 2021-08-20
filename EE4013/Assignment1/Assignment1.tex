@@ -194,7 +194,19 @@ We need to prove that $gcd(a-b,b) = m$. We will prove it by contradiction. Let $
 \end{align}
 We know that $gcd(a_{1}, b_{1}) = 1$, so $a$ and $b$ cannot have a common divisor $k$. Hence by contradiction, there doesn't exist a $M \neq m$ such that $gcd(a-b, b) = M$. Hence it can be proved that, $gcd(a, b) = gcd(a-b, b) = m$ for $a > b$.\\
 
-\quad Worst Case Time-Complexity of Euclidean Algorithm by Subtraction is $\mathcal{O}(a+b)$.\\
+\subsubsection{Complexity Analysis}
+Let $a > b$ and $T(n)$ denote time complexity of $gcd(a,b)$ where $n = a+b$. Then,
+\begin{align}
+T(n) = 1 + T(n-b)\\
+T(n-b) = 1 + T(n-2b) \text{ if $a > 2b$}\\
+T(n-b) = 1 + T(n-a-b) \text{ if $b < a < 2b$}
+\end{align}
+
+On assuming $n > (x_{1}a + x_{2}b)$ for some $x_{1}, x_{2}$, $T(n)$ can be written as:
+\begin{align}
+T(n) = k + T(n - x_{1}a - x_{2}b) \text{ (For $k = x_{1} + x_{2}$)}
+\end{align}
+No.of steps vary linearly with $n=a+b$. Hence Worst Case Time-Complexity for calculating GCD of $a$ and  $b$ using Euclidean Algorithm by Subtraction is $\mathcal{O}(a + b)$.\\
 
 \begin{figure}[h!]
 	\begin{center}
@@ -237,7 +249,48 @@ So, $r_{n-1}$ is a common divisor of both $a$ and $b$. Let $gcd(a,b) = M \implie
 \end{align}
 So, M divides $a, b, r_{0}, r_{1}, ... $ and so on all the following remainders. So, $M$ should divide $r_{n-1}$, which implies $r_{n-1} \geq M$ which is a contraction as $M > r_{n-1}$. Hence by contradiction, there doesn't exist a $M > r_{n-1}$ which is a divisor of $a$ and $b$. So, $gcd(a,b) = r_{n-1}$.\\
 
-\quad Worst Case Time-Complexity of Euclidean Algorithm by Division is $\mathcal{O}(\log min(a,b))$.\\
+\quad On using Euclidean Algorithm by Division the recursion goes as follows:
+\[
+\begin{split}
+&gcd(15,255) = gcd(255,15) = gcd(15,0) = 15
+\end{split}\]
+
+\subsubsection{Complexity Analysis}
+Let $f_{n}$ denote elements in Fibonacci Sequence starting from $n=0$ where $f_{0} = 0, f_{1} = 1, f_{2} = 1,...$ and so on. Then they can be written as:
+\begin{align*}
+f_{n+2} = 1 \times f_{n+1} + f_{n}\\
+f_{n+1} = 1 \times f_{n} + f_{n-1}\\
+...........................\\
+f_{4} = 1 \times f_{3} + f_{2}\\
+f_{3} = 2 \times f_{2}
+\end{align*}
+So from Euclidean Algorithm by Division, it can be proved that $gcd(f_{n+2}, f_{n+1}) = 1$ and takes $n$ steps to converge.\\
+
+If $gcd(a,b)$ takes $n$ steps to converge by using Euclidean Algorithm by Division, then $a \geq f_{n+2}$ and $b \geq f_{n+1}$.\\
+
+\textbf{Proof by Mathematical Induction:}\\
+Let $a = 2$ and $b = 1$. Then, $gcd(2,1) = 1$ takes $1$ step to converge. $a \geq f_{3} = 2$ and $b \geq f_{2} = 1$. Assuming statements hold true at ${n-1}^{th}$ step, $gcd(b,a\%b)$ takes $n-1$ steps to converge.
+\begin{align}
+b \geq f_{n+1}\\
+a\%b \geq f_{n}\\
+a = q_{0}b + a\%b\\
+a \geq b + a\%b\\
+a \geq f_{n+1} + f_{n}\\
+a \geq f_{n+2}
+\end{align}
+Hence proved.\\
+
+Let $gcd(a,b)$ takes $n$ steps to converge. Then,
+\begin{align}
+a \geq f_{n+2}\\
+b \geq f_{n+1}\\
+f_{n}=\frac{1}{\sqrt{5}}\left(\left(\frac{1+\sqrt{5}}{2}\right)^{n}-\left(\frac{1-\sqrt{5}}{2}\right)^{n}\right)\\
+\phi = \frac{1+\sqrt{5}}{2}\\
+f_{n} \approx \phi^{n}\\
+b \approx \phi^{n+1}\\
+n \approx \log_{\phi}{\left(min(a,b)\right)}
+\end{align}
+Hence, Worst Case Time-Complexity for calculating GCD of $a$ and  $b$ using Euclidean Algorithm by Division is $\mathcal{O}(\log min(a,b))$.\\
 
 \begin{figure}[h!]
 	\begin{center}
@@ -247,15 +300,10 @@ So, M divides $a, b, r_{0}, r_{1}, ... $ and so on all the following remainders.
 	\label{fig:Input}
 \end{figure}
 
-\quad On using Euclidean Algorithm by Division the recursion goes as follows:
-\[
-\begin{split}
-&gcd(15,255) = gcd(255,15) = gcd(15,0) = 15
-\end{split}\]
-
 Codes of Euclidean Algorithm by Division:
 \begin{lstlisting}
 codes/Euclid_Division.py
 codes/Euclid_Division.c
 \end{lstlisting}
+
 \end{document}
