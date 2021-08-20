@@ -28,6 +28,7 @@
 \usepackage[breaklinks=true]{hyperref}
 \usepackage{graphicx}
 \usepackage{tkz-euclide}
+\usetikzlibrary{shapes,arrows}
 
 \usetikzlibrary{calc,math}
 \usepackage{listings}
@@ -195,6 +196,14 @@ We know that $gcd(a_{1}, b_{1}) = 1$, so $a$ and $b$ cannot have a common diviso
 
 \quad Worst Case Time-Complexity of Euclidean Algorithm by Subtraction is $\mathcal{O}(a+b)$.\\
 
+\begin{figure}[h!]
+	\begin{center}
+		\resizebox{\columnwidth/1}{!}{\input{./figs/figa.tex}}
+	\end{center}
+	\caption{Flowchart of Euclidean Algorithm by Subtraction}
+	\label{fig:Input}
+\end{figure}
+
 Codes of Euclidean Algorithm by Subtraction:
 \begin{lstlisting}
 codes/Euclid_Subtraction.py
@@ -229,6 +238,14 @@ So, $r_{n-1}$ is a common divisor of both $a$ and $b$. Let $gcd(a,b) = M \implie
 So, M divides $a, b, r_{0}, r_{1}, ... $ and so on all the following remainders. So, $M$ should divide $r_{n-1}$, which implies $r_{n-1} \geq M$ which is a contraction as $M > r_{n-1}$. Hence by contradiction, there doesn't exist a $M > r_{n-1}$ which is a divisor of $a$ and $b$. So, $gcd(a,b) = r_{n-1}$.\\
 
 \quad Worst Case Time-Complexity of Euclidean Algorithm by Division is $\mathcal{O}(\log min(a,b))$.\\
+
+\begin{figure}[h!]
+	\begin{center}
+		\resizebox{\columnwidth/1}{!}{\input{./figs/figb.tex}}
+	\end{center}
+	\caption{Flowchart of Euclidean Algorithm by Division}
+	\label{fig:Input}
+\end{figure}
 
 \quad On using Euclidean Algorithm by Division the recursion goes as follows:
 \[
