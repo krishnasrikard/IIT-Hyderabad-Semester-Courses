@@ -1,0 +1,4 @@
+\beamer@sectionintoc {1}{Euclidean Algorithm by Subtraction}{2}{0}{1}
+\beamer@sectionintoc {2}{Complexity Analysis of Euclidean Algorithm by Subtraction}{4}{0}{2}
+\beamer@sectionintoc {3}{Euclidean Algorithm by Division}{5}{0}{3}
+\beamer@sectionintoc {4}{Complexity Analysis of Euclidean Algorithm by Divsion}{8}{0}{4}
