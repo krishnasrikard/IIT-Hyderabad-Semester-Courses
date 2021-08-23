@@ -206,7 +206,7 @@ On assuming $n > (x_{1}a + x_{2}b)$ for some $x_{1}, x_{2}$, $T(n)$ can be writt
 \begin{align}
 T(n) = k + T(n - x_{1}a - x_{2}b) \text{ (For $k = x_{1} + x_{2}$)}
 \end{align}
-No.of steps vary linearly with $n=a+b$. Hence Worst Case Time-Complexity for calculating GCD of $a$ and  $b$ using Euclidean Algorithm by Subtraction is $\mathcal{O}(a + b)$.\\
+No.of steps vary linearly with $n=a+b$. So, in the worst-case scenerio the algorithm performs $a+b$ subtractions. Hence Worst Case Time-Complexity for calculating GCD of $a$ and  $b$ using Euclidean Algorithm by Subtraction is $\mathcal{O}(a + b)$.\\
 
 \begin{figure}[h!]
 	\begin{center}
@@ -227,7 +227,7 @@ Euclidean Algorithm by Division involves divison rather than subtraction. For so
 
 Let $a$ and $b$ be 2 positive integers such that $a > b$. By applying Euclid's Algorithm from $0^{th}$-step,\\
 \begin{align}
-	a = q_{0}b + r_{0}\\
+	a = q_{0}b + r_{0}\label{eq:ED1}\\
 	b = q_{1}r_{0} + r_{1}\\
 	r_{0} = q_{2}r_{1} + r_{2}\\
 	r_{1} = q_{3}r_{2} + r_{3}...
@@ -236,7 +236,7 @@ Here $a > b$, $ b > r_{0}$, $r_{0} > r_{1}$, $r_{1} > r_{2}$.. and so on. So, re
 
 Let at $n^{th}$-step $r_{n-2} = q_{n}r_{n-1}$ i.e $r_{n} = 0$.
  \begin{align}
-    r_{n-2} = q_{n}r_{n-1}\\
+    r_{n-2} = q_{n}r_{n-1}\label{eq:ED2}\\
     r_{n-3} = q_{n-1}r_{n-2} + r_{n-1}\\
     r_{n-1} \text{ divides } r_{n-2}, r_{n-3}, r_{n-4},..., r_{1}, r_{0}, b, a\\
     a \equiv 0\ (\textrm{mod}\ r_{n-1}) \text{ and } b \equiv 0\ (\textrm{mod}\ r_{n-1})
@@ -256,7 +256,7 @@ So, M divides $a, b, r_{0}, r_{1}, ... $ and so on all the following remainders.
 \end{split}\]
 
 \subsubsection{Complexity Analysis}
-Let $f_{n}$ denote elements in Fibonacci Sequence starting from $n=0$ where $f_{0} = 0, f_{1} = 1, f_{2} = 1,...$ and so on. Then they can be written as:
+Let $f_{n}$ denote elements in Pingala Sequence starting from $n=0$ where $f_{0} = 0, f_{1} = 1, f_{2} = 1,...$ and so on. Elements of the sequence can be written as follows:
 \begin{align*}
 f_{n+2} = 1 \times f_{n+1} + f_{n}\\
 f_{n+1} = 1 \times f_{n} + f_{n-1}\\
@@ -264,7 +264,7 @@ f_{n+1} = 1 \times f_{n} + f_{n-1}\\
 f_{4} = 1 \times f_{3} + f_{2}\\
 f_{3} = 2 \times f_{2}
 \end{align*}
-So from Euclidean Algorithm by Division, it can be proved that $gcd(f_{n+2}, f_{n+1}) = 1$ and takes $n$ steps to converge.\\
+The above equations are similar to equations in Euclidean Algorithm by Division i.e from \eqref{eq:ED1} to \eqref{eq:ED2}. Hence it can be proved that $gcd(f_{n+2}, f_{n+1}) = f_{2} = 1$ and takes $n$ steps to converge.\\
 
 If $gcd(a,b)$ takes $n$ steps to converge by using Euclidean Algorithm by Division, then $a \geq f_{n+2}$ and $b \geq f_{n+1}$.\\
 
@@ -290,7 +290,7 @@ f_{n} \approx \phi^{n}\\
 b \approx \phi^{n+1}\\
 n \approx \log_{\phi}{\left(min(a,b)\right)}
 \end{align}
-Hence, Worst Case Time-Complexity for calculating GCD of $a$ and  $b$ using Euclidean Algorithm by Division is $\mathcal{O}(\log min(a,b))$.\\
+So, in the worst-case scenerio the algorithm performs $n \approx \log_{\phi}{\left(min(a,b)\right)} $ divisons. Hence, Worst Case Time-Complexity for calculating GCD of $a$ and  $b$ using Euclidean Algorithm by Division is $\mathcal{O}(\log min(a,b))$.\\
 
 \begin{figure}[h!]
 	\begin{center}
@@ -305,5 +305,25 @@ Codes of Euclidean Algorithm by Division:
 codes/Euclid_Division.py
 codes/Euclid_Division.c
 \end{lstlisting}
+
+\textbf{Another Example:}\\
+The following example illustrates the difference in no.of steps between Euclidean Algorithm by Subtraction and Euclidean Algorithm by Divison. To find GCD of two numbers $24$ and $92$.\\
+
+By Euclid's Subtraction,
+\[
+\begin{split}
+&f(24,92) = f(24,68) = f(24,44) = f(24,20)\\
+&= f(4,20) = f(4,16) = f(4,12) = f(4,8)\\
+&= f(4,4) = 4
+\end{split}\]
+
+By Euclid's Division,
+\[
+\begin{split}
+&f(24,92) = f(92,24) = f(24,20) = f(20,4)\\
+&= f(4,0) = 4
+\end{split}\]
+
+The difference in no.of steps indicates the performance improvement of Euclidean Algorithm by Division over Subtraction.
 
 \end{document}
