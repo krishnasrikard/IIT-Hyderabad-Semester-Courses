@@ -31,6 +31,19 @@
   \titlepage
 \end{frame}
 
+\begin{frame}[fragile]{Question}
+Consider the following ANSI C function:
+\begin{lstlisting}[language=C]
+int SomeFunction(int x, int y){
+	if ((x == 1) || (y == 1)) return 1;
+	if (x == y) return x;
+	if (x > y) return SomeFunction(x-y, y);
+	if (x < y) return SomeFunction(x, y-x);
+}
+\end{lstlisting}
+The value of returned by SomeFunction(15,255) is \rule{1cm}{0.15mm}
+\end{frame}
+
 \section{Euclidean Algorithm by Subtraction}
 \begin{frame}[allowframebreaks]{Euclidean Algorithm by Subtraction}
 Euclidean Algorithm is a recursive method of finding Greatest Common Divisor of 2 numbers. For some positive integers $a$ and $b$, it works by repeatedly subtracting the smaller number from the larger one until they become equal. At this point, the value of either term is the greatest common divisor of our inputs.
@@ -62,6 +75,17 @@ We need to prove that $gcd(a-b,b) = m$. We will prove it by contradiction. Let $
     \implies a_{1} \equiv 0\ (\textrm{mod}\ k) \text{ and } b_{1} \equiv 0\ (\textrm{mod}\ k)
 \end{align}
 We know that $gcd(a_{1}, b_{1}) = 1$, so there doesn't exist a $M \neq m$ such that $gcd(a-b, b) = M$. So, from contradiction, $gcd(a, b) = gcd(a-b, b) = M$ for $a > b$. Worst Case Time-Complexity is $\mathcal{O}(a+b)$.
+
+So, the solution to the given question is:
+\[
+\begin{split}
+&f(15,255) = f(15,240) = f(15,225) = f(15,210)\\
+&= f(15,195) = f(15,180) = f(15,165) = f(15,150)\\
+&= f(15,135) = f(15,120) = f(15,105) = f(15,90)\\
+&= f(15,75) = f(15,60) = f(15,45) = f(15,30)\\
+&= f(15,15) = 1
+\end{split}\]
+
 \end{frame}
 
 \section{Complexity Analysis of Euclidean Algorithm by Subtraction}
@@ -78,15 +102,6 @@ On assuming $n > (x_{1}a + x_{2}b)$ for some $x_{1}, x_{2}$, $T(n)$ can be writt
 T(n) = k + T(n - x_{1}a - x_{2}b) \text{ (For $k = x_{1} + x_{2}$)}
 \end{align}
 No.of steps vary linearly with $n=a+b$. So, in the worst-case scenerio the algorithm performs $a+b$ subtractions. Hence Worst Case Time-Complexity for calculating GCD of $a$ and  $b$ using Euclidean Algorithm by Subtraction is $\mathcal{O}(a + b)$.\\
-
-\[
-\begin{split}
-&f(15,255) = f(15,240) = f(15,225) = f(15,210)\\
-&= f(15,195) = f(15,180) = f(15,165) = f(15,150)\\
-&= f(15,135) = f(15,120) = f(15,105) = f(15,90)\\
-&= f(15,75) = f(15,60) = f(15,45) = f(15,30)\\
-&= f(15,15) = 1
-\end{split}\]
 
 \end{frame}
 
@@ -124,8 +139,9 @@ So, the proof goes as $gcd(a,b) = r_{n-1}$. We will prove it by contraction. Let
 
 So, M divides $a, b, r_{0}, r_{1}, ... $ and so on all the following remainders. So, $M$ should divide $r_{n-1}$, which implies $r_{n-1} \geq M$ which is a contraction from $M > r_{n-1}$.\\
 \vspace{0.2in}
-So, there doesn't exist a $M > r_{n-1}$ which is a divisor of $a$ and $b$. So, $gcd(a,b)  = r_{n-1}$.
-
+So, there doesn't exist a $M > r_{n-1}$ which is a divisor of $a$ and $b$. So, $gcd(a,b)  = r_{n-1}$.\\
+\vspace{0.2in}
+So, the solution the given question using Euclidean Algorithm by Divsion is:
 \[
 \begin{split}
 &gcd(15,255) = gcd(255,15) = gcd(15,0) = 15

@@ -1,0 +1,11 @@
+\frametitle{Question}
+Consider the following ANSI C function:
+\begin{lstlisting}[language=C]
+int SomeFunction(int x, int y){
+	if ((x == 1) || (y == 1)) return 1;
+	if (x == y) return x;
+	if (x > y) return SomeFunction(x-y, y);
+	if (x < y) return SomeFunction(x, y-x);
+}
+\end{lstlisting}
+The value of returned by SomeFunction(15,255) is \rule{1cm}{0.15mm}
