@@ -78,6 +78,16 @@ On assuming $n > (x_{1}a + x_{2}b)$ for some $x_{1}, x_{2}$, $T(n)$ can be writt
 T(n) = k + T(n - x_{1}a - x_{2}b) \text{ (For $k = x_{1} + x_{2}$)}
 \end{align}
 No.of steps vary linearly with $n=a+b$. So, in the worst-case scenerio the algorithm performs $a+b$ subtractions. Hence Worst Case Time-Complexity for calculating GCD of $a$ and  $b$ using Euclidean Algorithm by Subtraction is $\mathcal{O}(a + b)$.\\
+
+\[
+\begin{split}
+&f(15,255) = f(15,240) = f(15,225) = f(15,210)\\
+&= f(15,195) = f(15,180) = f(15,165) = f(15,150)\\
+&= f(15,135) = f(15,120) = f(15,105) = f(15,90)\\
+&= f(15,75) = f(15,60) = f(15,45) = f(15,30)\\
+&= f(15,15) = 1
+\end{split}\]
+
 \end{frame}
 
 \section{Euclidean Algorithm by Division}
@@ -115,6 +125,12 @@ So, the proof goes as $gcd(a,b) = r_{n-1}$. We will prove it by contraction. Let
 So, M divides $a, b, r_{0}, r_{1}, ... $ and so on all the following remainders. So, $M$ should divide $r_{n-1}$, which implies $r_{n-1} \geq M$ which is a contraction from $M > r_{n-1}$.\\
 \vspace{0.2in}
 So, there doesn't exist a $M > r_{n-1}$ which is a divisor of $a$ and $b$. So, $gcd(a,b)  = r_{n-1}$.
+
+\[
+\begin{split}
+&gcd(15,255) = gcd(255,15) = gcd(15,0) = 15
+\end{split}\]
+
 \end{frame}
 
 \section{Complexity Analysis of Euclidean Algorithm by Divsion}
@@ -130,17 +146,18 @@ f_{3} = 2 \times f_{2}
 \end{align*}
 The above equations are similar to equations in Euclidean Algorithm by Division i.e from \eqref{eq:ED1} to \eqref{eq:ED2}. Hence it can be proved that $gcd(f_{n+2}, f_{n+1}) = f_{2} = 1$ and takes $n$ steps to converge.\\
 
-If $gcd(a,b)$ takes $n$ steps to converge by using Euclidean Algorithm by Division, then $a \geq f_{n+2}$ and $b \geq f_{n+1}$.\\
+\framebreak
+
+If $gcd(a,b)$ where $a>b$ takes $n$ steps to converge by using Euclidean Algorithm by Division, then $a \geq f_{n+2}$ and $b \geq f_{n+1}$.\\
 
 \textbf{Proof by Mathematical Induction:}\\
 Let $a = 2$ and $b = 1$. Then, $gcd(2,1) = 1$ takes $1$ step to converge. $a \geq f_{3} = 2$ and $b \geq f_{2} = 1$. Assuming statements hold true at ${n-1}^{th}$ step, $gcd(b,a\%b)$ takes $n-1$ steps to converge.
 \begin{align}
-b \geq f_{n+1}\\
-a\%b \geq f_{n}\\
+b \geq f_{n+1} \text{ and } a\%b \geq f_{n}\\
 a = q_{0}b + a\%b\\
 a \geq b + a\%b\\
-a \geq f_{n+1} + f_{n}\\
-a \geq f_{n+2}
+a \geq f_{n+1} + f_{n} \implies a \geq f_{n+2} \\
+\implies a \geq f_{n+2} \text{ and } b \geq f_{n+1}
 \end{align}
 Hence proved.\\
 
@@ -156,6 +173,27 @@ n \approx \log_{\phi}{\left(min(a,b)\right)}
 \end{align}
 So, in the worst-case scenerio the algorithm performs $n \approx \log_{\phi}{\left(min(a,b)\right)} $ divisons. Hence, Worst Case Time-Complexity for calculating GCD of $a$ and  $b$ using Euclidean Algorithm by Division is $\mathcal{O}(\log min(a,b))$.\\
 
+\end{frame}
+
+\begin{frame}{Another Example:}
+The following example illustrates the difference in no.of steps between Euclidean Algorithm by Subtraction and Euclidean Algorithm by Divison. To find GCD of two numbers $24$ and $92$.\\
+
+By Euclid's Subtraction,
+\[
+\begin{split}
+&f(24,92) = f(24,68) = f(24,44) = f(24,20)\\
+&= f(4,20) = f(4,16) = f(4,12) = f(4,8)\\
+&= f(4,4) = 4
+\end{split}\]
+
+By Euclid's Division,
+\[
+\begin{split}
+&f(24,92) = f(92,24) = f(24,20) = f(20,4)\\
+&= f(4,0) = 4
+\end{split}\]
+
+The difference in no.of steps indicates the performance improvement of Euclidean Algorithm by Division over Subtraction.
 \end{frame}
 
 \begin{frame}[allowframebreaks]{Flow Diagrams}
