@@ -10,7 +10,6 @@
 %\usepackage[legalpaper, landscape, margin=2in]{geometry}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage{graphicx}
 \usepackage{tikz}
 \usepackage{circuitikz}
 \usepackage{hyperref}
@@ -19,6 +18,8 @@
 \usepackage{listings}
 \usepackage{tikz}
 \usepackage{graphicx}
+\usepackage{array}
+\usepackage{tabularx}
 \usetikzlibrary{shapes,arrows}
 \setlength{\columnsep}{4.5cm}
 
@@ -89,7 +90,7 @@ So, the solution to the given question is:
 \end{frame}
 
 \section{Complexity Analysis of Euclidean Algorithm by Subtraction}
-\begin{frame}{Complexity Analysis of Euclidean Algorithm by Subtraction}
+\begin{frame}[allowframebreaks]{Complexity Analysis of Euclidean Algorithm by Subtraction}
 Let $a > b$ and $T(n)$ denote time complexity of $gcd(a,b)$ where $n = a+b$. Then,
 \begin{align}
 T(n) = 1 + T(n-b)\\
@@ -102,6 +103,16 @@ On assuming $n > (x_{1}a + x_{2}b)$ for some $x_{1}, x_{2}$, $T(n)$ can be writt
 T(n) = k + T(n - x_{1}a - x_{2}b) \text{ (For $k = x_{1} + x_{2}$)}
 \end{align}
 No.of steps vary linearly with $n=a+b$. So, in the worst-case scenerio the algorithm performs $a+b$ subtractions. Hence Worst Case Time-Complexity for calculating GCD of $a$ and  $b$ using Euclidean Algorithm by Subtraction is $\mathcal{O}(a + b)$.\\
+
+\framebreak
+
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[scale=0.5]{figs/Euclid_Subtraction.eps}
+	\caption{Plot of Worst-Case Time Complexity of Euclidean Algorithm by Subtraction}
+	\label{fig:0}
+\end{figure}
+
 
 \end{frame}
 
@@ -189,9 +200,18 @@ n \approx \log_{\phi}{\left(min(a,b)\right)}
 \end{align}
 So, in the worst-case scenerio the algorithm performs $n \approx \log_{\phi}{\left(min(a,b)\right)} $ divisons. Hence, Worst Case Time-Complexity for calculating GCD of $a$ and  $b$ using Euclidean Algorithm by Division is $\mathcal{O}(\log min(a,b))$.\\
 
+\framebreak
+
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=\columnwidth]{figs/Euclid_Division.eps}
+	\caption{Plot of Worst-Case Time Complexity of Euclidean Algorithm by Division}
+	\label{fig:1}
+\end{figure}
+
 \end{frame}
 
-\begin{frame}{Another Example:}
+\begin{frame}[allowframebreaks]{Comparison of Algorithms:}
 The following example illustrates the difference in no.of steps between Euclidean Algorithm by Subtraction and Euclidean Algorithm by Divison. To find GCD of two numbers $24$ and $92$.\\
 
 By Euclid's Subtraction,
@@ -210,6 +230,25 @@ By Euclid's Division,
 \end{split}\]
 
 The difference in no.of steps indicates the performance improvement of Euclidean Algorithm by Division over Subtraction.
+
+\begin{center}
+    \begin{tabular}{ | m{5em} | m{5em} | m{5em} | m{5em} | m{5em} | } 
+	\hline
+	$a,b$ & $N_{-}$ & $T_{-}(\mu s)$ & $N_{\%}$ & $T_{\%}(\mu s)$ \\ 
+	\hline
+	$319,50$ & $14$ & $14.781$ & $8$ & $8.821$ \\ 
+	\hline
+	$453,369$ & $14$ & $15.974$ & $7$ & $8.106$ \\ 
+	\hline
+	$263,810$ & $18$ & $18.596$ & $6$ & $6.675$ \\ 
+	\hline
+	$243,929$ & $18$ & $19.550$ & $9$ & $9.775$ \\ 
+	\hline
+	$508,609$ & $41$ & $56.505$ & $6$ & $8.583$ \\ 
+	\hline
+    \end{tabular}
+\end{center}
+Comparison of no.of steps and time-taken to execute between teh algorithms Euclidean Algorithm by Subtraction and Euclidean Algorithm by Division. 
 \end{frame}
 
 \begin{frame}[allowframebreaks]{Flow Diagrams}

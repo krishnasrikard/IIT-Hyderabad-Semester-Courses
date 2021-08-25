@@ -306,7 +306,7 @@ codes/Euclid_Division.py
 codes/Euclid_Division.c
 \end{lstlisting}
 
-\textbf{Another Example:}\\
+\subsection{Comparison between Algorithms:}
 The following example illustrates the difference in no.of steps between Euclidean Algorithm by Subtraction and Euclidean Algorithm by Divison. To find GCD of two numbers $24$ and $92$.\\
 
 By Euclid's Subtraction,
@@ -324,6 +324,26 @@ By Euclid's Division,
 &= f(4,0) = 4
 \end{split}\]
 
-The difference in no.of steps indicates the performance improvement of Euclidean Algorithm by Division over Subtraction.
+\begin{table}[!ht]
+	\centering
+	\input{./tables/comparison.tex}
+	\caption{Comparison between Euclidean Algorithm by Division and Euclidean Algorithm by Subtraction}
+	\label{table:table1}
+\end{table}
 
+The difference in no.of steps indicates the performance improvement of Euclidean Algorithm by Division over Euclidean Algorithm by Subtraction.\\
+
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=\columnwidth]{figs/Euclid_Subtraction.eps}
+	\caption{Plot of Worst-Case Time Complexity of Euclidean Algorithm by Subtraction}
+	\label{fig:0}
+\end{figure}
+
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=\columnwidth]{figs/Euclid_Division.eps}
+	\caption{Plot of Worst-Case Time Complexity of Euclidean Algorithm by Division}
+	\label{fig:1}
+\end{figure}
 \end{document}
