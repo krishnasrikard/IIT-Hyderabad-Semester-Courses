@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2021.7.27)  25 AUG 2021 15:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2021.7.27)  26 AUG 2021 15:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1480,12 +1480,12 @@ File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
 
 ]
 Package epstopdf Info: Source file: <figs/Euclid_Subtraction.eps>
-(epstopdf)                    date: 2021-08-25 12:47:36
-(epstopdf)                    size: 15906 bytes
+(epstopdf)                    date: 2021-08-26 15:22:57
+(epstopdf)                    size: 30447 bytes
 (epstopdf)             Output file: <figs/Euclid_Subtraction-eps-converted-to.p
 df>
-(epstopdf)                    date: 2021-08-25 15:00:44
-(epstopdf)                    size: 7455 bytes
+(epstopdf)                    date: 2021-08-26 15:28:46
+(epstopdf)                    size: 16182 bytes
 (epstopdf)             Command: <repstopdf --outfile=figs/Euclid_Subtraction-ep
 s-converted-to.pdf figs/Euclid_Subtraction.eps>
 (epstopdf)             \includegraphics on input line 117.
@@ -1516,12 +1516,12 @@ input line 117.
 
 ]
 Package epstopdf Info: Source file: <figs/Euclid_Division.eps>
-(epstopdf)                    date: 2021-08-25 12:47:38
-(epstopdf)                    size: 15296 bytes
+(epstopdf)                    date: 2021-08-26 15:23:00
+(epstopdf)                    size: 25049 bytes
 (epstopdf)             Output file: <figs/Euclid_Division-eps-converted-to.pdf>
 
-(epstopdf)                    date: 2021-08-25 15:02:31
-(epstopdf)                    size: 7907 bytes
+(epstopdf)                    date: 2021-08-26 15:28:47
+(epstopdf)                    size: 15526 bytes
 (epstopdf)             Command: <repstopdf --outfile=figs/Euclid_Division-eps-c
 onverted-to.pdf figs/Euclid_Division.eps>
 (epstopdf)             \includegraphics on input line 212.
@@ -1530,12 +1530,12 @@ Package epstopdf Info: Output file is already uptodate.
 
 pdfTeX warning: pdflatex (file ./figs/Euclid_Division-eps-converted-to.pdf): PD
 F inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<figs/Euclid_Division-eps-converted-to.pdf, id=313, 462.52798pt x 346.89601pt>
+<figs/Euclid_Division-eps-converted-to.pdf, id=339, 462.52798pt x 346.89601pt>
 File: figs/Euclid_Division-eps-converted-to.pdf Graphic file (type pdf)
 <use figs/Euclid_Division-eps-converted-to.pdf>
 Package pdftex.def Info: figs/Euclid_Division-eps-converted-to.pdf  used on inp
 ut line 212.
-(pdftex.def)             Requested size: 307.28987pt x 230.4765pt.
+(pdftex.def)             Requested size: 231.26341pt x 173.44757pt.
 [11
 
 ] [12
@@ -1544,11 +1544,7 @@ ut line 212.
 ] [13
 
 
-]
-Overfull \vbox (25.6402pt too high) detected at line 212
- []
-
-[14
+] [14
 
 
  <./figs/Euclid_Division-eps-converted-to.pdf>] [15
@@ -1556,8 +1552,8 @@ Overfull \vbox (25.6402pt too high) detected at line 212
 ] [16
 
 
-] (./figs/figa.tex)
-(./figs/figb.tex) [17
+]
+(./figs/figa.tex) (./figs/figb.tex) [17
 
 ]
 Overfull \vbox (8.7827pt too high) detected at line 269
@@ -1614,9 +1610,9 @@ usr/share/texmf/fonts/type1/public/cm-super/sfss0600.pfb></usr/share/texmf/font
 s/type1/public/cm-super/sfss0700.pfb></usr/share/texmf/fonts/type1/public/cm-su
 per/sfss0800.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss1095.pfb></u
 sr/share/texmf/fonts/type1/public/cm-super/sfsx0800.pfb>
-Output written on Presentation1.pdf (18 pages, 191527 bytes).
+Output written on Presentation1.pdf (18 pages, 206806 bytes).
 PDF statistics:
- 592 PDF objects out of 1000 (max. 8388607)
+ 643 PDF objects out of 1000 (max. 8388607)
  526 compressed objects within 6 object streams
  46 named destinations out of 1000 (max. 500000)
  85 words of extra memory for PDF output out of 10000 (max. 10000000)

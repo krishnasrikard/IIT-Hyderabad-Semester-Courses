@@ -1,69 +1,69 @@
 import numpy as np
+np.set_printoptions(precision=9)
 import matplotlib.pyplot as plt
-import time
+from scipy.optimize import curve_fit
 import sys
 sys.setrecursionlimit(int(1e4))
 
-# Euclid's Division
-def EuclidDivision(x,y):
-	if x == 0:
-		return y
-	if y == 0:
-		return x
-	if x == y:
-		return x
-	if x > y:
-		return EuclidDivision(y, x%y)
-	if x < y:
-		return EuclidDivision(x, y%x)
-
-
 # Euclid's Subtraction
-def EuclidSubtraction(x,y):
-	if x == 1 or y == 1:
-		return 1
-	if x == y:
-		return x
-	if x > y:
-		return EuclidSubtraction(x-y,y)
-	if x < y:
-		return EuclidSubtraction(x,y-x)
+f = open("TimeComplexity_Subtraction.dat", "rb")
+Lines = f.readlines()
+X = np.zeros((len(Lines),))
+y = np.zeros((len(Lines),))
 
-# Euclid's Subtraction
-Test_Cases = np.arange(2,int(1e3),5)
+for i in range(len(Lines)):
+	Data = Lines[i].split()
+	X[i] = (int(Data[0]) + int(Data[1]))
+	y[i] = (float(Data[2]))
 
-X = []
-y = []
-for t in Test_Cases:
-	t1 = time.time()
-	EuclidSubtraction(2, t)
-	t2 = time.time()
-	X.append(2+t)
-	y.append(t2-t1)
+# Theoritical Curve of O(n)
+def Linear(x,a,b):
+	return a*x + b
+	
+# Curve Fitting
+popt, pcov = curve_fit(Linear, X, y)
+a = popt[0]
+b = popt[1]
+
+# Plotting Results
+plt.figure()
 plt.grid()
-plt.plot(X,y)
+plt.plot(X,y, label="Experimental Plot")
+plt.plot(X, a*X + b, label="Theoritical Curve Fit Plot")
+plt.ylabel("Time")
+plt.xlabel(r"a+b")
+plt.title("Time Complexity")
+plt.legend()
 plt.savefig("../figs/Euclid_Subtraction.eps")
 plt.show()
 
+
 # Euclid's Division
-Test_Cases = [0,1]
-for i in range(28):
-	Test_Cases.append(Test_Cases[-1] + Test_Cases[-2])
+f = open("TimeComplexity_Division.dat", "rb")
+Lines = f.readlines()
+X = np.zeros((len(Lines),))
+y = np.zeros((len(Lines),))
 
-D = {}
-for i in range(0,len(Test_Cases)-1,2):
-	t1 = time.time()
-	EuclidDivision(Test_Cases[i], Test_Cases[i+1])
-	t2 = time.time()
-	D[min(Test_Cases[i], Test_Cases[i+1])] = t2-t1
+for i in range(len(Lines)):
+	Data = Lines[i].split()
+	X[i] = (int(Data[0]) + int(Data[1]))
+	y[i] = (float(Data[2]))
+	
+# Theoritical Curve of O(log(n))
+def Log(x,k):
+	return (k * np.log(x)) + 1e-10
 
-X = []
-y = []
-for i in sorted(D):
-	X.append(i)
-	y.append(D[i])
+popt, pcov = curve_fit(Log, X, y)
+k = popt[0]
 
+# Plotting Results
+plt.figure()
 plt.grid()
-plt.plot(X,y)
+plt.plot(X,y, label="Experimental Plot")
+plt.plot(X, k*np.log(X), label="Theoritical Curve Fit Plot")
+plt.ylabel("Time")
+plt.xlabel(r"min(a+b)")
+plt.title("Time Complexity")
+plt.legend()
 plt.savefig("../figs/Euclid_Division.eps")
 plt.show()
