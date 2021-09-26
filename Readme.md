@@ -109,3 +109,6 @@ Implemeting Estimation Techniques.
 ### Semester-7 Fall(2021)
 #### EE4013 -- C and Data Structures by GVV Sharma Sir
 Learning and Practicing C and Data Structures.
+
+#### EE6310 -- Image and Video Processing by Summohana Sir
+Learning Image and Video Processing and Coding Algorithms in Python.
