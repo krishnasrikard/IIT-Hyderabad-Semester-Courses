@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2021.7.27)  6 OCT 2021 09:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2021.7.27)  14 OCT 2021 13:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1383,42 +1383,64 @@ LaTeX Font Info:    Try loading font information for U+txsyc on input line 138.
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxsyc.fd
 File: utxsyc.fd 2000/12/15 v3.1
 )
-Underfull \hbox (badness 10000) in paragraph at lines 149--150
-
- []
-
-
-Overfull \hbox (9.19113pt too wide) detected at line 160
- []$[]  [] \OT1/txr/m/n/12 = [] = []\OML/txmi/m/it/12 :::: \OT1/txr/m/n/12 = []
- = \OML/txmi/m/it/12 ^^U$ []  
- []
-
-
 Underfull \hbox (badness 2119) detected at line 165
  []$[]  [] \OT1/txr/m/n/12 = [] = [] = 2$ [][]  
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 166.
+Package epstopdf Info: Source file: <figs/Plot.eps>
+(epstopdf)                    date: 2021-10-14 13:10:51
+(epstopdf)                    size: 17125 bytes
+(epstopdf)             Output file: <figs/Plot-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-10-14 13:15:35
+(epstopdf)                    size: 9781 bytes
+(epstopdf)             Command: <repstopdf --outfile=figs/Plot-eps-converted-to
+.pdf figs/Plot.eps>
+(epstopdf)             \includegraphics on input line 174.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./figs/Plot-eps-converted-to.pdf): PDF inclusion
+: found PDF version <1.7>, but at most version <1.5> allowed
+<figs/Plot-eps-converted-to.pdf, id=23, 433.62pt x 433.62pt>
+File: figs/Plot-eps-converted-to.pdf Graphic file (type pdf)
+<use figs/Plot-eps-converted-to.pdf>
+Package pdftex.def Info: figs/Plot-eps-converted-to.pdf  used on input line 174
+.
+(pdftex.def)             Requested size: 252.0pt x 252.00262pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 179--180
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 181--182
+
+ []
+
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
+ <./figs/Plot-eps-converted-to.pdf>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 196.
+ [2
+
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 166.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 196.
  (./Assignment2.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 166.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 166.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 196.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 196.
 Package rerunfilecheck Info: File `Assignment2.out' has not changed.
-(rerunfilecheck)             Checksum: 1210BCF5FEAE7A75A114051724EF25E7;85.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 166.
+(rerunfilecheck)             Checksum: 5F34EAD8A8770FE4FB8A340366B0BFBB;188.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 196.
  ) 
 Here is how much of TeX's memory you used:
- 33116 strings out of 492982
- 715634 string characters out of 6134896
- 967531 words of memory out of 5000000
- 36040 multiletter control sequences out of 15000+600000
+ 33137 strings out of 492982
+ 715998 string characters out of 6134896
+ 966531 words of memory out of 5000000
+ 36048 multiletter control sequences out of 15000+600000
  64456 words of font info for 138 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 55i,10n,67p,415b,1132s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,16n,67p,415b,1132s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/share/texlive/texmf-dis
 t/fonts/type1/public/txfonts/rtxr.pfb></usr/share/texlive/texmf-dist/fonts/type
@@ -1427,10 +1449,10 @@ fonts/txex.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsy.p
 fb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/
 texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-d
 ist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Assignment2.pdf (1 page, 43001 bytes).
+Output written on Assignment2.pdf (2 pages, 53240 bytes).
 PDF statistics:
- 67 PDF objects out of 1000 (max. 8388607)
- 55 compressed objects within 1 object stream
- 11 named destinations out of 1000 (max. 500000)
- 29 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 106 PDF objects out of 1000 (max. 8388607)
+ 79 compressed objects within 1 object stream
+ 21 named destinations out of 1000 (max. 500000)
+ 50 words of extra memory for PDF output out of 10000 (max. 10000000)
 

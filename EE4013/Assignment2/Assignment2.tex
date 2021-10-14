@@ -144,24 +144,53 @@ and latex-tikz codes from
 https://github.com/dks2000dks/IIT-Hyderabad-Semester-Courses/tree/master/EE4013/Assignment2
 \end{lstlisting}
 \section{Problem}
-Sjow that the points $\textbf{A} = \begin{bmatrix} 1 \\ 2 \\ 7 \end{bmatrix}$, $\textbf{B} = \begin{bmatrix} 2 \\ 6 \\ 3 \end{bmatrix}$ and $\textbf{C} = \begin{bmatrix} 3 \\ 10 \\ -1 \end{bmatrix}$ are collinear.
-\section{Solution}
-Let $\textbf{A}_{i} = \begin{bmatrix} x_{i,0} \\ x_{i,1} \\ \vdots \\ x_{i, n-1} \end{bmatrix}$ represent $m$ i.e $i \in \{0,1,2,..,m-1\}$ $n$ dimensional vectors. The objective is to check whether these $m$-points are collinear or not.\\
+Show that the points $\textbf{A} = \begin{pmatrix} 1 \\ 2 \\ 7 \end{pmatrix}$, $\textbf{B} = \begin{pmatrix} 2 \\ 6 \\ 3 \end{pmatrix}$ and $\textbf{C} = \begin{pmatrix} 3 \\ 10 \\ -1 \end{pmatrix}$ are collinear.
 
+\section{Solution}
 We know that if points $A,B,C$ are collinear then,
 \begin{align}
 \textbf{CA} = \lambda \times \textbf{BA}
 \end{align}
 
-If $\textbf{A} = \begin{bmatrix} a_{0} \\ a_{1} \\ \vdots \\ a_{n-1} \end{bmatrix}$, $\textbf{B} = \begin{bmatrix} b_{0} \\ b_{1} \\ \vdots \\ b_{n-1} \end{bmatrix}$ and $\textbf{C} = \begin{bmatrix} c_{0} \\ c_{1} \\ \vdots \\ c_{n-1} \end{bmatrix}$ and A,B,C are collinear then,
+So,
+\begin{align}
+\textbf{CA} = \begin{pmatrix} 2 \\ 8 \\ -8 \end{pmatrix} \\
+\textbf{BA} = \begin{pmatrix} 1 \\ 4 \\ -4 \end{pmatrix} \\
+CA = 2 \times BA
+\end{align}
 
-\begin{multline}
-\frac{c_{0} - a_{0}}{b_{0} - a_{0}} = \frac{c_{1} - a_{1}}{b_{1} - a_{1}} = \frac{c_{2} - a_{2}}{b_{2} - a_{2}} .... = \frac{c_{n-1} - a_{n-1}}{b_{n-}1 - a_{n-1}} = \lambda
-\end{multline}
-
-For the points given in the question,
+The above can be rewritten as follows by comparing each component of both the vectors $\textbf{CA}$ and $\textbf{BA}$
 \begin{multline}
 \frac{3 - 1}{2 - 1} = \frac{10 - 2}{6 - 2} = \frac{-1 - 7}{3 - 7} = 2
 \end{multline}
+
+So, it can be concluded that the points $\textbf{A} = \begin{pmatrix} 1 \\ 2 \\ 7 \end{pmatrix}$, $\textbf{B} = \begin{pmatrix} 2 \\ 6 \\ 3 \end{pmatrix}$ and $\textbf{C} = \begin{pmatrix} 3 \\ 10 \\ -1 \end{pmatrix}$ are collinear.
+
+\section {Verification}
+Verifying that \textbf{A}, \textbf{B} and \textbf{C} are collinear by plotting them.
+
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=\columnwidth]{figs/Plot.eps}
+\end{figure}
+
+\section{Generalizing Solution}
+
+Let $\textbf{A}_{i} = \begin{pmatrix} x_{i,0} \\ x_{i,1} \\ \vdots \\ x_{i, n-1} \end{pmatrix}$ be an $n$ dimensional vector and it represents $i^{th}$ point where $i \in \{0,1,2,..,m-1\}$. The objective is to check whether these $m$-points are collinear or not.\\
+
+For all the m-points to be collinear any three points among m-points $A_{i}$, $A_{j}$ and $A_{k}$ should be collinear i.e $\textbf{A}_{k}\textbf{A}_{i} = \lambda \times \textbf{A}_{j}\textbf{A}_{i}$.\\
+
+\begin{align}
+\textbf{A}_{k}\textbf{A}_{i} = \begin{pmatrix} x_{k,0} - x_{i,0} \\ x_{k,1} - x_{i,1} \\ \vdots \\ x_{k,n-1} - x_{i,n-1} \end{pmatrix} \\
+\textbf{A}_{j}\textbf{A}_{i} = \begin{pmatrix} x_{j,0} - x_{i,0} \\ x_{j,1} - x_{i,1} \\ \vdots \\ x_{j,n-1} - x_{i,n-1} \end{pmatrix} \\
+\begin{pmatrix} x_{k,0} - x_{i,0} \\ x_{k,1} - x_{i,1} \\ \vdots \\ x_{k,n-1} - x_{i,n-1} \end{pmatrix} = \lambda \begin{pmatrix} x_{j,0} - x_{i,0} \\ x_{j,1} - x_{i,1} \\ \vdots \\ x_{j,n-1} - x_{i,n-1} \end{pmatrix}
+\end{align}
+
+It can be rewritten as:
+\begin{multline}
+\frac{x_{k,0} - x_{i,0}}{x_{j,0} - x_{i,0}} = \frac{x_{k,1} - x_{i,1}}{x_{j,1} - x_{i,1}} = ... = \frac{x_{k,n-1} - x_{i,n-1}}{x_{j,n-1} - x_{i,n-1}} = \lambda
+\end{multline}
+
+So, if all m-points satisfy the above condition it can be concluded that all the points are collinear.
 
 \end{document}
