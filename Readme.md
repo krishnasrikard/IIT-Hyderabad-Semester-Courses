@@ -112,3 +112,9 @@ Learning and Practicing C and Data Structures.
 
 #### EE6310 -- Image and Video Processing by Summohana Sir
 Learning Image and Video Processing and Coding Algorithms in Python.
+
+---
+
+### Semester-8 Spring(2022)
+#### MA2142 -- Regression Analysis by Sayantee Jana Madam
+Learning Regression Analysis
